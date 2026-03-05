@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "SafeAI-Global PRD Agent": {
+      "source": "datht-work/safeai-global-agent",
+      "sourceType": "github",
+      "computedHash": "92c1681b4409b36e6a078d94021a3d1992447368dd3c7d0166b7b291fd921c05"
+    }
+  }
+}
