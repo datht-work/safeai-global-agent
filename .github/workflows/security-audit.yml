@@ -15,65 +15,7 @@ permissions:
 
 jobs:
   # ──────────────────────────────────────────
-  # Job 1: Snyk Vulnerability Scan
-  # ──────────────────────────────────────────
-  snyk-scan:
-    name: Snyk Security Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install --package-lock-only
-
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=medium
-
-      - name: Run Snyk to check for code issues
-        uses: snyk/actions/node@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: code test
-
-  # ──────────────────────────────────────────
-  # Job 2: Socket Supply-Chain Security
-  # ──────────────────────────────────────────
-  socket-scan:
-    name: Socket Supply-Chain Scan
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Socket CLI
-        run: npm install -g socket
-
-      - name: Run Socket Security Scan
-        continue-on-error: true
-        env:
-          SOCKET_SECURITY_API_KEY: ${{ secrets.SOCKET_TOKEN }}
-        run: socket scan .
-
-  # ──────────────────────────────────────────
-  # Job 3: npm Audit
+  # Job 1: npm Audit
   # ──────────────────────────────────────────
   npm-audit:
     name: npm Audit
