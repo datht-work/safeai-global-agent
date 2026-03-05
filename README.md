@@ -75,7 +75,7 @@ skills login
 ### Publishing
 
 ```bash
-skills publish https://github.com/safeai-global/prd-expert
+skills publish https://github.com/datht-work/SafeAI-Global-PRD-Agent
 ```
 
 ---
