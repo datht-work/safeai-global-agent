@@ -150,14 +150,7 @@ For Open Banking products (PSD2, FDX, CDR):
 
 ---
 
-## ⚠️ Disclaimer
-
-> **This skill provides compliance guidance to assist Product Managers in creating security-aware PRDs. It does NOT constitute legal advice.**
->
-> - Always consult qualified legal counsel for final compliance decisions
-> - Regulations change frequently — verify all citations against official government sources
-> - This tool is not a substitute for professional compliance audits or certifications
-> - The SafeAI-Global team is not liable for decisions made based on this guidance
+*Powered by SafeAI-Global Team · FinTech Compliance v1.0.0 · March 2026*
 
 ---
 
@@ -177,14 +170,12 @@ This skill provides deep FinTech & Payment expertise. For other compliance domai
 ## Usage Without Installation
 
 ### Option 1: Install via CLI
-
 ```bash
 npx skills add datht-work/safeai-global-agent
 # → Select "safeai-fintech-compliance"
 ```
 
 ### Option 2: Copy-Paste into AI Tools
-
 1. Open [Raw SKILL.md](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-fintech-compliance/SKILL.md)
 2. Copy entire content
 3. Paste into your AI tool:
@@ -203,7 +194,6 @@ npx skills add datht-work/safeai-global-agent
 
 | Version | Date | Changes |
 |---|---|---|
-| **v1.1.0** | 2026-03-06 | Added Disclaimer |
 | **v1.0.0** | 2026-03-06 | Initial release — PCI-DSS v4.0.1, PSD2/SCA, AML/KYC tiers, Open Banking FAPI |
 
 > See [CHANGELOG.md](../CHANGELOG.md) for full version history across all skills.

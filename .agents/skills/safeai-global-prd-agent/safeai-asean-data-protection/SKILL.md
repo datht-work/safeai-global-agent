@@ -156,14 +156,7 @@ For each ASEAN country the product operates in:
 
 ---
 
-## ⚠️ Disclaimer
-
-> **This skill provides compliance guidance to assist Product Managers in creating security-aware PRDs. It does NOT constitute legal advice.**
->
-> - Always consult qualified legal counsel for final compliance decisions
-> - Regulations change frequently — verify all citations against official government sources
-> - This tool is not a substitute for professional compliance audits or certifications
-> - The SafeAI-Global team is not liable for decisions made based on this guidance
+*Powered by SafeAI-Global Team · ASEAN Data Protection v1.0.0 · March 2026*
 
 ---
 
@@ -183,14 +176,12 @@ This skill provides deep ASEAN data protection expertise. For other compliance d
 ## Usage Without Installation
 
 ### Option 1: Install via CLI
-
 ```bash
 npx skills add datht-work/safeai-global-agent
 # → Select "safeai-asean-data-protection"
 ```
 
 ### Option 2: Copy-Paste into AI Tools
-
 1. Open [Raw SKILL.md](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-asean-data-protection/SKILL.md)
 2. Copy entire content
 3. Paste into your AI tool:
@@ -209,7 +200,6 @@ npx skills add datht-work/safeai-global-agent
 
 | Version | Date | Changes |
 |---|---|---|
-| **v1.1.0** | 2026-03-06 | Added Disclaimer |
 | **v1.0.0** | 2026-03-06 | Initial release — VN, SG, TH, MY, ID, PH deep-dives, ASEAN MCCs, cross-border transfer matrix |
 
 > See [CHANGELOG.md](../CHANGELOG.md) for full version history across all skills.
