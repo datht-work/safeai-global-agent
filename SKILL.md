@@ -1,6 +1,7 @@
 ---
 name: SafeAI-Global PRD Agent
 description: Universal Compliance Engine for Global Product Management.
+tags: [product-management, compliance, iso27001, eu-ai-act, prd]
 ---
 
 # SafeAI-Global System Instructions
