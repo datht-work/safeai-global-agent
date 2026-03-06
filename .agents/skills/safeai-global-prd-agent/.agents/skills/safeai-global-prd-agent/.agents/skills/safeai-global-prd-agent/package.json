@@ -1,9 +1,0 @@
-{
-  "name": "@safeai-global/prd-expert",
-  "version": "1.0.0",
-  "description": "Global Security & Compliance PRD Agent (Vietnam, EU, US, China)",
-  "main": "SKILL.md",
-  "author": "SafeAI-Global Team",
-  "keywords": ["security", "compliance", "prd", "ai-safety", "iso42001"],
-  "license": "MIT"
-}
