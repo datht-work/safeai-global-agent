@@ -10,29 +10,6 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
-## [v2.2.0] — 2026-03-06
-
-### safeai-global-prd-agent `v2.2.0`
-
-- **Step 0: Compliance Depth Selector** — Users choose Standard PRD (no compliance), Smart Compliance (auto-detect region), or Full Audit (all frameworks). Default: Smart. Prevents overkill for simple PRDs.
-- **Operationalized ISO Standards** — ISO/IEC 27001 Annex A controls, ISO/IEC 27701 PII management, ISO/IEC 42001 AI lifecycle management
-- **SOC 2 Trust Service Criteria** mapping (Security, Availability, Processing Integrity, Confidentiality, Privacy)
-- **Accessibility Compliance** — WCAG 2.2 Level AA, European Accessibility Act (EAA), ADA, Section 508, AODA, EN 301 549
-- **Disclaimer** added — "Not legal advice" limitation of liability
-
-### All Specialist Skills `v1.1.0`
-
-- Added **Disclaimer** section to safeai-gdpr-expert, safeai-hipaa-expert, safeai-fintech-compliance, safeai-asean-data-protection
-
-### Infrastructure
-
-- Created `examples/sample-prd-output.md` — Sample PRD showing compliance output format
-- Added `package-lock.json` — Fixes Snyk FAIL on skills.sh
-- Updated `README.md` with Compliance Depth modes, ISO standards section, and example PRD reference
-- Bumped `package.json` to v2.2.0
-
----
-
 ## [v2.1.0] — 2026-03-06
 
 ### All Skills

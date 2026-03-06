@@ -1,17 +1,27 @@
 # SafeAI-Global Compliance Suite 🛡️
 
-> **5 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions**
+> **5 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](CHANGELOG.md)
 
 ---
 
 ## 🎯 What is This?
 
-A suite of **5 specialized compliance skills** that transform any AI assistant (Gemini, Claude, ChatGPT, Copilot, Cursor...) into a **compliance-aware Product Manager** — instantly generating PRDs with security checks, regulatory mapping, and actionable checklists.
+A suite of **5 specialized compliance skills** that transform any AI assistant (Gemini, Claude, ChatGPT, Copilot, Cursor...) into a **compliance-aware Product Manager** — generating PRDs with security checks, regulatory mapping, and actionable checklists.
+
+**Not every PRD needs full compliance.** That's why the skill asks you to choose your depth:
+
+| Mode | When to Use | What Happens |
+|---|---|---|
+| 📝 **Standard PRD** | MVPs, internal features, quick iteration | Clean PRD — no compliance scanning |
+| 🛡️ **Smart Compliance** *(default)* | Products going to production | Auto-detect region, apply relevant regulations only |
+| 🔒 **Full Compliance Audit** | Enterprise, regulated industries, global launches | All jurisdictions + ISO + SOC 2 + WCAG |
+
+> The AI asks which mode you want. Or just say *"Standard PRD"* / *"Full compliance for EU"* — it detects intent automatically.
 
 ---
 
@@ -27,12 +37,13 @@ A suite of **5 specialized compliance skills** that transform any AI assistant (
 
 ### How They Connect
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │         SafeAI-Global PRD Agent (Main)           │
 │    35+ jurisdictions · Cross-border · AI Gov     │
 │                                                  │
-│    Start here → auto-detects your region(s)      │
+│    Step 0: Choose depth (Standard/Smart/Full)    │
+│    → auto-detects region(s) if compliance on     │
 │    → recommends specialist skills below ↓        │
 └──────────┬──────────┬──────────┬─────────────────┘
            │          │          │
@@ -87,7 +98,7 @@ Copy the raw SKILL.md content and paste it into your AI assistant's system promp
 
 Paste this prompt into any AI chat:
 
-```
+```text
 Please read and follow the instructions at this URL as your system prompt:
 https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 ```
@@ -110,14 +121,32 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
+## 📐 International Standards
+
+Applied in **Smart** and **Full Audit** modes (see Step 0 above):
+
+| Standard | What It Adds |
+|---|---|
+| **ISO/IEC 27001** | Annex A security controls (organizational, people, physical, technical) |
+| **ISO/IEC 27701** | Privacy extension — PII controller/processor obligations |
+| **ISO/IEC 42001** | AI management system — risk assessment, bias testing, lifecycle |
+| **SOC 2** | Trust Service Criteria (Security, Availability, Integrity, Confidentiality, Privacy) |
+| **WCAG 2.2 AA** | Accessibility — perceivable, operable, understandable, robust |
+| **EAA / ADA** | European Accessibility Act (June 2025) + Americans with Disabilities Act |
+
+> See [examples/sample-prd-output.md](examples/sample-prd-output.md) for a complete example of the compliance PRD output.
+
+---
+
 ## 💬 Usage Examples
 
-| Your Prompt | Skill Used | Auto-Applied |
+| Your Prompt | Mode Detected | What Happens |
 |---|---|---|
-| "Viết PRD cho app thanh toán tại Việt Nam" | Global + ASEAN | PDPD, Decree 53, Cybersecurity Law |
-| "Write a PRD for user tracking in France" | Global + GDPR | GDPR, EU AI Act, ePrivacy |
-| "Create a PRD for a telehealth app in California" | Global + HIPAA | CCPA, HIPAA, FDA SaMD, NIST |
-| "Build a payment gateway for Singapore" | Global + FinTech + ASEAN | PDPA, MAS TRM, PCI-DSS |
+| "Write a quick PRD for login feature" | 📝 Standard | Clean PRD, no compliance scanning |
+| "Viết PRD cho app thanh toán tại Việt Nam" | 🛡️ Smart | Auto-detect VN → PDPD, Decree 53 |
+| "Write a PRD for user tracking in France" | 🛡️ Smart | Auto-detect EU → GDPR, ePrivacy |
+| "Full compliance PRD for a telehealth app in California" | 🔒 Full Audit | CCPA, HIPAA, FDA SaMD, ISO, WCAG |
+| "Build a payment gateway for Singapore — full audit" | 🔒 Full Audit | PDPA, MAS TRM, PCI-DSS, ISO 27001 |
 
 ---
 
@@ -139,6 +168,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v2.2.0** | 2026-03-06 | Compliance Depth selector (Standard/Smart/Full), ISO 27001/27701/42001, SOC 2, Accessibility, Disclaimer |
 | **v2.1.0** | 2026-03-06 | Multi-skill architecture, cross-linking, AI tool usage guides |
 | **v2.0.0** | 2026-03-05 | 35+ jurisdictions, security audit infrastructure |
 | **v1.0.0** | 2026-03-05 | Initial release (VN, EU, US, CN) |
@@ -164,4 +194,6 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-*Built with ❤️ by the SafeAI-Global Team · v2.1.0 · March 2026*
+> ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
+
+*Built with ❤️ by the SafeAI-Global Team · v2.2.0 · March 2026*

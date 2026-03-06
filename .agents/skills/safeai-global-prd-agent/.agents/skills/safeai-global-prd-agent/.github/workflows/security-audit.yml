@@ -1,0 +1,138 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Run weekly on Monday at 09:00 UTC
+    - cron: '0 9 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  # ──────────────────────────────────────────
+  # Job 1: npm Audit
+  # ──────────────────────────────────────────
+  npm-audit:
+    name: npm Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --package-lock-only
+
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate || true
+
+  # ──────────────────────────────────────────
+  # Job 4: Skill Content Security Check
+  # ──────────────────────────────────────────
+  content-check:
+    name: Skill Content Security Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for executable files
+        run: |
+          echo "🔍 Scanning for executable files..."
+          EXEC_FILES=$(find . -type f -executable -not -path './.git/*' 2>/dev/null || true)
+          if [ -n "$EXEC_FILES" ]; then
+            echo "⚠️ WARNING: Executable files found:"
+            echo "$EXEC_FILES"
+            exit 1
+          else
+            echo "✅ No executable files found."
+          fi
+
+      - name: Check for script files
+        run: |
+          echo "🔍 Scanning for script files..."
+          SCRIPT_FILES=$(find . -type f \( -name "*.sh" -o -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.rb" -o -name "*.php" -o -name "*.pl" -o -name "*.bat" -o -name "*.cmd" -o -name "*.ps1" \) -not -path './.git/*' 2>/dev/null || true)
+          if [ -n "$SCRIPT_FILES" ]; then
+            echo "⚠️ WARNING: Script files found:"
+            echo "$SCRIPT_FILES"
+            echo "::warning::Script files detected in skill repository"
+          else
+            echo "✅ No script files found."
+          fi
+
+      - name: Check for suspicious patterns in SKILL.md
+        run: |
+          echo "🔍 Scanning SKILL.md for suspicious patterns..."
+          SUSPICIOUS=0
+
+          # Check for URL patterns that could be data exfiltration
+          if grep -iE '(curl|wget|fetch|http\.get|requests\.get)\s' SKILL.md 2>/dev/null; then
+            echo "⚠️ Found network call patterns"
+            SUSPICIOUS=1
+          fi
+
+          # Check for file system manipulation
+          if grep -iE '(rm\s+-rf|rmdir|unlink|fs\.delete|os\.remove)' SKILL.md 2>/dev/null; then
+            echo "⚠️ Found file deletion patterns"
+            SUSPICIOUS=1
+          fi
+
+          # Check for credential/secret access patterns
+          if grep -iE '(password|secret|api_key|token|credential).*=.*["\x27]' SKILL.md 2>/dev/null; then
+            echo "⚠️ Found potential credential patterns"
+            SUSPICIOUS=1
+          fi
+
+          if [ $SUSPICIOUS -eq 0 ]; then
+            echo "✅ No suspicious patterns detected."
+          else
+            echo "::warning::Suspicious patterns found - manual review recommended"
+          fi
+
+      - name: Verify skill structure
+        run: |
+          echo "🔍 Verifying skill structure..."
+
+          # Check SKILL.md exists
+          if [ ! -f "SKILL.md" ]; then
+            echo "❌ SKILL.md not found"
+            exit 1
+          fi
+          echo "✅ SKILL.md exists"
+
+          # Check frontmatter
+          if head -1 SKILL.md | grep -q '^---'; then
+            echo "✅ SKILL.md has valid frontmatter"
+          else
+            echo "❌ SKILL.md missing frontmatter"
+            exit 1
+          fi
+
+          # Check SECURITY.md exists
+          if [ -f "SECURITY.md" ]; then
+            echo "✅ SECURITY.md exists"
+          else
+            echo "⚠️ SECURITY.md not found (recommended)"
+          fi
+
+          # Check LICENSE exists
+          if [ -f "LICENSE" ]; then
+            echo "✅ LICENSE exists"
+          else
+            echo "⚠️ LICENSE not found (recommended)"
+          fi
+
+          echo ""
+          echo "📊 Skill Security Summary:"
+          echo "  Files: $(find . -type f -not -path './.git/*' | wc -l | tr -d ' ')"
+          echo "  Size: $(du -sh . --exclude=.git 2>/dev/null | cut -f1 || du -sh . | cut -f1)"
+          echo "  Markdown files: $(find . -name '*.md' -not -path './.git/*' | wc -l | tr -d ' ')"
