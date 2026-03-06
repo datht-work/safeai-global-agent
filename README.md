@@ -11,17 +11,19 @@
 
 ## 🎯 What is This?
 
-A suite of **5 specialized compliance skills** that transform any AI assistant (Gemini, Claude, ChatGPT, Copilot, Cursor...) into a **compliance-aware Product Manager** — generating PRDs with security checks, regulatory mapping, and actionable checklists.
+A suite of **5 specialized compliance skills** that transform any AI assistant (Gemini, Claude, ChatGPT, Copilot, Cursor...) into a **Compliance-Aware Product Manager**. It generates PRDs with built-in security checks, regulatory mapping, and actionable engineering checklists.
 
-**Not every PRD needs full compliance.** That's why the skill asks you to choose your depth:
+### 🎛️ Step 0: The Compliance Depth Selector
 
-| Mode | When to Use | What Happens |
-|---|---|---|
-| 📝 **Standard PRD** | MVPs, internal features, quick iteration | Clean PRD — no compliance scanning |
-| 🛡️ **Smart Compliance** *(default)* | Products going to production | Auto-detect region, apply relevant regulations only |
-| 🔒 **Full Compliance Audit** | Enterprise, regulated industries, global launches | All jurisdictions + ISO + SOC 2 + WCAG |
+**Not every PRD needs full compliance.** To prevent over-engineering simple features, the agent asks you to choose your depth at the start of every chat:
 
-> The AI asks which mode you want. Or just say *"Standard PRD"* / *"Full compliance for EU"* — it detects intent automatically.
+| Level | Mode Name | Best For | What Happens |
+|:---:|---|---|---|
+| 🟢 | 📝 **Standard PRD** | MVPs, internal tools, fast iteration | Generates a clean, standard PRD — **no compliance scanning**. |
+| 🟡 | 🛡️ **Smart Compliance** *(Default)* | Products going to production | Auto-detects region and applies **only** the relevant local laws. |
+| 🔴 | 🔒 **Full Compliance Audit** | Enterprise, strictly regulated industries | Full audit: **All jurisdictions + ISO 27001/42001 + SOC 2 + WCAG**. |
+
+> *Tip: You don't have to wait for the bot to ask. Just say "Standard PRD" or "Full compliance for EU" in your very first prompt to skip Step 0.*
 
 ---
 
@@ -35,29 +37,33 @@ A suite of **5 specialized compliance skills** that transform any AI assistant (
 | 💳 | **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | FinTech PMs |
 | 🌏 | **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH country deep-dives | ASEAN startups |
 
-### How They Connect
+### 🔗 How They Connect
+
+The SafeAI-Global suite uses a **Hub-and-Spoke** architecture to ensure your AI agent doesn't suffer from "context dilution".
 
 ```text
-┌──────────────────────────────────────────────────┐
-│         SafeAI-Global PRD Agent (Main)           │
-│    35+ jurisdictions · Cross-border · AI Gov     │
-│                                                  │
-│    Step 0: Choose depth (Standard/Smart/Full)    │
-│    → auto-detects region(s) if compliance on     │
-│    → recommends specialist skills below ↓        │
-└──────────┬──────────┬──────────┬─────────────────┘
-           │          │          │
-     ┌─────▼──┐ ┌─────▼──┐ ┌────▼───┐ ┌───────────┐
-     │  GDPR  │ │ HIPAA  │ │FinTech │ │   ASEAN   │
-     │Expert  │ │Expert  │ │Compli- │ │   Data    │
-     │        │ │        │ │ance    │ │Protection │
-     │EU+UK   │ │US      │ │Global  │ │SEA 6 ctry │
-     │AI Act  │ │FDA SaMD│ │PCI-DSS │ │VN SG TH   │
-     └────────┘ └────────┘ │PSD2    │ │MY ID PH   │
-                           └────────┘ └───────────┘
+               ┌─────────────────────────────────────────┐
+               │    🌐 SafeAI-Global PRD Agent (Hub)     │
+               │   ───────────────────────────────       │
+               │   • Covers 35+ Jurisdictions            │
+               │   • Cross-border Data Transfers         │
+               │   • Defines AI Governance               │
+               └───────────────────┬─────────────────────┘
+                                   │
+              [ Step 0: Auto-Detects Region & Depth ]
+                                   │
+       ┌───────────────┬───────────┴───┬───────────────┬───────────────┐
+       ▼               ▼               ▼               ▼               ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ 🇪🇺 GDPR     │ │ 🏥 HIPAA    │ │ 💳 FinTech  │ │ 🌏 ASEAN    │ │ 📝 Standard │
+│   Expert    │ │   Expert    │ │ Compliance  │ │  Data Prot. │ │    PRD      │
+├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤
+│ • Art-by-Art│ │ • FDA SaMD  │ │ • PCI-DSS   │ │ • VN, SG, TH│ │ • No Legal  │
+│ • EU AI Act │ │ • PHI Safegu│ │ • PSD2/SCA  │ │ • MY, ID, PH│ │ • Fast MVP  │
+└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
 ```
 
-> **Workflow:** Start with the **Global PRD Agent** for initial assessment → it will recommend the specialist skill for your domain.
+> **The Hub Workflow:** Start your chat with the **Global PRD Agent**. If it detects a highly regulated domain (like Healthcare in the US or FinTech in Europe), it will automatically recommend you switch to the specialized **Spoke** skill for a deeper audit.
 
 ---
 
@@ -121,20 +127,20 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-## 📐 International Standards
+## 📐 International Standards & Certifications
 
-Applied in **Smart** and **Full Audit** modes (see Step 0 above):
+The agent is trained to map product features to strict international frameworks (applied automatically in **Smart** and **Full Audit** modes):
 
-| Standard | What It Adds |
-|---|---|
-| **ISO/IEC 27001** | Annex A security controls (organizational, people, physical, technical) |
-| **ISO/IEC 27701** | Privacy extension — PII controller/processor obligations |
-| **ISO/IEC 42001** | AI management system — risk assessment, bias testing, lifecycle |
-| **SOC 2** | Trust Service Criteria (Security, Availability, Integrity, Confidentiality, Privacy) |
-| **WCAG 2.2 AA** | Accessibility — perceivable, operable, understandable, robust |
-| **EAA / ADA** | European Accessibility Act (June 2025) + Americans with Disabilities Act |
+| Category | Standard | What the AI Does / Maps to in PRD |
+|---|---|---|
+| 🔒 **Security** | **ISO/IEC 27001** | Enforces Annex A controls (RBAC, cryptography, MFA, logging). |
+| 🛡️ **Privacy** | **ISO/IEC 27701** | Adds PII controller/processor obligations and data minimization. |
+| 🤖 **AI Risk** | **ISO/IEC 42001** | Defines an AI Impact Assessment, human oversight, and bias testing. |
+| 🏢 **Enterprise**| **SOC 2 Type II** | Maps Trust Service Criteria (Security, Availability, Privacy). |
+| ♿ **Access** | **WCAG 2.2 AA** | Adds perceivable/operable ACs for frontend features. |
+| 🏛️ **Legal** | **EAA / ADA** | Checks European Accessibility Act & Americans with Disabilities Act. |
 
-> See [examples/sample-prd-output.md](examples/sample-prd-output.md) for a complete example of the compliance PRD output.
+> 💡 *Want to see it in action? Look at [examples/sample-prd-output.md](examples/sample-prd-output.md) for a complete compliance PRD output.*
 
 ---
 
