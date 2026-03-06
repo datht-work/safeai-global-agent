@@ -75,19 +75,19 @@ jobs:
           SUSPICIOUS=0
 
           # Check for URL patterns that could be data exfiltration
-          if grep -iE '(curl|wget|fetch|http\.get|requests\.get)\s' SKILL.md 2>/dev/null; then
+          if find . -name 'SKILL.md' -not -path './.git/*' -exec grep -iE '(curl|wget|fetch|http\.get|requests\.get)\s' {} + 2>/dev/null; then
             echo "⚠️ Found network call patterns"
             SUSPICIOUS=1
           fi
 
           # Check for file system manipulation
-          if grep -iE '(rm\s+-rf|rmdir|unlink|fs\.delete|os\.remove)' SKILL.md 2>/dev/null; then
+          if find . -name 'SKILL.md' -not -path './.git/*' -exec grep -iE '(rm\s+-rf|rmdir|unlink|fs\.delete|os\.remove)' {} + 2>/dev/null; then
             echo "⚠️ Found file deletion patterns"
             SUSPICIOUS=1
           fi
 
           # Check for credential/secret access patterns
-          if grep -iE '(password|secret|api_key|token|credential).*=.*["\x27]' SKILL.md 2>/dev/null; then
+          if find . -name 'SKILL.md' -not -path './.git/*' -exec grep -iE '(password|secret|api_key|token|credential).*=.*["\x27]' {} + 2>/dev/null; then
             echo "⚠️ Found potential credential patterns"
             SUSPICIOUS=1
           fi
@@ -103,19 +103,29 @@ jobs:
           echo "🔍 Verifying skill structure..."
 
           # Check SKILL.md exists
-          if [ ! -f "SKILL.md" ]; then
-            echo "❌ SKILL.md not found"
-            exit 1
-          fi
-          echo "✅ SKILL.md exists"
+          SKILL_FILES=(
+            "SKILL.md"
+            "safeai-gdpr-expert/SKILL.md"
+            "safeai-hipaa-expert/SKILL.md"
+            "safeai-fintech-compliance/SKILL.md"
+            "safeai-asean-data-protection/SKILL.md"
+          )
 
-          # Check frontmatter
-          if head -1 SKILL.md | grep -q '^---'; then
-            echo "✅ SKILL.md has valid frontmatter"
-          else
-            echo "❌ SKILL.md missing frontmatter"
-            exit 1
-          fi
+          for file in "${SKILL_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ $file not found"
+              exit 1
+            fi
+            echo "✅ $file exists"
+
+            # Check frontmatter
+            if head -1 "$file" | grep -q '^---'; then
+              echo "✅ $file has valid frontmatter"
+            else
+              echo "❌ $file missing frontmatter"
+              exit 1
+            fi
+          done
 
           # Check SECURITY.md exists
           if [ -f "SECURITY.md" ]; then

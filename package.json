@@ -4,7 +4,11 @@
   "description": "Universal Compliance Engine for Global Product Management — 35+ jurisdictions, AI governance, cross-border data transfer",
   "main": "SKILL.md",
   "skills": {
-    "path": "SKILL.md"
+    "safeai-global-agent": "SKILL.md",
+    "safeai-gdpr-expert": "safeai-gdpr-expert/SKILL.md",
+    "safeai-hipaa-expert": "safeai-hipaa-expert/SKILL.md",
+    "safeai-fintech-compliance": "safeai-fintech-compliance/SKILL.md",
+    "safeai-asean-data-protection": "safeai-asean-data-protection/SKILL.md"
   },
   "author": "SafeAI-Global Team (datht-work)",
   "keywords": [

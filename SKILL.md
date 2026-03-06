@@ -97,7 +97,25 @@ When receiving a user request, automatically detect the applicable legal jurisdi
 
 ---
 
-## Step 2: Cross-Border Data Transfer Matrix
+## Step 2: Hub-and-Spoke Routing
+
+When Step 1 (Region Detection) identifies a domain requiring deep expertise, do NOT handle it with the hub's surface-level tables. Instead, automatically load and follow the specialized spoke rules:
+
+- IF EU/GDPR detected AND compliance depth is Smart or Full:
+  → Load and follow the instructions in `safeai-gdpr-expert/SKILL.md`
+  → Integrate its output into the PRD sections defined in Step 5
+- IF US Healthcare / PHI detected:
+  → Load and follow the instructions in `safeai-hipaa-expert/SKILL.md`
+- IF payments, PCI-DSS, or financial data detected:
+  → Load and follow the instructions in `safeai-fintech-compliance/SKILL.md`
+- IF ASEAN markets (VN, SG, TH, MY, ID, PH) detected:
+  → Load and follow the instructions in `safeai-asean-data-protection/SKILL.md`
+
+After the spoke completes its analysis, merge its findings into the hub's PRD structure (Step 5-8). The user should never need to manually switch skills.
+
+---
+
+## Step 3: Cross-Border Data Transfer Matrix
 
 When a product processes data across borders, evaluate transfer mechanisms:
 
@@ -115,7 +133,7 @@ When a product processes data across borders, evaluate transfer mechanisms:
 
 ---
 
-## Step 3: Data Redaction Layer (Confirm Before Masking)
+## Step 4: Data Redaction Layer (Confirm Before Masking)
 
 Before finalizing the PRD, **detect and flag** any potentially sensitive information, then **ask the user for confirmation** before masking. PII may be intentionally included (e.g., data schema definitions, field specifications, or sample payloads).
 
@@ -134,16 +152,18 @@ Before finalizing the PRD, **detect and flag** any potentially sensitive informa
 
 **Workflow:**
 
-1. **Detect** — Scan the PRD draft for PII patterns listed above.
-2. **Flag** — Present all detected PII instances to the user with their location and context.
-3. **Confirm** — Ask the user: *"The following PII was detected. Which items should be masked?"*
-4. **Apply** — Mask only the items the user confirms. Leave intentional PII untouched.
+| Step | Action |
+|---|---|
+| 1. Detect | Scan the PRD draft for PII patterns listed above. |
+| 2. Flag | Present all detected PII instances to the user with their location and context. |
+| 3. Confirm | Ask the user: *"The following PII was detected. Which items should be masked?"* |
+| 4. Apply | Mask only the items the user confirms. Leave intentional PII untouched. |
 
 > **Important:** If the user does not respond or skips confirmation, default to masking all detected PII as a safety precaution. Always recommend using dummy data for sample/example values in the final PRD.
 
 ---
 
-## Step 4: PRD Output Structure (Consulting Framework)
+## Step 5: PRD Output Structure (Consulting Framework)
 
 Every PRD must adhere to the following structure:
 
@@ -197,7 +217,7 @@ A concrete list of tasks for Dev Team, Legal Team, and Compliance Team to execut
 
 ---
 
-## Step 5: AI-Specific Governance Rules
+## Step 6: AI-Specific Governance Rules
 
 When the product involves AI/ML components, additionally apply:
 
@@ -213,7 +233,7 @@ When the product involves AI/ML components, additionally apply:
 
 ---
 
-## Step 6: Behavioral Rules
+## Step 7: Behavioral Rules
 
 1. **Remain neutral:** Do not express political opinions; only cite laws and standards.
 2. **Stay current:** When regulations change, always prioritize the latest version. Cross-reference effective dates.
@@ -226,7 +246,7 @@ When the product involves AI/ML components, additionally apply:
 
 ---
 
-## Step 7: International Standards Mapping
+## Step 8: International Standards Mapping
 
 When generating a PRD, map applicable international standards and include relevant controls in the compliance checklist. Apply these standards **regardless of jurisdiction** — they represent global best practices.
 
@@ -288,7 +308,7 @@ For products handling customer data (especially SaaS/B2B), map features to SOC 2
 
 ---
 
-## Step 8: Accessibility & Inclusion Compliance
+## Step 9: Accessibility & Inclusion Compliance
 
 When the product has a **user interface** (web, mobile, desktop), include accessibility requirements:
 
