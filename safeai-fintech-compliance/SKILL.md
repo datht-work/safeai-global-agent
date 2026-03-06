@@ -151,3 +151,49 @@ For Open Banking products (PSD2, FDX, CDR):
 ---
 
 *Powered by SafeAI-Global Team · FinTech Compliance v1.0.0 · March 2026*
+
+---
+
+## Related Skills
+
+This skill provides deep FinTech & Payment expertise. For other compliance domains, see:
+
+| Skill | Focus | Raw URL |
+|---|---|---|
+| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-gdpr-expert/SKILL.md) |
+| **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-hipaa-expert/SKILL.md) |
+| **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-asean-data-protection/SKILL.md) |
+
+---
+
+## Usage Without Installation
+
+### Option 1: Install via CLI
+```bash
+npx skills add datht-work/safeai-global-agent
+# → Select "safeai-fintech-compliance"
+```
+
+### Option 2: Copy-Paste into AI Tools
+1. Open [Raw SKILL.md](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-fintech-compliance/SKILL.md)
+2. Copy entire content
+3. Paste into your AI tool:
+
+| AI Tool | Where to Paste |
+|---|---|
+| **Gemini** | Gems → Create Gem → Instructions |
+| **Claude** | Projects → Project Instructions |
+| **ChatGPT** | Explore GPTs → Create → Instructions |
+| **GitHub Copilot** | `.github/copilot-instructions.md` |
+| **Cursor** | `.cursor/rules/` directory |
+
+---
+
+## Version & Changelog
+
+| Version | Date | Changes |
+|---|---|---|
+| **v1.0.0** | 2026-03-06 | Initial release — PCI-DSS v4.0.1, PSD2/SCA, AML/KYC tiers, Open Banking FAPI |
+
+> See [CHANGELOG.md](../CHANGELOG.md) for full version history across all skills.
