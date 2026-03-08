@@ -110,6 +110,12 @@ When Step 1 (Region Detection) identifies a domain requiring deep expertise, do 
   → Load and follow the instructions in `safeai-fintech-compliance/SKILL.md`
 - IF ASEAN markets (VN, SG, TH, MY, ID, PH) detected:
   → Load and follow the instructions in `safeai-asean-data-protection/SKILL.md`
+- IF US State laws (CCPA, CPA, VCDPA, etc.) detected:
+  → Load and follow the instructions in `safeai-us-privacy-expert/SKILL.md`
+- IF EdTech, Child Privacy, COPPA, or FERPA detected:
+  → Load and follow the instructions in `safeai-edtech-compliance/SKILL.md`
+- IF AI Risk, Bias testing, NIST AI RMF, or AI Ethics requested:
+  → Load and follow the instructions in `safeai-ai-ethics-expert/SKILL.md`
 
 After the spoke completes its analysis, merge its findings into the hub's PRD structure (Step 5-8). The user should never need to manually switch skills.
 
@@ -356,6 +362,9 @@ This skill provides comprehensive global coverage. For **deeper expertise** in s
 | **[SafeAI HIPAA Expert](safeai-hipaa-expert/SKILL.md)** | HealthTech products — HIPAA safeguards, FDA SaMD classification, PHI handling | `npx skills add datht-work/safeai-global-agent` → select `safeai-hipaa-expert` |
 | **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | Payment/banking products — PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | `npx skills add datht-work/safeai-global-agent` → select `safeai-fintech-compliance` |
 | **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | Southeast Asian markets — VN, SG, TH, MY, ID, PH country deep-dives | `npx skills add datht-work/safeai-global-agent` → select `safeai-asean-data-protection` |
+| **[SafeAI US State Privacy Expert](safeai-us-privacy-expert/SKILL.md)** | Fragmented US state laws — CCPA/CPRA, CPA, VCDPA, GPC | `npx skills add datht-work/safeai-global-agent` → select `safeai-us-privacy-expert` |
+| **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | Products for minors — COPPA, FERPA, AADC, Age Gating | `npx skills add datht-work/safeai-global-agent` → select `safeai-edtech-compliance` |
+| **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | AI governance — NIST AI RMF, Bias Testing, Human-in-the-Loop | `npx skills add datht-work/safeai-global-agent` → select `safeai-ai-ethics-expert` |
 
 > **Workflow:** Start with this **Global PRD Agent** for initial compliance assessment → use domain-specific skills for detailed implementation.
 
@@ -398,6 +407,7 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
+| **v2.3.0** | 2026-03-08 | Added US Privacy, EdTech/Child Privacy, and AI Ethics spoke skills |
 | **v2.2.0** | 2026-03-06 | ISO 27001/27701/42001 operationalized controls, SOC 2 mapping, Accessibility (WCAG/ADA/EAA), Disclaimer |
 | **v2.1.0** | 2026-03-06 | Multi-skill cross-linking, AI tool usage guides, version tracking |
 | **v2.0.0** | 2026-03-05 | Expanded to 35+ jurisdictions, Cross-Border Transfer Matrix, AI Governance Rules |
@@ -407,4 +417,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-*Powered by SafeAI-Global Team · Version 2.2.0 · March 2026*
+*Powered by SafeAI-Global Team · Version 2.3.0 · March 2026*

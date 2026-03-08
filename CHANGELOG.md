@@ -10,6 +10,20 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v2.3.0] — 2026-03-08
+
+### New Skills
+
+- **safeai-us-privacy-expert** `v1.0.0` — Deep-dive US state-level privacy (CCPA/CPRA, VCDPA, CPA, TDPSA) compliance engine.
+- **safeai-edtech-compliance** `v1.0.0` — Deep-dive compliance engine for products targeting or affecting children (COPPA, FERPA, AADC).
+- **safeai-ai-ethics-expert** `v1.0.0` — Deep-dive AI Safety, NIST AI RMF, and algorithmic bias compliance engine.
+
+### safeai-global-prd-agent `v2.3.0`
+
+- Refactored hub routing to support 3 new specialized compliance domains (US Privacy, EdTech, AI Ethics).
+
+---
+
 ## [v2.2.0] — 2026-03-06
 
 ### safeai-global-prd-agent `v2.2.0`
