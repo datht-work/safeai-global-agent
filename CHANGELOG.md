@@ -10,6 +10,26 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v2.4.0] — 2026-03-09
+
+### safeai-global-prd-agent `v2.4.0`
+
+- **`/template` Command** — Type `/template [industry] [region]` to instantly receive a pre-built PRD skeleton tailored to a specific industry and jurisdiction. 12 built-in templates (FinTech, Healthcare, Social, EdTech, E-Commerce, AI/ML × EU, US, VN, SG, Global).
+- **Compliance Visualizer** — New behavioral rule: AI must generate annotated Mermaid.js data flow diagrams in every PRD. Annotations cite specific legal articles explaining WHY data flows that way.
+
+### New Tools
+
+- **`cli/safeai-lint.js`** — Node.js CLI tool to scan PRD Markdown files for missing compliance sections (Security, Encryption, Consent, Data Flow, Audit logging, Checklist). 6 rules.
+- **`.github/workflows/safeai-compliance-check.yml`** — GitHub Actions blueprint to run safeai-lint on Pull Requests that modify Markdown files.
+
+### Infrastructure
+
+- Created `README-vi.md` — Full Vietnamese translation of the README
+- Added language switcher badges (🌍 English | 🇻🇳 Tiếng Việt) to both READMEs
+- Bumped `package.json` to v2.4.0 with `bin` entry for `safeai-lint`
+
+---
+
 ## [v2.3.0] — 2026-03-08
 
 ### New Skills

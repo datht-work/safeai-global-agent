@@ -1,0 +1,53 @@
+# SafeAI Compliance Check — GitHub Actions Workflow
+#
+# This workflow runs on every Pull Request that modifies Markdown files.
+# It uses safeai-lint to ensure PRD documents include required compliance sections.
+#
+# Usage:
+#   Copy this file into your repo's .github/workflows/ directory.
+#   PRDs missing security/compliance sections will cause the check to fail.
+
+name: SafeAI Compliance Check
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+
+jobs:
+  compliance-lint:
+    name: 🛡️ PRD Compliance Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run SafeAI Linter on changed Markdown files
+        run: |
+          # Get list of changed .md files in this PR
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} -- '*.md' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "✅ No Markdown files changed — skipping lint."
+            exit 0
+          fi
+
+          echo "📋 Changed Markdown files:"
+          echo "$CHANGED_FILES"
+          echo ""
+
+          # Run the linter on each changed file
+          EXIT_CODE=0
+          for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              node cli/safeai-lint.js "$file" || EXIT_CODE=$?
+            fi
+          done
+
+          exit $EXIT_CODE
