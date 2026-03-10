@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -131,7 +131,7 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ### 🌎 Americas
 
-🇺🇸 US (Federal + CA, CO, TX, VA, NY) · 🇨🇦 Canada · 🇧🇷 Brazil · 🇲🇽 Mexico · 🇦🇷 Argentina · 🇨🇴 Colombia · 🇵🇪 Peru
+🇺🇸 US (Federal + CA, CO, TX, VA, NY) · 🇨🇦 Canada · 🇧🇷 Brazil (LGPD, Digital ECA) · 🇲🇽 Mexico · 🇦🇷 Argentina · 🇨🇴 Colombia · 🇵🇪 Peru
 
 ---
 
@@ -182,6 +182,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v2.4.0** | 2026-03-09 | `/template` command, Compliance Visualizer, CLI Linter, Vietnamese README |
 | **v2.3.0** | 2026-03-08 | Added 3 new Spoke skills: US State Privacy, EdTech/Child Privacy, and AI Ethics & Risk |
 | **v2.2.0** | 2026-03-06 | Compliance Depth selector (Standard/Smart/Full), ISO 27001/27701/42001, SOC 2, Accessibility, Disclaimer |
@@ -212,4 +213,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.4.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.5.0 · March 2026*

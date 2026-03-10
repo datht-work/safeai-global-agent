@@ -139,7 +139,7 @@ When receiving a user request, automatically detect the applicable legal jurisdi
 | Virginia, VA | 🇺🇸 US – Virginia | VCDPA (Virginia Consumer Data Protection Act) |
 | New York, NY | 🇺🇸 US – New York | SHIELD Act, DFS Cybersecurity Regulation (23 NYCRR 500) |
 | Canada, CA, Toronto, Vancouver | 🇨🇦 Canada | PIPEDA, Quebec Law 25, CPPA (proposed), AIDA (Artificial Intelligence & Data Act) |
-| Brazil, BR, São Paulo, Rio | 🇧🇷 Brazil | LGPD (Lei Geral de Proteção de Dados), AI Regulatory Framework (PL 2338/2023) |
+| Brazil, BR, São Paulo, Rio | 🇧🇷 Brazil | LGPD (Lei Geral de Proteção de Dados), AI Regulatory Framework (PL 2338/2023), Digital Child and Adolescent Statute (Digital ECA) 2026 |
 | Mexico, MX, Mexico City | 🇲🇽 Mexico | LFPDPPP (Federal Law on Protection of Personal Data), NOM-151 |
 | Argentina, AR, Buenos Aires | 🇦🇷 Argentina | Personal Data Protection Law 25.326, AAIP Regulations |
 | Colombia, CO, Bogotá | 🇨🇴 Colombia | Law 1581/2012 (Habeas Data), Decree 1377/2013 |
@@ -277,6 +277,7 @@ A concrete list of tasks for Dev Team, Legal Team, and Compliance Team to execut
 - [ ] Set up Human-in-the-Loop review for high-risk AI outputs
 - [ ] Verify children's data handling compliance (COPPA / local age laws)
 - [ ] Establish Data Retention & Destruction policy per jurisdiction
+- [ ] (Brazil/EdTech) Integrate Play Age Signals API (v0.0.3+) & prohibit loot boxes per Digital ECA
 ```
 
 ---
@@ -488,6 +489,7 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
+| **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v2.4.0** | 2026-03-09 | `/template` command, Compliance Visualizer (annotated Mermaid diagrams) |
 | **v2.3.0** | 2026-03-08 | Added US Privacy, EdTech/Child Privacy, and AI Ethics spoke skills |
 | **v2.2.0** | 2026-03-06 | ISO 27001/27701/42001 operationalized controls, SOC 2 mapping, Accessibility (WCAG/ADA/EAA), Disclaimer |
@@ -499,4 +501,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-*Powered by SafeAI-Global Team · Version 2.4.0 · March 2026*
+*Powered by SafeAI-Global Team · Version 2.5.0 · March 2026*

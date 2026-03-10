@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -112,7 +112,7 @@ Công cụ sẽ kiểm tra các mục: Security section, Encryption, Consent/DSA
 
 ### 🌎 Châu Mỹ
 
-🇺🇸 Mỹ (Liên bang + CA, CO, TX, VA, NY) · 🇨🇦 Canada · 🇧🇷 Brazil · 🇲🇽 Mexico · 🇦🇷 Argentina · 🇨🇴 Colombia · 🇵🇪 Peru
+🇺🇸 Mỹ (Liên bang + CA, CO, TX, VA, NY) · 🇨🇦 Canada · 🇧🇷 Brazil (LGPD, Digital ECA) · 🇲🇽 Mexico · 🇦🇷 Argentina · 🇨🇴 Colombia · 🇵🇪 Peru
 
 ---
 
@@ -134,6 +134,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v2.5.0** | 2026-03-10 | Thêm luật Digital ECA của Brazil (Age Signals API, cấm Loot Box) |
 | **v2.4.0** | 2026-03-09 | Lệnh `/template`, Compliance Visualizer (sơ đồ Mermaid chú thích), CLI Linter, README Tiếng Việt |
 | **v2.3.0** | 2026-03-08 | 3 kỹ năng Spoke mới: US Privacy, EdTech/Child Privacy, AI Ethics |
 | **v2.2.0** | 2026-03-06 | Bộ chọn mức độ tuân thủ, ISO 27001/27701/42001, SOC 2, Accessibility, Disclaimer |
@@ -165,4 +166,4 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.4.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.5.0 · Tháng 3/2026*

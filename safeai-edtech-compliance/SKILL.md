@@ -19,6 +19,7 @@ You must apply these critical frameworks when building features that may be acce
 | **FERPA** | USA (Federal) | Student education records, school permissions |
 | **UK AADC / CAADCA** | UK / California | Age-Appropriate Design Code: privacy by design for minors |
 | **GDPR-K** | EU | Age of consent (13-16 depending on Member State) |
+| **Digital ECA** | Brazil | Ingest age range data (Play Age Signals API) & ban loot boxes |
 
 ---
 
@@ -63,10 +64,14 @@ If selling to schools or districts:
 - [ ] Implement neutral age-screening UX
 - [ ] Design Verifiable Parental Consent (VPC) flow
 - [ ] Set all user profiles to private by default
+- [ ] Enforce End-to-End Encryption (AES-256 at rest, TLS 1.3 in transit) for all child data
+- [ ] Generate a Mermaid Data Flow Diagram detailing how child data moves through the system
 - [ ] Disable all targeted advertising scripts for users under 18
 - [ ] Remove gamification elements designed to extract personal data
 - [ ] Create "Child-friendly" privacy notice format (plain language/visuals)
 - [ ] Sign Student Data Privacy Consortium (SDPC) agreements if selling to schools
+- [ ] **Brazil (Digital ECA)**: Integrate Play Age Signals API (lib v0.0.3+) for age range ingestion
+- [ ] **Brazil (Digital ECA)**: Strictly prohibit loot boxes in games aimed at minors
 ```
 
 ---
@@ -84,4 +89,5 @@ If selling to schools or districts:
 
 | Version | Date | Changes |
 |---|---|---|
+| **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v1.0.0** | 2026-03-08 | Initial release — COPPA, FERPA, UK AADC, California AADC |

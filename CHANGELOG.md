@@ -10,6 +10,22 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v2.5.0] — 2026-03-10
+
+### safeai-global-prd-agent `v2.5.0`
+
+- Added **Brazil Digital ECA** compliance tracking for the Americas region.
+- Added strict checklist enforcement for the **Play Age Signals API** (v0.0.3+) to ingest age ranges in Brazil.
+- Added prohibition on **loot boxes** in electronic games aimed at children.
+- Bumped version in `package.json` and READMEs.
+
+### safeai-edtech-compliance `v2.5.0`
+
+- Integrated **Brazil Digital ECA** into the core regulatory framework alongside COPPA, FERPA, AADC, and GDPR-K.
+- Added explicit checklist requirements for the **Play Age Signals API** and loot box bans for EdTech/Gaming apps.
+
+---
+
 ## [v2.4.0] — 2026-03-09
 
 ### safeai-global-prd-agent `v2.4.0`
