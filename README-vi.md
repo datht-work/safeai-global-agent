@@ -7,15 +7,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
-## 🎯 Đây là gì?
+## 🎯 Giá trị Doanh nghiệp dành cho Product Manager
 
-Một bộ **8 kỹ năng tuân thủ chuyên biệt** biến bất kỳ trợ lý AI nào (Gemini, Claude, ChatGPT, Copilot, Cursor...) thành một **Product Manager có ý thức về pháp lý**. Nó tạo ra PRD với kiểm tra bảo mật tích hợp, ánh xạ quy định, và checklist hành động cụ thể cho đội kỹ thuật.
+Việc xây dựng phần mềm tuân thủ hệ thống pháp lý toàn cầu thường chậm chạp, tốn kém và nhiều rủi ro. **SafeAI-Global Compliance Suite** hoạt động như một chuyên gia Pháp lý & Bảo mật nhúng (embedded co-pilot), được thiết kế đặc biệt dành cho Product Manager.
 
-### 🚀 Tính năng mới: Lệnh `/template`
+- **⚡ Tăng tốc Time-to-Market**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút thay vì chờ đợi hàng tuần để bộ phận pháp chế rà soát.
+- **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và vạch định rủi ro pháp lý (GDPR, CCPA, SEC, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code.
+- **🏗️ Thu hẹp Khoảng cách**: Dịch các thuật ngữ pháp lý khô khan thành các Checklist kỹ thuật hành động được, biểu đồ luồng dữ liệu Mermaid, và các tiêu chuẩn bảo mật ISO/SOC2.
+- **📉 Tránh "Kỹ sư hoá quá mức"**: Đảm bảo sản phẩm của bạn chỉ áp dụng những luật thực sự cần thiết cho thị trường mục tiêu, không làm phần mềm trở nên cồng kềnh.
+
+### 🚀 Tính năng nổi bật: Lệnh `/template`
 
 Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵn** theo ngành và khu vực pháp lý:
 
@@ -66,15 +71,16 @@ Hiển thị tất cả 8 kỹ năng — chọn những cái bạn cần.
 
 ### Cách 2: Sử dụng trực tiếp trong AI Chat (Không cần cài)
 
-Sao chép nội dung thô của SKILL.md và dán vào phần System Prompt của trợ lý AI:
+Dự án này sử dụng kiến trúc **Modular Knowledge Engine**. Để sử dụng trong giao diện web, bạn cần cung cấp cả File Chỉ thị (`SKILL.md`) và Tập Dữ Liệu (`knowledge/`).
 
 | Công cụ AI | Cách thiết lập |
 |---|---|
-| **Google Gemini** | *Gems* → Tạo Gem → Dán SKILL.md vào Instructions |
-| **Claude** (Anthropic) | *Projects* → Tạo Project → Dán vào *Project Instructions* |
-| **ChatGPT** (OpenAI) | *Explore GPTs* → Tạo → Dán vào *Instructions* |
-| **GitHub Copilot** | Lưu thành `.github/copilot-instructions.md` trong repo |
-| **Cursor** | Đặt SKILL.md vào thư mục `.cursor/rules/` |
+| **Google Gemini** | 1. Tạo *Gem* mới<br>2. Dán `SKILL.md` vào phần Instructions<br>3. Tải toàn bộ file trong thư mục `knowledge/` lên |
+| **Claude** (Anthropic) | 1. Tạo *Project* mới<br>2. Dán `SKILL.md` vào *Project Instructions*<br>3. Tải thư mục `knowledge/` lên phần *Project Knowledge* |
+| **ChatGPT** (OpenAI) | 1. Vào *Explore GPTs* → Create<br>2. Dán `SKILL.md` vào *Instructions*<br>3. Tải thư mục `knowledge/` vào phần *Knowledge* |
+| **GitHub Copilot** | Lưu `SKILL.md` thành `.github/copilot-instructions.md` trong repo |
+| **Cursor** | Đặt `SKILL.md` vào thư mục `.cursor/rules/` và đảm bảo có folder `knowledge/` trong Workspace |
+| **Windsurf** | Đặt `SKILL.md` vào `.windsurfrules` và đảm bảo có folder `knowledge/` trong Workspace |
 
 ### Cách 3: Dùng lệnh `/template`
 
@@ -134,6 +140,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v3.0.0** | 2026-03-11 | Kiến trúc Modular Knowledge Engine: Tách toàn bộ luật cứng tĩnh thành kho dữ liệu có thể tìm kiếm trong thư mục `knowledge/` |
 | **v2.5.0** | 2026-03-10 | Thêm luật Digital ECA của Brazil (Age Signals API, cấm Loot Box) |
 | **v2.4.0** | 2026-03-09 | Lệnh `/template`, Compliance Visualizer (sơ đồ Mermaid chú thích), CLI Linter, README Tiếng Việt |
 | **v2.3.0** | 2026-03-08 | 3 kỹ năng Spoke mới: US Privacy, EdTech/Child Privacy, AI Ethics |
@@ -166,4 +173,4 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.5.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.0.0 · Tháng 3/2026*

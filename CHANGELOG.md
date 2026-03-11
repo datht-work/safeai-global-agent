@@ -10,6 +10,20 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v3.0.0] — 2026-03-11
+
+### safeai-global-prd-agent `v3.0.0`
+
+- **Core Modular Knowledge Engine**: Migrated from static rule arrays in `SKILL.md` to a dynamic Document Store in the `knowledge/` folder.
+- **Extended Cybersecurity Knowledge Base to 2026**:
+  - **EU**: Added Cyber Resilience Act (CRA), NIS2 Directive, and Digital Operational Resilience Act (DORA).
+  - **US**: Added SEC Cybersecurity Disclosure Rules.
+  - **Global**: Added Application Security & Supply Chain mandates (SBOM, Secure by Design, Zero Trust Architecture).
+- **Improved Context Efficiency**: Agent now searches and retrieves rules as needed.
+- Added `/cli/safeai-rag-build.js` compiler script.
+
+---
+
 ## [v2.5.0] — 2026-03-10
 
 ### safeai-global-prd-agent `v2.5.0`

@@ -7,13 +7,18 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
-## 🎯 What is This?
+## 🎯 The Business Value for Product Managers
 
-A suite of **8 specialized compliance skills** that transform any AI assistant (Gemini, Claude, ChatGPT, Copilot, Cursor...) into a **Compliance-Aware Product Manager**. It generates PRDs with built-in security checks, regulatory mapping, and actionable engineering checklists.
+Building globally compliant software is slow, expensive, and legally risky. The **SafeAI-Global Compliance Suite** acts as your embedded Legal & Security co-pilot, designed specifically for Product Managers.
+
+- **⚡ Accelerate Time-to-Market**: Generate engineering-ready, compliant PRDs in minutes instead of waiting weeks for external legal reviews.
+- **🛡️ De-Risk Product Launches**: Automatically identify and mitigate regulatory risks (GDPR, CCPA, SEC, DORA) before a single line of code is written.
+- **🏗️ Bridge the Gap**: Translate dense legal jargon into actionable engineering checklists, Mermaid data flow diagrams, and ISO/SOC2 engineering controls.
+- **📉 Prevent "Compliance Overkill"**: Ensure you only apply the regulations necessary for your specific market and product tier.
 
 ### 🎛️ Step 0: The Compliance Depth Selector
 
@@ -26,6 +31,19 @@ A suite of **8 specialized compliance skills** that transform any AI assistant (
 | 🔴 | 🔒 **Full Compliance Audit** | Enterprise, strictly regulated industries | Full audit: **All jurisdictions + ISO 27001/42001 + SOC 2 + WCAG**. |
 
 > *Tip: You don't have to wait for the bot to ask. Just say "Standard PRD" or "Full compliance for EU" in your very first prompt to skip Step 0.*
+
+### 🚀 Instant Starts: The `/template` Command
+
+Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton for your specific market:
+
+| Command | Industry | Region | Applied Regulations |
+|---|---|---|---|
+| `/template fintech eu` | FinTech | 🇪🇺 EU | PSD2, GDPR, DORA |
+| `/template healthcare us` | HealthTech | 🇺🇸 USA | HIPAA, FDA SaMD |
+| `/template social vn` | Social Media | 🇻🇳 Vietnam | Decree 13, Cybersecurity Law |
+| `/template ai eu` | AI/ML | 🇪🇺 EU | EU AI Act, GDPR Art. 22 |
+
+> *See the full list of templates in [SKILL.md](SKILL.md).*
 
 ---
 
@@ -42,9 +60,9 @@ A suite of **8 specialized compliance skills** that transform any AI assistant (
 | 👶 | **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC, Age Gating | EdTech PMs |
 | 🤖 | **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, Human-in-the-Loop | AI/ML PMs |
 
-### 🔗 How They Connect
+### 🔗 Modular Architecture for Global Scale
 
-The SafeAI-Global suite uses a **Hub-and-Spoke** architecture to ensure your AI agent doesn't suffer from "context dilution".
+The SafeAI-Global suite uses a **Hub-and-Spoke** architecture. You always start with the Global Hub, and pivot to deep-dive Spoke experts only when you hit heavily regulated verticals.
 
 ```text
                ┌─────────────────────────────────────────┐
@@ -84,16 +102,16 @@ This will show all 8 skills — select the ones you need.
 
 ### Method 2: Use in Any AI Chat Tool (No Install)
 
-Copy the raw SKILL.md content and paste it into your AI assistant's system prompt:
+This project uses a **Modular Knowledge Engine** architecture. To use it in a web interface, you need to provide both the Agent Instructions (`SKILL.md`) and the Knowledge Base (`knowledge/` folder).
 
-| AI Tool | Setup |
+| AI Tool | Setup Instructions |
 |---|---|
-| **Google Gemini** | *Gems* → Create Gem → Paste SKILL.md into Instructions |
-| **Claude** (Anthropic) | *Projects* → Create Project → Paste into *Project Instructions* |
-| **ChatGPT** (OpenAI) | *Explore GPTs* → Create → Paste into *Instructions* |
-| **GitHub Copilot** | Save as `.github/copilot-instructions.md` in your repo |
-| **Cursor** | Place SKILL.md in `.cursor/rules/` directory |
-| **Windsurf** | Place SKILL.md in `.windsurfrules` directory |
+| **Google Gemini** | 1. Create a new *Gem*<br>2. Paste `SKILL.md` into Instructions<br>3. Upload all files from the `knowledge/` folder |
+| **Claude** (Anthropic) | 1. Create a new *Project*<br>2. Paste `SKILL.md` into *Project Instructions*<br>3. Upload the `knowledge/` folder to *Project Knowledge* |
+| **ChatGPT** (OpenAI) | 1. Go to *Explore GPTs* → Create<br>2. Paste `SKILL.md` into *Instructions*<br>3. Upload the `knowledge/` folder to *Knowledge* |
+| **GitHub Copilot** | Save `SKILL.md` as `.github/copilot-instructions.md` in your repo |
+| **Cursor** | Place `SKILL.md` in `.cursor/rules/` and ensure the `knowledge/` folder is in your workspace |
+| **Windsurf** | Place `SKILL.md` in `.windsurfrules` and ensure the `knowledge/` folder is in your workspace |
 
 #### Quick Copy Links (Raw SKILL.md)
 
@@ -182,6 +200,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v3.0.0** | 2026-03-11 | Core Modular Knowledge Engine: Extracted all static regulations into a searchable `knowledge/` Document Store |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v2.4.0** | 2026-03-09 | `/template` command, Compliance Visualizer, CLI Linter, Vietnamese README |
 | **v2.3.0** | 2026-03-08 | Added 3 new Spoke skills: US State Privacy, EdTech/Child Privacy, and AI Ethics & Risk |
@@ -213,4 +232,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v2.5.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.0.0 · March 2026*
