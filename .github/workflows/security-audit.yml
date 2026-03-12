@@ -105,10 +105,10 @@ jobs:
           # Check SKILL.md exists
           SKILL_FILES=(
             "SKILL.md"
-            "safeai-gdpr-expert/SKILL.md"
-            "safeai-hipaa-expert/SKILL.md"
-            "safeai-fintech-compliance/SKILL.md"
-            "safeai-asean-data-protection/SKILL.md"
+            "skills/safeai-gdpr-expert/SKILL.md"
+            "skills/safeai-hipaa-expert/SKILL.md"
+            "skills/safeai-fintech-compliance/SKILL.md"
+            "skills/safeai-asean-data-protection/SKILL.md"
           )
 
           for file in "${SKILL_FILES[@]}"; do
