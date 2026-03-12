@@ -1,13 +1,14 @@
 # SafeAI-Global Compliance Suite 🛡️
 
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
+> 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 
 > **8 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -17,6 +18,7 @@ Việc xây dựng phần mềm tuân thủ hệ thống pháp lý toàn cầu t
 
 - **⚡ Tăng tốc Time-to-Market**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút thay vì chờ đợi hàng tuần để bộ phận pháp chế rà soát.
 - **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và vạch định rủi ro pháp lý (GDPR, CCPA, SEC, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code.
+- **💯 Chấm điểm SafeAI-Global Score**: Đánh giá nhanh mức độ sẵn sàng tuân thủ của PRD với điểm số 0-100 dựa trên 3 trụ cột: Quyền riêng tư, Bảo mật và Minh bạch.
 - **🏗️ Thu hẹp Khoảng cách**: Dịch các thuật ngữ pháp lý khô khan thành các Checklist kỹ thuật hành động được, biểu đồ luồng dữ liệu Mermaid, và các tiêu chuẩn bảo mật ISO/SOC2.
 - **📉 Tránh "Kỹ sư hoá quá mức"**: Đảm bảo sản phẩm của bạn chỉ áp dụng những luật thực sự cần thiết cho thị trường mục tiêu, không làm phần mềm trở nên cồng kềnh.
 
@@ -49,13 +51,13 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 | # | Kỹ năng | Chuyên về | Dành cho |
 |---|---|---|---|
 | 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ quốc gia, luồng dữ liệu xuyên biên giới | Tất cả PM |
-| 🇪🇺 | **[SafeAI GDPR Expert](safeai-gdpr-expert/SKILL.md)** | GDPR từng Điều, EU AI Act | PM thị trường EU |
-| 🏥 | **[SafeAI HIPAA Expert](safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, PHI | PM HealthTech |
-| 💳 | **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC | PM FinTech |
-| 🌏 | **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | Startup ASEAN |
-| 🇺🇸 | **[SafeAI US State Privacy Expert](safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC | PM thị trường Mỹ |
-| 👶 | **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC | PM EdTech |
-| 🤖 | **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, HITL | PM AI/ML |
+| 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR từng Điều, EU AI Act | PM thị trường EU |
+| 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, PHI | PM HealthTech |
+| 💳 | **[SafeAI FinTech Compliance](skills/safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC | PM FinTech |
+| 🌏 | **[SafeAI ASEAN Data Protection](skills/safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | Startup ASEAN |
+| 🇺🇸 | **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC | PM thị trường Mỹ |
+| 👶 | **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC | PM EdTech |
+| 🤖 | **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, HITL | PM AI/ML |
 
 ---
 
@@ -140,6 +142,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v3.1.0** | 2026-03-12 | Scoring Ecosystem — Ra mắt tính năng tự động chấm điểm SafeAI-Global Score (0-100) cho PRD |
 | **v3.0.0** | 2026-03-11 | Kiến trúc Modular Knowledge Engine: Tách toàn bộ luật cứng tĩnh thành kho dữ liệu có thể tìm kiếm trong thư mục `knowledge/` |
 | **v2.5.0** | 2026-03-10 | Thêm luật Digital ECA của Brazil (Age Signals API, cấm Loot Box) |
 | **v2.4.0** | 2026-03-09 | Lệnh `/template`, Compliance Visualizer (sơ đồ Mermaid chú thích), CLI Linter, README Tiếng Việt |
@@ -173,4 +176,4 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.0.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.1.0 · Tháng 3/2026*

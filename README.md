@@ -1,13 +1,14 @@
 # SafeAI-Global Compliance Suite 🛡️
 
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
+> 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 
 > **8 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -17,6 +18,7 @@ Building globally compliant software is slow, expensive, and legally risky. The 
 
 - **⚡ Accelerate Time-to-Market**: Generate engineering-ready, compliant PRDs in minutes instead of waiting weeks for external legal reviews.
 - **🛡️ De-Risk Product Launches**: Automatically identify and mitigate regulatory risks (GDPR, CCPA, SEC, DORA) before a single line of code is written.
+- **💯 SafeAI-Global Score**: Instantly gauge your PRD's compliance readiness with a 0-100 score based on Privacy, Security, and Transparency pillars.
 - **🏗️ Bridge the Gap**: Translate dense legal jargon into actionable engineering checklists, Mermaid data flow diagrams, and ISO/SOC2 engineering controls.
 - **📉 Prevent "Compliance Overkill"**: Ensure you only apply the regulations necessary for your specific market and product tier.
 
@@ -52,7 +54,7 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 | # | Skill | Focus | For Who |
 |---|---|---|---|
 | 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ jurisdictions, cross-border transfers, AI governance | All Product Managers |
-| 🇪🇺 | **[SafeAI GDPR Expert](safeai-gdpr-expert/SKILL.md)** | GDPR Art-by-Art, EU AI Act risk classification, DPIA | EU market PMs |
+| 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR Art-by-Art, EU AI Act risk classification, DPIA | EU market PMs |
 | 🏥 | **[SafeAI HIPAA Expert](safeai-hipaa-expert/SKILL.md)** | HIPAA safeguards, FDA SaMD, PHI handling | HealthTech PMs |
 | 💳 | **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | FinTech PMs |
 | 🌏 | **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH country deep-dives | ASEAN startups |
@@ -118,13 +120,13 @@ This project uses a **Modular Knowledge Engine** architecture. To use it in a we
 | Skill | Raw URL |
 |---|---|
 | Global PRD Agent | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md) |
-| GDPR Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-gdpr-expert/SKILL.md) |
-| HIPAA Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-hipaa-expert/SKILL.md) |
-| FinTech Compliance | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-fintech-compliance/SKILL.md) |
-| ASEAN Data Protection | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-asean-data-protection/SKILL.md) |
-| US State Privacy Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-us-privacy-expert/SKILL.md) |
-| EdTech & Child Privacy Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-edtech-compliance/SKILL.md) |
-| Ethics & Risk Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-ai-ethics-expert/SKILL.md) |
+| GDPR Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-gdpr-expert/SKILL.md) |
+| HIPAA Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-hipaa-expert/SKILL.md) |
+| FinTech Compliance | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-fintech-compliance/SKILL.md) |
+| ASEAN Data Protection | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-asean-data-protection/SKILL.md) |
+| US State Privacy Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-us-privacy-expert/SKILL.md) |
+| EdTech & Child Privacy Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-edtech-compliance/SKILL.md) |
+| Ethics & Risk Expert | [Copy](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/skills/safeai-ai-ethics-expert/SKILL.md) |
 
 ### Method 3: Reference by URL
 
@@ -200,6 +202,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v3.1.0** | 2026-03-12 | Scoring Ecosystem — Introduced the SafeAI-Global Score (0-100) evaluating Privacy, Security, and Transparency |
 | **v3.0.0** | 2026-03-11 | Core Modular Knowledge Engine: Extracted all static regulations into a searchable `knowledge/` Document Store |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v2.4.0** | 2026-03-09 | `/template` command, Compliance Visualizer, CLI Linter, Vietnamese README |
@@ -232,4 +235,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.0.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.1.0 · March 2026*

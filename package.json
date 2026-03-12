@@ -1,18 +1,18 @@
 {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "main": "SKILL.md",
   "bin": {
     "safeai-lint": "cli/safeai-lint.js"
   },
   "skills": {
     "safeai-global-agent": "SKILL.md",
-    "safeai-gdpr-expert": "safeai-gdpr-expert/SKILL.md",
-    "safeai-hipaa-expert": "safeai-hipaa-expert/SKILL.md",
-    "safeai-fintech-compliance": "safeai-fintech-compliance/SKILL.md",
-    "safeai-asean-data-protection": "safeai-asean-data-protection/SKILL.md",
-    "safeai-us-privacy-expert": "safeai-us-privacy-expert/SKILL.md",
-    "safeai-edtech-compliance": "safeai-edtech-compliance/SKILL.md",
-    "safeai-ai-ethics-expert": "safeai-ai-ethics-expert/SKILL.md"
+    "safeai-gdpr-expert": "skills/safeai-gdpr-expert/SKILL.md",
+    "safeai-hipaa-expert": "skills/safeai-hipaa-expert/SKILL.md",
+    "safeai-fintech-compliance": "skills/safeai-fintech-compliance/SKILL.md",
+    "safeai-asean-data-protection": "skills/safeai-asean-data-protection/SKILL.md",
+    "safeai-us-privacy-expert": "skills/safeai-us-privacy-expert/SKILL.md",
+    "safeai-edtech-compliance": "skills/safeai-edtech-compliance/SKILL.md",
+    "safeai-ai-ethics-expert": "skills/safeai-ai-ethics-expert/SKILL.md"
   },
   "author": "SafeAI-Global Team (datht-work)",
   "keywords": [

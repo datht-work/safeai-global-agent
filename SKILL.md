@@ -117,20 +117,20 @@ When receiving a user request, automatically detect the applicable legal jurisdi
 When Step 1 (Region Detection) identifies a domain requiring deep expertise, do NOT handle it with the hub's surface-level tables. Instead, automatically load and follow the specialized spoke rules:
 
 - IF EU/GDPR detected AND compliance depth is Smart or Full:
-  → Load and follow the instructions in `safeai-gdpr-expert/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-gdpr-expert/SKILL.md`
   → Integrate its output into the PRD sections defined in Step 5
 - IF US Healthcare / PHI detected:
-  → Load and follow the instructions in `safeai-hipaa-expert/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-hipaa-expert/SKILL.md`
 - IF payments, PCI-DSS, or financial data detected:
-  → Load and follow the instructions in `safeai-fintech-compliance/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-fintech-compliance/SKILL.md`
 - IF ASEAN markets (VN, SG, TH, MY, ID, PH) detected:
-  → Load and follow the instructions in `safeai-asean-data-protection/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-asean-data-protection/SKILL.md`
 - IF US State laws (CCPA, CPA, VCDPA, etc.) detected:
-  → Load and follow the instructions in `safeai-us-privacy-expert/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-us-privacy-expert/SKILL.md`
 - IF EdTech, Child Privacy, COPPA, or FERPA detected:
-  → Load and follow the instructions in `safeai-edtech-compliance/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-edtech-compliance/SKILL.md`
 - IF AI Risk, Bias testing, NIST AI RMF, or AI Ethics requested:
-  → Load and follow the instructions in `safeai-ai-ethics-expert/SKILL.md`
+  → Load and follow the instructions in `skills/safeai-ai-ethics-expert/SKILL.md`
 
 After the spoke completes its analysis, merge its findings into the hub's PRD structure (Step 5-8). The user should never need to manually switch skills.
 
@@ -188,7 +188,21 @@ Evaluate and assign a safety badge to the product:
 - **🟡 AA** — Basic compliance achieved; 1–3 items require supplementation.
 - **🔴 A** — Non-compliant; urgent action required before deployment.
 
-### 4.2 Executive Compliance Summary
+### 4.2 SafeAI-Global Compliance Score
+
+Calculate an overall compliance readiness score (0-100) based on the PRD's content.
+
+- **Scoring Pillars**:
+  - **Privacy (40 points)**: Are consent mechanisms, data flow, and PII handling clearly defined?
+  - **Security (40 points)**: Are encryption, access controls, and data residency aligned with standards?
+  - **Transparency (20 points)**: Are AI models explained, or is there a clear human oversight mechanism?
+- **Score Display & Interpretation**:
+  - 🟢 **80-100**: Ready for Development (Acceptable posture).
+  - 🟡 **50-79**: Moderate Risk (Requires supplementary controls).
+  - 🔴 **< 50**: High Risk (Requires immediate remediation).
+- **Format**: Show the total score out of 100 alongside the Badge (Step 4.1). Briefly list the top 2 reasons for any points deducted.
+
+### 4.3 Executive Compliance Summary
 
 Summarize legal risks by **each** operating region:
 
@@ -197,7 +211,7 @@ Summarize legal risks by **each** operating region:
 - Recommend prioritized actions with estimated timeline.
 - Flag any **conflicting requirements** between jurisdictions (e.g., EU "right to erasure" vs. local data-retention mandates).
 
-### 4.3 Security-Enhanced Features (Detailed Specs)
+### 4.4 Security-Enhanced Features (Detailed Specs)
 
 Detail each product feature, accompanied by:
 
@@ -207,7 +221,7 @@ Detail each product feature, accompanied by:
 - **AI Risk Classification** — Per EU AI Act (Unacceptable / High / Limited / Minimal risk), if applicable.
 - **Data Flow Diagram** — Describe where data originates → processed → stored → transferred.
 
-### 4.4 Actionable Compliance Checklist
+### 4.5 Actionable Compliance Checklist
 
 A concrete list of tasks for Dev Team, Legal Team, and Compliance Team to execute:
 
@@ -306,13 +320,13 @@ This skill provides comprehensive global coverage. For **deeper expertise** in s
 
 | Skill | Best For | Install |
 |---|---|---|
-| **[SafeAI GDPR Expert](safeai-gdpr-expert/SKILL.md)** | EU products needing deep GDPR Art-by-Art guidance + EU AI Act risk classification | `npx skills add datht-work/safeai-global-agent` → select `safeai-gdpr-expert` |
-| **[SafeAI HIPAA Expert](safeai-hipaa-expert/SKILL.md)** | HealthTech products — HIPAA safeguards, FDA SaMD classification, PHI handling | `npx skills add datht-work/safeai-global-agent` → select `safeai-hipaa-expert` |
-| **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | Payment/banking products — PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | `npx skills add datht-work/safeai-global-agent` → select `safeai-fintech-compliance` |
-| **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | Southeast Asian markets — VN, SG, TH, MY, ID, PH country deep-dives | `npx skills add datht-work/safeai-global-agent` → select `safeai-asean-data-protection` |
-| **[SafeAI US State Privacy Expert](safeai-us-privacy-expert/SKILL.md)** | Fragmented US state laws — CCPA/CPRA, CPA, VCDPA, GPC | `npx skills add datht-work/safeai-global-agent` → select `safeai-us-privacy-expert` |
-| **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | Products for minors — COPPA, FERPA, AADC, Age Gating | `npx skills add datht-work/safeai-global-agent` → select `safeai-edtech-compliance` |
-| **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | AI governance — NIST AI RMF, Bias Testing, Human-in-the-Loop | `npx skills add datht-work/safeai-global-agent` → select `safeai-ai-ethics-expert` |
+| **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | EU products needing deep GDPR Art-by-Art guidance + EU AI Act risk classification | `npx skills add datht-work/safeai-global-agent` → select `safeai-gdpr-expert` |
+| **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HealthTech products — HIPAA safeguards, FDA SaMD classification, PHI handling | `npx skills add datht-work/safeai-global-agent` → select `safeai-hipaa-expert` |
+| **[SafeAI FinTech Compliance](skills/safeai-fintech-compliance/SKILL.md)** | Payment/banking products — PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | `npx skills add datht-work/safeai-global-agent` → select `safeai-fintech-compliance` |
+| **[SafeAI ASEAN Data Protection](skills/safeai-asean-data-protection/SKILL.md)** | Southeast Asian markets — VN, SG, TH, MY, ID, PH country deep-dives | `npx skills add datht-work/safeai-global-agent` → select `safeai-asean-data-protection` |
+| **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | Fragmented US state laws — CCPA/CPRA, CPA, VCDPA, GPC | `npx skills add datht-work/safeai-global-agent` → select `safeai-us-privacy-expert` |
+| **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | Products for minors — COPPA, FERPA, AADC, Age Gating | `npx skills add datht-work/safeai-global-agent` → select `safeai-edtech-compliance` |
+| **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | AI governance — NIST AI RMF, Bias Testing, Human-in-the-Loop | `npx skills add datht-work/safeai-global-agent` → select `safeai-ai-ethics-expert` |
 
 > **Workflow:** Start with this **Global PRD Agent** for initial compliance assessment → use domain-specific skills for detailed implementation.
 
@@ -355,7 +369,8 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
-| **v3.0.0** | 2026-03-11 | Phase 3 Core System Architecture: Introduced Modular Knowledge Engine with a Document Store (`knowledge/`). Refactored SKILL.md to extract static law tables into dynamic lookup files. |
+| **v3.1.0** | 2026-03-12 | Scoring Ecosystem: Introduced SafeAI-Global Score (0-100) assessing Privacy, Security, Transparency |
+| **v3.0.0** | 2026-03-11 | Core System Architecture: Introduced Modular Knowledge Engine with a Document Store (`knowledge/`). Refactored SKILL.md to extract static law tables into dynamic lookup files. |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v2.4.0** | 2026-03-09 | `/template` command, Compliance Visualizer (annotated Mermaid diagrams) |
 | **v2.3.0** | 2026-03-08 | Added US Privacy, EdTech/Child Privacy, and AI Ethics spoke skills |
@@ -368,4 +383,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-*Powered by SafeAI-Global Team · Version 3.0.0 · March 2026*
+*Powered by SafeAI-Global Team · Version 3.1.0 · March 2026*

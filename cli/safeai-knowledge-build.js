@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * SafeAI RAG Builder
+ * SafeAI Knowledge Engine Builder
  * 
  * Compiles the `knowledge/` directory into a single JSON file
- * for teams using localized RAG setups or custom vector databases.
+ * for teams using localized Knowledge Engine setups or custom vector databases.
  */
 
 const fs = require('fs');

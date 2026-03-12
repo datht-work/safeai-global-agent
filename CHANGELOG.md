@@ -10,6 +10,16 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v3.1.0] — 2026-03-12
+
+### safeai-global-prd-agent `v3.1.0` (Scoring Ecosystem)
+
+- **SafeAI-Global Score**: Introduced a new scoring system (0-100) that evaluates PRDs based on Privacy (40%), Security (40%), and Transparency (20%).
+- Provides a clear readout of the score alongside the SafeAI Compliance Badge.
+- Automatically flags the top reasons for point deductions to guide PMs on immediate remediation steps.
+
+---
+
 ## [v3.0.0] — 2026-03-11
 
 ### safeai-global-prd-agent `v3.0.0`
@@ -20,7 +30,7 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
   - **US**: Added SEC Cybersecurity Disclosure Rules.
   - **Global**: Added Application Security & Supply Chain mandates (SBOM, Secure by Design, Zero Trust Architecture).
 - **Improved Context Efficiency**: Agent now searches and retrieves rules as needed.
-- Added `/cli/safeai-rag-build.js` compiler script.
+- Added `/cli/safeai-knowledge-build.js` compiler script.
 
 ---
 
