@@ -135,3 +135,18 @@ The CLI tool scans your project documentation locally. It checks for mandatory c
 > 🤖 **Agent Integration (Cursor, Claude, Antigravity):**
 > If you are using an Agentic IDE or CLI-enabled AI, you can simply ask the agent to run the scan for you:
 > *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
+
+---
+
+## 👤 Task 9: Inject Personal/Custom Rules (v3.2.0)
+
+**Use Case:** Your team has specific internal standards (e.g., *"All APIs must use OAuth2"*) or you have unique project constraints that aren't part of global laws.
+
+**How to Trigger:**
+Use the command `/inject-policy [Rule Name]: [Content]`.
+
+> **Example Prompt:**
+> *"/inject-policy AuthStandard: Every user-facing API must implement OAuth 2.0 with PKCE."*
+
+**What Happens:**  
+The agent stores this rule in `knowledge/custom/`. From now on, every PRD generated will treat this rule as **highest priority**. If a global law (like GDPR) and your Custom Rule both apply, the agent merges them. If they conflict, your rule wins (marked as a `⚠️ CUSTOM OVERRIDE`).

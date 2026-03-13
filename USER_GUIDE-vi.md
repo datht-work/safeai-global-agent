@@ -135,3 +135,18 @@ Công cụ CLI sẽ quét toàn bộ tài liệu trong dự án của bạn ở 
 > 🤖 **Tích hợp Agent Nội bộ (Cursor, Claude, Antigravity):**
 > Nếu bạn đang dùng một Agentic IDE có cấp quyền gõ lệnh Terminal (như Antigravity hoặc Cursor), bạn có thể nhờ Agent tự động quét luôn toàn bộ dự án đang mở bằng prompt:
 > *"Hãy chạy script `cli/safeai-lint.js` trên toàn bộ dự án này, sau đó đọc log và tự động sửa các lỗi tuân thủ (ví dụ: thiếu mục bảo mật, thiếu chuẩn mã hoá) mà linter báo về."*
+
+---
+
+## 👤 Tác vụ 9: Nạp Quy định Cá nhân / Tùy chỉnh (v3.2.0)
+
+**Khi nào dùng:** Team bạn có những tiêu chuẩn nội bộ riêng (ví dụ: *"Mọi API phải dùng OAuth2"*) hoặc bạn có những ràng buộc dự án đặc thù không nằm trong luật quốc tế.
+
+**Cách kích hoạt:**
+Sử dụng lệnh `/inject-policy [Tên luật]: [Nội dung]`.
+
+> **Ví dụ Prompt:**
+> *"/inject-policy AuthStandard: Mọi API phía người dùng phải triển khai OAuth 2.0 kèm theo PKCE."*
+
+**Điều gì xảy ra:**  
+Agent lưu quy tắc này vào thư mục `knowledge/custom/`. Từ thời điểm này, mọi PRD được tạo ra sẽ coi quy tắc này là **ưu tiên cao nhất**. Nếu luật quốc tế (như GDPR) và Quy tắc riêng của bạn cùng áp dụng, Agent sẽ kết hợp cả hai. Nếu có xung đột, quy tắc của bạn sẽ thắng (được đánh dấu là `⚠️ CUSTOM OVERRIDE`).

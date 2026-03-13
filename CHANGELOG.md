@@ -10,6 +10,16 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [v3.2.0] — 2026-03-13
+
+### safeai-global-prd-agent `v3.2.0` (Personalized Compliance)
+
+- **Custom Policy Injection**: Added the `/inject-policy` command, allowing users to define their own project-specific or team-specific rules.
+- **Hybrid Compliance Engine**: The agent now automatically merges global regulations with personal/custom rules, giving priority to user-defined overrides.
+- **Knowledge Base Expansion**: Added support for the `knowledge/custom/` directory for persistent custom rules.
+
+---
+
 ## [v3.1.0] — 2026-03-12
 
 ### safeai-global-prd-agent `v3.1.0` (Scoring Ecosystem)

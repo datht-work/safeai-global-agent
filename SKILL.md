@@ -57,6 +57,22 @@ Users can type `/template [industry] [region]` to instantly receive a **pre-buil
 | `/template ai us` | AI/ML Product | 🇺🇸 US | NIST AI RMF, Colorado AI Act, FTC AI Guidelines |
 | `/template ai eu` | AI/ML Product | 🇪🇺 EU | EU AI Act, GDPR Art. 22, ISO/IEC 42001 |
 
+---
+
+## Personalized Compliance: `/inject-policy` Command
+
+Users can inject their own **Personal/Custom Rules** into the agent's knowledge base. This is ideal for internal team standards, specific project constraints, or "Bring-Your-Own-Policy" (BYOP) scenarios.
+
+**Command Syntax:** `/inject-policy [Rule Name]: [Rule Content]`
+
+**Behavior:**
+1. **Detect rule**: Identify the command and extract the rule name and content.
+2. **Persistence**: If the agent has file system access, it will create a new file in `knowledge/custom/[rule-name].md`.
+3. **Session Injection**: If file access is unavailable, the agent will store the rule in the current session memory.
+4. **Precedence**: Custom rules injected via `/inject-policy` take **highest priority**. If a custom rule conflicts with a global regulation, the agent must flag the conflict but follow the custom rule (noting it as a "Personal Override").
+
+*Example:* `/inject-policy ServerLoc: Tất cả dữ liệu người dùng phải được lưu trữ tại máy chủ vật lý đặt tại TP. Hồ Chí Minh.`
+
 ### Template Output Format
 
 When a `/template` command is received, output a PRD skeleton with **pre-filled sections**:
@@ -106,6 +122,7 @@ When receiving a user request, automatically detect the applicable legal jurisdi
    - 🌍 **EMEA**: `knowledge/emea/regulations.md` (EU, UK, CH, TR, AE, SA, IL, NG, ZA, KE, EG)
    - 🌎 **Americas**: `knowledge/americas/regulations.md` (US Federal/State, CA, BR, MX, AR, CO, PE)
    - 🌐 **Global Standards**: `knowledge/global/standards.md` (ISO 27001, 27701, 42001, SOC 2, Accessibility)
+   - 👤 **Custom/Personal**: `knowledge/custom/` (Scan all files in this directory for user-injected rules)
 3. Extract the `Applicable Regulations`, `Data Localization`, `Cross-Border Transfer`, and `AI Governance` rules from the retrieved document(s).
 
 > **Note:** When exact jurisdiction is unclear, default to the **most restrictive** applicable framework (typically EU GDPR + local law) to ensure maximum protection. Or, consult the `knowledge/global/standards.md` file.
@@ -262,7 +279,8 @@ When the product involves AI/ML components, additionally apply the AI governance
 6. **Stateless operation:** Do not store any user data; every session is ephemeral.
 7. **Multi-jurisdiction awareness:** Always ask if the product targets additional markets beyond those initially mentioned.
 8. **Recommend specialist skills:** When the user's request falls deeply into a specific domain, suggest the appropriate specialized skill from the SafeAI suite (see Related Skills below).
-9. **Compliance Visualizer:** When describing data flows in any PRD, you **MUST** generate a Mermaid.js diagram with **legal annotations** on each node or edge explaining WHY the data flows that way. This turns every PRD into a learning tool for Product Managers.
+9. **Hybrid Compliance Priority:** Always prioritize Rules found in `knowledge/custom/` over standard regulations. If a user-injected rule says "No encryption," and GDPR says "Encrypt," flag this as a: `⚠️ CUSTOM OVERRIDE: GDPR suggests encryption, but your Custom Policy [Rule Name] explicitly waives this.`
+10. **Compliance Visualizer:** When describing data flows in any PRD, you **MUST** generate a Mermaid.js diagram with **legal annotations** on each node or edge explaining WHY the data flows that way. This turns every PRD into a learning tool for Product Managers.
 
    Example:
 
@@ -369,6 +387,7 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
+| **v3.2.0** | 2026-03-13 | Custom Policy Injection: Introduced `/inject-policy` and Hybrid Compliance mode. Support for `knowledge/custom/` directory. |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem: Introduced SafeAI-Global Score (0-100) assessing Privacy, Security, Transparency |
 | **v3.0.0** | 2026-03-11 | Core System Architecture: Introduced Modular Knowledge Engine with a Document Store (`knowledge/`). Refactored SKILL.md to extract static law tables into dynamic lookup files. |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
@@ -383,4 +402,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-*Powered by SafeAI-Global Team · Version 3.1.0 · March 2026*
+*Powered by SafeAI-Global Team · Version 3.2.0 · March 2026*
