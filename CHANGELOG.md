@@ -8,13 +8,24 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
+## [Unreleased]
+
+## [4.0.0] - 2026-03-14
+
+### Added
+
+- **Agile Engine**: Added `/safeai export jira` and `/safeai export confluence` output formats with Gherkin BDD Acceptance Criteria.
+- **Multilingual Support**: Auto-detects prompt language and allows manual override via `/safeai lang [Language]`. Legal terms are preserved in English parentheses.
+- **Full Ecosystem Sync**: Synchronized the Advanced Engine Delivery capabilities (Agile, Multilingual, Custom Policy) across all 7 Spoke Skills (`safeai-gdpr-expert`, `safeai-fintech-compliance`, etc.). All Spoke Skills bumped to v4.0.0.
+- Synchronized version tags across `README.md`, `README-vi.md`, and `USER_GUIDE` (En/Vi).
+
 ---
 
 ## [v3.2.0] — 2026-03-13
 
 ### safeai-global-prd-agent `v3.2.0` (Personalized Compliance)
 
-- **Custom Policy Injection**: Added the `/inject-policy` command, allowing users to define their own project-specific or team-specific rules.
+- **Custom Policy Injection**: Added the `/safeai inject` command, allowing users to define their own project-specific or team-specific rules.
 - **Hybrid Compliance Engine**: The agent now automatically merges global regulations with personal/custom rules, giving priority to user-defined overrides.
 - **Knowledge Base Expansion**: Added support for the `knowledge/custom/` directory for persistent custom rules.
 

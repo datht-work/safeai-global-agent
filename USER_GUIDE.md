@@ -1,152 +1,103 @@
-# SafeAI-Global PRD Agent: Actionable Task Guide
+# SafeAI-Global PRD Agent: Actionable User Guide
 
-This guide provides focused, step-by-step examples of the core tasks you can accomplish with the SafeAI-Global Agent. Whether you are building a quick MVP or complex enterprise software, this guide will help you trigger the right behavior.
-
----
-
-## 🚀 Task 1: Generate a Fast MVP PRD (No legal overhead)
-
-**Use Case:** You are building an internal tool, a hackathon project, or an early MVP where speed is the priority—you don't need a heavy compliance audit yet.
-
-**How to Trigger:**
-Include **"Standard PRD"** or **"skip compliance"** in your prompt.
-
-> **Example Prompt:**
-> *"Write a Standard PRD for an internal time-tracking web app for our Dev team. Skip all compliance scanning."*
-
-**What Happens:**  
-The agent bypasses the legal/security engine and focuses purely on User Stories, MVP Features, UX/UI requirements, and Technical Architecture.
+This guide provides a focused, step-by-step reference for the SafeAI-Global Agent. Whether you are building a quick MVP or complex enterprise software, these commands will help you trigger the right behavior instantly.
 
 ---
 
-## 🛡️ Task 2: Auto-Detect Market Compliance (Smart Mode)
+## ⚡ Quick Command Cheat Sheet
 
-**Use Case:** You are launching a product targeted at a specific country (e.g., Vietnam, EU, USA) and need to ensure basic local laws are met without over-engineering.
+| Command | Action / Behavior |
+|---|---|
+| *(Natural text)* | **Auto-Detect Market Compliance**: Mention a country (e.g. "Vietnam") and the agent automatically applies targeted local laws. |
+| **"Standard PRD"** | **Fast MVP**: Skips legal compliance scanning for fast-paced MVP generation. |
+| **"Full Audit"** | **Enterprise Audit**: Runs an aggressive, fine-tooth-comb compliance check for highly sensitive data (ISO 27001/SOC 2). |
+| `/template [industry] [region]` | **Industry Skeleton**: Spits out a pre-built compliant skeleton (e.g. `/template fintech eu`). |
+| `/safeai lang [Language]` | **Multilingual**: Translates PRD but keeps English legal terms in parentheses (e.g. `/safeai lang japanese`). |
+| `/safeai export jira` | **Agile Export**: Slices PRD into Epics/User Stories + Gherkin BDD Acceptance Criteria. |
+| `/safeai export confluence`| **Wiki Export**: Formats the PRD into Wiki-friendly tables and layout. |
+| `/safeai inject [Rule]: [Text]`| **Custom Policy**: Forces the agent to prioritize your internal company rules natively across PRDs. |
 
-**How to Trigger:**
-Just mention the **target country/region** naturally in your prompt. This is the default behavior.
+---
 
-> **Example Prompt:**
+## 🟢 1. Core Capabilities (Natural Prompts)
+
+These features work automatically based on conversational context.
+
+### Auto-Detect Market Compliance (Smart Mode)
+
+**Use Case:** Launching a product targeted at a specific country (e.g., Vietnam, EU, USA).
+**How to Trigger:** Just mention the target country/region naturally.
 > *"Write a PRD for a ride-hailing mobile app. Target market is **Vietnam**."*
 
-**What Happens:**  
-The agent automatically detects the region, retrieves the appropriate local laws (e.g., Vietnam PDPD Decree 13, Cybersecurity Law), and embeds targeted security constraints into the PRD.
+**What Happens:** The agent automatically embeds local laws (e.g., Vietnam PDPD Decree 13) into the PRD constraints.
+
+### Fast MVP Generation (No legal overhead)
+
+**Use Case:** Internal tools, hackathons, or early MVPs where speed is the priority.
+**How to Trigger:** Include **"Standard PRD"** or **"skip compliance"** in your prompt.
+**What Happens:** Bypasses the legal safety engine and focuses purely on User Stories and Technical Architecture.
+
+### Deep-Dive Enterprise Audit (Full Audit)
+
+**Use Case:** Preparing for enterprise software deployment handling sensitive data (PHI/PII).
+**How to Trigger:** Include the keyword **"Full Audit"** in your prompt.
+> *"Write a full audit PRD for an AI medical triaging app."*
+
+**What Happens:** Runs aggressive multi-jurisdiction checks (GDPR + HIPAA + ISO 42001) mapping all edge-cases.
 
 ---
 
-## ⚡ Task 3: Use Pre-built Industry Templates
+## 🟡 2. Advanced Slash Commands (`/safeai`)
 
-**Use Case:** You are starting from scratch in a highly regulated industry (FinTech, HealthTech, EdTech) and want a compliant skeleton instantly.
+Use these explicit commands for precision control over the agent's output.
 
-**How to Trigger:**
-Type `/template [industry] [region]`.
+### Pre-built Industry Templates
 
-> **Example Prompts:**
->
-> - `/template fintech eu` (For payment gateways in Europe)
-> - `/template healthcare us` (For medical apps in the US)
-> - `/template social vn` (For social apps in Vietnam)
-> - `/template ai global` (For AI/ML products globally)
+**Use Case:** Starting from scratch in a highly regulated industry.
+**How to Trigger:** `/template [industry] [region]`
+> `/template fintech eu` or `/template healthcare us`
 
-**What Happens:**  
-The agent ignores normal conversation and immediately spits out a full PRD skeleton tailored to that industry, pre-filled with the necessary ISO standards, data flow placeholders, and legal guardrails.
+**What Happens:** Immediately outputs a full PRD skeleton pre-filled with the necessary ISO standards and legal guardrails.
 
----
+### Export to Agile Tickets
 
-## 🔒 Task 4: Run a Deep-Dive Enterprise Audit (Full Audit)
+**Use Case:** Handing over a generated PRD to engineering without manual copy-pasting.
+**How to Trigger:** `/safeai export jira` or `/safeai export confluence`
+**What Happens:** Strips conversational fluff and outputs pure, structured blocks tailored for Agile software. Security constraints are embedded deep inside the ticket Acceptance Criteria.
 
-**Use Case:** You are preparing for enterprise software deployment, dealing with highly sensitive data (PHI/PII), or actively pushing for ISO 27001/SOC 2 certifications.
+### Multilingual PRDs
 
-**How to Trigger:**
-Explicitly ask for a **"Full Compliance Audit"** or mention **"ISO/SOC2"**.
+**Use Case:** Working with offshore teams that require PRDs in specific languages.
+**How to Trigger:** `/safeai lang [Language]`
+> `/safeai lang japanese: Generate a PRD for a telehealth app.`
 
-> **Example Prompt:**
-> *"I need a **Full Compliance Audit** PRD for a B2B SaaS payroll platform in Singapore. Include ISO 27001 mapping and accessibility standards."*
+**What Happens:** Translates the PRD while preserving the strict legal meaning intact by keeping English legal phrases in parentheses.
 
-**What Happens:**  
-The agent activates *all* available compliance frameworks. It cross-references local laws (SG PDPA) with global standards (ISO/IEC 27001, SOC 2, WCAG 2.2) and generates a highly detailed, strict engineering checklist.
+### Inject Personal/Custom Rules
 
----
+**Use Case:** Enforcing specific internal team standards inside PRDs.
+**How to Trigger:** `/safeai inject [Rule Name]: [Content]`
+> `/safeai inject AuthStandard: Every user-facing API must implement OAuth 2.0 with PKCE.`
 
-## 💯 Task 5: Interpret Your "SafeAI-Global Score"
-
-**Use Case:** You have generated a PRD and need to present the risk level to your engineering or legal stakeholders.
-
-**How to Trigger:**
-This happens automatically in every compliant PRD under **Section 4.2**.
-
-**How to Interpret:**
-
-- Look at the 0–100 score in the generated document.
-- **If Score < 80:** The agent will list the top 2 reasons points were deducted (e.g., *"No explicit end-to-end encryption defined"* or *"Missing age-gating for users under 16"*).
-- **Your Action:** Add the missing features to your spec until the agent upgrades your score to 🟢 (Ready for Development).
+**What Happens:** Stores the rule in memory, treating it as highest priority moving forward (`⚠️ CUSTOM OVERRIDE`).
 
 ---
 
-## 🔍 Task 6: Ask Specific Legal/Security Questions
+## 🔴 3. Engineering & CI/CD Integration
 
-**Use Case:** You already have a PRD and just want to ask the agent a specific question about data residency or a new law.
+### Run the CLI Linter
 
+**Use Case:** You are a developer who wants to plug SafeAI-Global's compliance brain directly into your CI/CD pipeline (GitHub Actions, GitLab CI).
 **How to Trigger:**
-Just ask directly as if talking to a Legal/Security engineer.
 
-> **Example Prompts:**
->
-> - *"Does the EU AI Act apply to a chatbot that just summarizes user documents?"*
-> - *"If I use AWS ap-southeast-1 (Singapore) to store Vietnamese user data, am I violating Decree 53?"*
+```bash
+npx safeai-lint .
+```
 
-**What Happens:**  
-The agent acts as a knowledge-base Q&A, directly answering your question with citations from its Core Knowledge Engine without generating an entire PRD.
+**What Happens:** The CLI tool scans your project documentation locally. It fails the CI build if critical safety requirements (Security, Encryption, Data Flow) are missing.
+
+> 🤖 **Agentic IDE Integration (Cursor, Claude, Antigravity):**
+> You can ask your IDE agent: *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
 
 ---
-
-## 📄 Task 7: Review an Existing PRD or Document
-
-**Use Case:** You already have a drafted PRD, architecture document, or confluence page and need a compliance expert to review it before approval.
-
-**How to Trigger:**
-Paste your existing document into the prompt or upload the file, and ask for a compliance review.
-
-> **Example Prompt:**
->
-> *"Here is the PRD for our new messaging feature: [paste context]. Please run a Smart Compliance review for the EU market, highlight missing continuous-requirements, and give me a SafeAI-Global Score."*
-
-**What Happens:**  
-The agent will not write a new PRD from scratch. Instead, it will analyze your existing text, score it against Privacy, Security, and Transparency pillars, and list the exact gaps you need to fix.
-
----
-
-## 📁 Task 8: Scan an Entire Project or Documentation (CI/CD)
-
-**Use Case:** Your engineering team wants to automatically check if their markdown documentation or codebase meets compliance standards during the CI/CD pipeline.
-
-**How to Trigger:**
-Use the included CLI linter `safeai-lint` on your project repository.
-
-> **Example Command:**
->
-> ```bash
-> node cli/safeai-lint.js docs/**/*.md
-> ```
-
-**What Happens:**  
-The CLI tool scans your project documentation locally. It checks for mandatory compliance sections (Security, Encryption, Data Flow diagrams, and Audit logging) and fails the CI build if critical safety requirements are missing.
-
-> 🤖 **Agent Integration (Cursor, Claude, Antigravity):**
-> If you are using an Agentic IDE or CLI-enabled AI, you can simply ask the agent to run the scan for you:
-> *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
-
----
-
-## 👤 Task 9: Inject Personal/Custom Rules (v3.2.0)
-
-**Use Case:** Your team has specific internal standards (e.g., *"All APIs must use OAuth2"*) or you have unique project constraints that aren't part of global laws.
-
-**How to Trigger:**
-Use the command `/inject-policy [Rule Name]: [Content]`.
-
-> **Example Prompt:**
-> *"/inject-policy AuthStandard: Every user-facing API must implement OAuth 2.0 with PKCE."*
-
-**What Happens:**  
-The agent stores this rule in `knowledge/custom/`. From now on, every PRD generated will treat this rule as **highest priority**. If a global law (like GDPR) and your Custom Rule both apply, the agent merges them. If they conflict, your rule wins (marked as a `⚠️ CUSTOM OVERRIDE`).
+<small>Powered by SafeAI-Global Team · Version 4.0.0 · March 2026</small>

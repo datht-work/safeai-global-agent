@@ -2,13 +2,13 @@
 
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
-
+>
 > **8 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-3.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -17,6 +17,7 @@
 Việc xây dựng phần mềm tuân thủ hệ thống pháp lý toàn cầu thường chậm chạp, tốn kém và nhiều rủi ro. **SafeAI-Global Compliance Suite** hoạt động như một chuyên gia Pháp lý & Bảo mật nhúng (embedded co-pilot), được thiết kế đặc biệt dành cho Product Manager.
 
 - **⚡ Tăng tốc Time-to-Market**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút thay vì chờ đợi hàng tuần để bộ phận pháp chế rà soát.
+- **🔄 Sẵn sàng cho Agile (v4.0)**: Lệnh `/safeai export jira` và `/safeai export confluence` tự động bóc tách PRD thành Epics, User Stories tiêu chuẩn, đi thẳng vào Backlog.
 - **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và vạch định rủi ro pháp lý (GDPR, CCPA, SEC, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code.
 - **💯 Chấm điểm SafeAI-Global Score**: Đánh giá nhanh mức độ sẵn sàng tuân thủ của PRD với điểm số 0-100 dựa trên 3 trụ cột: Quyền riêng tư, Bảo mật và Minh bạch.
 - **🏗️ Thu hẹp Khoảng cách**: Dịch các thuật ngữ pháp lý khô khan thành các Checklist kỹ thuật hành động được, biểu đồ luồng dữ liệu Mermaid, và các tiêu chuẩn bảo mật ISO/SOC2.
@@ -142,7 +143,8 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
-| **v3.2.0** | 2026-03-13 | Custom Policy Injection — Giới thiệu lệnh `/inject-policy` và chế độ Hybrid Compliance |
+| **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Thêm lệnh xuất form `/safeai export jira` và `/safeai export confluence`. Tự động nhận diện chủ đích Đa ngôn ngữ và lệnh `/safeai lang`. |
+| **v3.2.0** | 2026-03-13 | Custom Policy Injection — Giới thiệu lệnh `/safeai inject` và chế độ Hybrid Compliance |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem — Ra mắt tính năng tự động chấm điểm SafeAI-Global Score (0-100) cho PRD |
 | **v3.0.0** | 2026-03-11 | Kiến trúc Modular Knowledge Engine: Tách toàn bộ luật cứng tĩnh thành kho dữ liệu có thể tìm kiếm trong thư mục `knowledge/` |
 | **v2.5.0** | 2026-03-10 | Thêm luật Digital ECA của Brazil (Age Signals API, cấm Loot Box) |
@@ -177,7 +179,7 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.2.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.0.0 · Tháng 3/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

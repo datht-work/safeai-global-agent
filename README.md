@@ -2,13 +2,13 @@
 
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
-
+>
 > **8 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-3.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -17,6 +17,7 @@
 Building globally compliant software is slow, expensive, and legally risky. The **SafeAI-Global Compliance Suite** acts as your embedded Legal & Security co-pilot, designed specifically for Product Managers.
 
 - **⚡ Accelerate Time-to-Market**: Generate engineering-ready, compliant PRDs in minutes instead of waiting weeks for external legal reviews.
+- **🔄 Agile Ready (v4.0)**: Use `/safeai export jira` and `/safeai export confluence` commands to instantly transform PRDs into Epics, User Stories, and Wiki docs. Total friction removal.
 - **🛡️ De-Risk Product Launches**: Automatically identify and mitigate regulatory risks (GDPR, CCPA, SEC, DORA) before a single line of code is written.
 - **💯 SafeAI-Global Score**: Instantly gauge your PRD's compliance readiness with a 0-100 score based on Privacy, Security, and Transparency pillars.
 - **🏗️ Bridge the Gap**: Translate dense legal jargon into actionable engineering checklists, Mermaid data flow diagrams, and ISO/SOC2 engineering controls.
@@ -202,6 +203,8 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output formats. Full multilingual prompt detection and `/safeai lang` manual override. |
+| **v3.2.0** | 2026-03-13 | Custom Policy Injection — Introduced `/safeai inject` command and Hybrid Compliance mode |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem — Introduced the SafeAI-Global Score (0-100) evaluating Privacy, Security, and Transparency |
 | **v3.0.0** | 2026-03-11 | Core Modular Knowledge Engine: Extracted all static regulations into a searchable `knowledge/` Document Store |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
@@ -235,7 +238,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v3.2.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.0.0 · March 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

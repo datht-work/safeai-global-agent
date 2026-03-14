@@ -59,19 +59,34 @@ Users can type `/template [industry] [region]` to instantly receive a **pre-buil
 
 ---
 
-## Personalized Compliance: `/inject-policy` Command
+## Agile Delivery: `/safeai export jira` & `/safeai export confluence` (v4.0.0)
+
+Turn any generated PRD into actionable engineering tickets or Confluence wiki pages.
+
+**Command Syntax:**
+
+- `/safeai export jira`: Converts the current PRD into structured Jira `Epics`, `Tasks`, and `User Stories`. Includes BDD/Gherkin syntax (`Given/When/Then`) for Acceptance Criteria.
+- `/safeai export confluence`: Formats the PRD into a corporate Wiki-friendly layout with structured tables, info-panels, and expand/collapse sections.
+
+**Behavior:**
+When these commands are invoked, do not regenerate the entire PRD. Output *only* the specific requested format, ensuring all compliance and security constraints from the PRD are strictly preserved in the tickets or wiki structure.
+
+---
+
+## Personalized Compliance: `/safeai inject` Command
 
 Users can inject their own **Personal/Custom Rules** into the agent's knowledge base. This is ideal for internal team standards, specific project constraints, or "Bring-Your-Own-Policy" (BYOP) scenarios.
 
-**Command Syntax:** `/inject-policy [Rule Name]: [Rule Content]`
+**Command Syntax:** `/safeai inject [Rule Name]: [Rule Content]`
 
 **Behavior:**
+
 1. **Detect rule**: Identify the command and extract the rule name and content.
 2. **Persistence**: If the agent has file system access, it will create a new file in `knowledge/custom/[rule-name].md`.
 3. **Session Injection**: If file access is unavailable, the agent will store the rule in the current session memory.
-4. **Precedence**: Custom rules injected via `/inject-policy` take **highest priority**. If a custom rule conflicts with a global regulation, the agent must flag the conflict but follow the custom rule (noting it as a "Personal Override").
+4. **Precedence**: Custom rules injected via `/safeai inject` take **highest priority**. If a custom rule conflicts with a global regulation, the agent must flag the conflict but follow the custom rule (noting it as a "Personal Override").
 
-*Example:* `/inject-policy ServerLoc: Tất cả dữ liệu người dùng phải được lưu trữ tại máy chủ vật lý đặt tại TP. Hồ Chí Minh.`
+*Example:* `/safeai inject ServerLoc: Tất cả dữ liệu người dùng phải được lưu trữ tại máy chủ vật lý đặt tại TP. Hồ Chí Minh.`
 
 ### Template Output Format
 
@@ -280,7 +295,11 @@ When the product involves AI/ML components, additionally apply the AI governance
 7. **Multi-jurisdiction awareness:** Always ask if the product targets additional markets beyond those initially mentioned.
 8. **Recommend specialist skills:** When the user's request falls deeply into a specific domain, suggest the appropriate specialized skill from the SafeAI suite (see Related Skills below).
 9. **Hybrid Compliance Priority:** Always prioritize Rules found in `knowledge/custom/` over standard regulations. If a user-injected rule says "No encryption," and GDPR says "Encrypt," flag this as a: `⚠️ CUSTOM OVERRIDE: GDPR suggests encryption, but your Custom Policy [Rule Name] explicitly waives this.`
-10. **Compliance Visualizer:** When describing data flows in any PRD, you **MUST** generate a Mermaid.js diagram with **legal annotations** on each node or edge explaining WHY the data flows that way. This turns every PRD into a learning tool for Product Managers.
+10. **Multilingual Support (v4.0.0):** You must adapt to the user's language smoothly.
+    - If the user uses the `/safeai lang [Language]` command (e.g. `/safeai lang japanese`), output the entire PRD in that language.
+    - If the user's prompt is in a specific language (e.g. "Hãy viết PRD bằng Tiếng Việt"), automatically detect and respond in that language.
+    - **CRITICAL:** When translating, retain the strict legal meaning of compliance terms. If a legal term lacks a perfect translation, include the original English term in parentheses, e.g., `Chấp thuận rõ ràng (Explicit Consent)`.
+11. **Compliance Visualizer:** When describing data flows in any PRD, you **MUST** generate a Mermaid.js diagram with **legal annotations** on each node or edge explaining WHY the data flows that way. This turns every PRD into a learning tool for Product Managers.
 
    Example:
 
@@ -299,10 +318,11 @@ When the product involves AI/ML components, additionally apply the AI governance
    ```
 
    Rules for Compliance Visualizer:
-   - Always annotate **storage nodes** with data residency laws (e.g., Decree 53, PIPL Art. 40).
-   - Always annotate **cross-border edges** with transfer mechanism (e.g., SCCs, BCRs, Consent).
-   - Always annotate **consent collection points** with the lawful basis (e.g., GDPR Art. 6(1)(a)).
-   - Use `Note right of` / `Note left of` Mermaid syntax for annotations.
+
+- Always annotate **storage nodes** with data residency laws (e.g., Decree 53, PIPL Art. 40).
+- Always annotate **cross-border edges** with transfer mechanism (e.g., SCCs, BCRs, Consent).
+- Always annotate **consent collection points** with the lawful basis (e.g., GDPR Art. 6(1)(a)).
+- Use `Note right of` / `Note left of` Mermaid syntax for annotations.
 
 ---
 
@@ -387,7 +407,8 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
-| **v3.2.0** | 2026-03-13 | Custom Policy Injection: Introduced `/inject-policy` and Hybrid Compliance mode. Support for `knowledge/custom/` directory. |
+| **v4.0.0** | 2026-03-14 | Agile & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output commands. Full detection and syntax support for multiple languages including `/safeai lang [language]` override. |
+| **v3.2.0** | 2026-03-13 | Custom Policy Injection: Introduced `/safeai inject` and Hybrid Compliance mode. Support for `knowledge/custom/` directory. |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem: Introduced SafeAI-Global Score (0-100) assessing Privacy, Security, Transparency |
 | **v3.0.0** | 2026-03-11 | Core System Architecture: Introduced Modular Knowledge Engine with a Document Store (`knowledge/`). Refactored SKILL.md to extract static law tables into dynamic lookup files. |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
@@ -402,4 +423,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-*Powered by SafeAI-Global Team · Version 3.2.0 · March 2026*
+<small>Powered by SafeAI-Global Team · Version 4.0.0 · March 2026</small>
