@@ -10,6 +10,20 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ## [Unreleased]
 
+## [4.1.0] - 2026-03-14
+
+### Added
+
+- **Policy-as-Code (DevSecOps)**: Added `/safeai export opa` (Rego) and `/safeai export terraform` (HCL) out-of-the-box infrastructure commands across all 8 skill files (1 Hub, 7 Spokes).
+- **Registry Enhancement**: Regenerated `skills-lock.json` mapping out the 7 Sub-paths skills out of the root directory for proper `skills.sh` visibility.
+
+### Fixed
+
+- **Critical Security Warning (Snyk/Socket)**: Fully removed `raw.githubusercontent.com` fetch strings within instructions to prevent remote payload injection warnings (`W012`) during runtime execution.
+- **Git Lifecycle**: Addressed "First Seen Jan 1, 1970" issue by strictly releasing with GitHub Tags timestamp format.
+
+---
+
 ## [4.0.0] - 2026-03-14
 
 ### Added

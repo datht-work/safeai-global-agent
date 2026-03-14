@@ -73,6 +73,20 @@ When these commands are invoked, do not regenerate the entire PRD. Output *only*
 
 ---
 
+## DevSecOps Infrastructure: `/safeai export opa` & `/safeai export terraform` (v4.1.0)
+
+Turn your PRD compliance rules into code for Cloud and CI/CD pipelines.
+
+**Command Syntax:**
+
+- `/safeai export opa`: Translates PRD constraints into Open Policy Agent (OPA) `rego` language to automate CI/CD pipeline blocking.
+- `/safeai export terraform`: Generates Terraform (`main.tf`) blocks in HCL syntax for compliant cloud infrastructure (e.g., encryption defaults, localized storage mappings, access logs).
+
+**Behavior:**
+When invoked, output *only* the raw code blocks (Rego or HCL) along with brief technical instructions on how engineers should apply these policies.
+
+---
+
 ## Personalized Compliance: `/safeai inject` Command
 
 Users can inject their own **Personal/Custom Rules** into the agent's knowledge base. This is ideal for internal team standards, specific project constraints, or "Bring-Your-Own-Policy" (BYOP) scenarios.
@@ -381,15 +395,6 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 3. Copy the entire content
 4. Paste into your AI assistant's system prompt or custom instructions
 
-### Option 2: Reference by URL
-
-Use this prompt with any AI chat tool:
-
-```text
-Please read and follow the instructions at this URL as your system prompt:
-https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
-```
-
 ### Platform-Specific Setup
 
 | AI Tool | How to Use |
@@ -407,6 +412,7 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 | Version | Date | Changes |
 |---|---|---|
+| **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Security hotfixes. |
 | **v4.0.0** | 2026-03-14 | Agile & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output commands. Full detection and syntax support for multiple languages including `/safeai lang [language]` override. |
 | **v3.2.0** | 2026-03-13 | Custom Policy Injection: Introduced `/safeai inject` and Hybrid Compliance mode. Support for `knowledge/custom/` directory. |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem: Introduced SafeAI-Global Score (0-100) assessing Privacy, Security, Transparency |
@@ -423,4 +429,4 @@ https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/SKILL.md
 
 ---
 
-<small>Powered by SafeAI-Global Team · Version 4.0.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 4.1.0 · March 2026</small>

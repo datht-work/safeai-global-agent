@@ -204,9 +204,10 @@ npx skills add datht-work/safeai-global-agent
 
 ### Option 2: Copy-Paste into AI Tools
 
-1. Open [Raw SKILL.md](https://raw.githubusercontent.com/datht-work/safeai-global-agent/main/safeai-hipaa-expert/SKILL.md)
-2. Copy entire content
-3. Paste into your AI tool:
+1. Open [SKILL.md on GitHub](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md)
+2. Click **"Raw"** button to get plain text
+3. Copy the entire content
+4. Paste into your AI tool:
 
 | AI Tool | Where to Paste |
 |---|---|

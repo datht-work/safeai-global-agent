@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -143,6 +143,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v4.1.0** | 2026-03-14 | Tòa nhà hạ tầng DevSecOps: Thêm lệnh `/safeai export opa` và `/safeai export terraform`. Đặc tả An toàn bảo mật. |
 | **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Thêm lệnh xuất form `/safeai export jira` và `/safeai export confluence`. Tự động nhận diện chủ đích Đa ngôn ngữ và lệnh `/safeai lang`. |
 | **v3.2.0** | 2026-03-13 | Custom Policy Injection — Giới thiệu lệnh `/safeai inject` và chế độ Hybrid Compliance |
 | **v3.1.0** | 2026-03-12 | Scoring Ecosystem — Ra mắt tính năng tự động chấm điểm SafeAI-Global Score (0-100) cho PRD |
@@ -179,7 +180,7 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.0.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.1.0 · Tháng 3/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

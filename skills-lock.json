@@ -5,6 +5,41 @@
       "source": "datht-work/safeai-global-agent",
       "sourceType": "github",
       "computedHash": "181e0cf536170514369ef2a40c8d5d445309d43d5db08fdb93901a64549d1d43"
+    },
+    "SafeAI GDPR Expert": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-gdpr-expert",
+      "sourceType": "github"
+    },
+    "SafeAI HIPAA Expert": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-hipaa-expert",
+      "sourceType": "github"
+    },
+    "SafeAI FinTech Compliance": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-fintech-compliance",
+      "sourceType": "github"
+    },
+    "SafeAI ASEAN Data Protection": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-asean-data-protection",
+      "sourceType": "github"
+    },
+    "SafeAI US State Privacy Expert": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-us-privacy-expert",
+      "sourceType": "github"
+    },
+    "SafeAI EdTech & Child Privacy Expert": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-edtech-compliance",
+      "sourceType": "github"
+    },
+    "SafeAI Ethics & Risk Expert": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-ai-ethics-expert",
+      "sourceType": "github"
     }
   }
 }

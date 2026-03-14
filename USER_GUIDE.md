@@ -15,6 +15,8 @@ This guide provides a focused, step-by-step reference for the SafeAI-Global Agen
 | `/safeai lang [Language]` | **Multilingual**: Translates PRD but keeps English legal terms in parentheses (e.g. `/safeai lang japanese`). |
 | `/safeai export jira` | **Agile Export**: Slices PRD into Epics/User Stories + Gherkin BDD Acceptance Criteria. |
 | `/safeai export confluence`| **Wiki Export**: Formats the PRD into Wiki-friendly tables and layout. |
+| `/safeai export opa` | **Rego Policy**: Translates PRD rules into Open Policy Agent (OPA) code to block pipelines. |
+| `/safeai export terraform`| **HCL Config**: Generates Terraform snippet for compliant cloud infrastructure. |
 | `/safeai inject [Rule]: [Text]`| **Custom Policy**: Forces the agent to prioritize your internal company rules natively across PRDs. |
 
 ---
@@ -73,6 +75,12 @@ Use these explicit commands for precision control over the agent's output.
 
 **What Happens:** Translates the PRD while preserving the strict legal meaning intact by keeping English legal phrases in parentheses.
 
+### Policy-as-Code Export (DevSecOps)
+
+**Use Case:** Automating compliance enforcement in the CI/CD pipeline or Cloud deployments directly based on PRD constraints.
+**How to Trigger:** `/safeai export opa` or `/safeai export terraform`
+**What Happens:** Outputs raw `.rego` scripts for Open Policy Agent to test CI/CD configurations, or `main.tf` logic in HCL to stand up secure infrastructure resources (e.g., encryption toggles, data localized VPCs).
+
 ### Inject Personal/Custom Rules
 
 **Use Case:** Enforcing specific internal team standards inside PRDs.
@@ -100,4 +108,4 @@ npx safeai-lint .
 > You can ask your IDE agent: *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
 
 ---
-<small>Powered by SafeAI-Global Team · Version 4.0.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 4.1.0 · March 2026</small>
