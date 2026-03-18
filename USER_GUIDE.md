@@ -18,6 +18,8 @@ This guide provides a focused, step-by-step reference for the SafeAI-Global Agen
 | `/safeai export opa` | **Rego Policy**: Translates PRD rules into Open Policy Agent (OPA) code to block pipelines. |
 | `/safeai export terraform`| **HCL Config**: Generates Terraform snippet for compliant cloud infrastructure. |
 | `/safeai inject [Rule]: [Text]`| **Custom Policy**: Forces the agent to prioritize your internal company rules natively across PRDs. |
+| `/safeai scan [Language]` | **Vibe Scan**: Audits AI-generated code for secrets, hallucinations, and insecure defaults. |
+| `/safeai verify-prd` | **Compliance Check**: Verifies if the implementation code matches the SafeAI PRD requirements. |
 
 ---
 
@@ -87,7 +89,24 @@ Use these explicit commands for precision control over the agent's output.
 **How to Trigger:** `/safeai inject [Rule Name]: [Content]`
 > `/safeai inject AuthStandard: Every user-facing API must implement OAuth 2.0 with PKCE.`
 
-**What Happens:** Stores the rule in memory, treating it as highest priority moving forward (`⚠️ CUSTOM OVERRIDE`).
+**What Happens**: Stores the rule in memory, treating it as highest priority moving forward (`⚠️ CUSTOM OVERRIDE`).
+
+### Scanning AI-Generated Code (Vibe Coding)
+
+**Use Case**: You've used an AI to generate code, or you want to audit an entire codebase/pull request before deployment to ensure it doesn't contain "hallucinated" libraries or leaked secrets.
+**How to Trigger**: `/safeai scan [Target]`
+You can scan a specific snippet, a folder, or even a git diff using your IDE's context features (like `@Folder` in Cursor/Windsurf).
+> **Examples:**
+>
+> - `/safeai scan @src/` ➔ Scans the entire `src` directory.
+> - `/safeai scan @PR` ➔ Scans a Pull Request or Git Diff.
+> - `/safeai scan python: [Paste code]` ➔ Scans a fast pasted snippet.
+
+**What Happens**: The agent performs a high-intensity audit for:
+
+- **Ghost Dependencies**: Non-existent or malicious packages.
+- **Hardcoded Secrets**: Placeholder API keys or mock credentials.
+- **Compliance Traceability**: Use `/safeai verify-prd` to ensure the code actually implements the security controls defined in your SafeAI PRD.
 
 ---
 
@@ -108,4 +127,4 @@ npx safeai-lint .
 > You can ask your IDE agent: *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
 
 ---
-<small>Powered by SafeAI-Global Team · Version 4.1.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 4.2.0 · March 2026</small>

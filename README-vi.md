@@ -3,12 +3,12 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **8 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
+> **9 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -59,6 +59,7 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 | 🇺🇸 | **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC | PM thị trường Mỹ |
 | 👶 | **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC | PM EdTech |
 | 🤖 | **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, HITL | PM AI/ML |
+| 🛡️ | **[SafeAI Code Scanner](skills/safeai-code-scanner/SKILL.md)** | Quét lỗi Code — Vibe Coding, bảo vệ API Key | DevSecOps / Kỹ sư |
 
 ---
 
@@ -70,7 +71,7 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 npx skills add datht-work/safeai-global-agent
 ```
 
-Hiển thị tất cả 8 kỹ năng — chọn những cái bạn cần.
+Hiển thị tất cả 9 kỹ năng — chọn những cái bạn cần.
 
 ### Cách 2: Sử dụng trực tiếp trong AI Chat (Không cần cài)
 
@@ -143,6 +144,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v4.2.0** | 2026-03-18 | **Kỹ năng mới**: SafeAI Code Scanner hỗ trợ rà soát rủi ro bảo mật cho Vibe Coding. |
 | **v4.1.0** | 2026-03-14 | Tòa nhà hạ tầng DevSecOps: Thêm lệnh `/safeai export opa` và `/safeai export terraform`. Đặc tả An toàn bảo mật. |
 | **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Thêm lệnh xuất form `/safeai export jira` và `/safeai export confluence`. Tự động nhận diện chủ đích Đa ngôn ngữ và lệnh `/safeai lang`. |
 | **v3.2.0** | 2026-03-13 | Custom Policy Injection — Giới thiệu lệnh `/safeai inject` và chế độ Hybrid Compliance |
@@ -180,7 +182,7 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.1.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.2.0 · Tháng 3/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

@@ -171,6 +171,8 @@ When Step 1 (Region Detection) identifies a domain requiring deep expertise, do 
   → Load and follow the instructions in `skills/safeai-fintech-compliance/SKILL.md`
 - IF ASEAN markets (VN, SG, TH, MY, ID, PH) detected:
   → Load and follow the instructions in `skills/safeai-asean-data-protection/SKILL.md`
+- IF code scanning, Vibe Coding, or security audit requested:
+  → Load and follow the instructions in `skills/safeai-code-scanner/SKILL.md`
 - IF US State laws (CCPA, CPA, VCDPA, etc.) detected:
   → Load and follow the instructions in `skills/safeai-us-privacy-expert/SKILL.md`
 - IF EdTech, Child Privacy, COPPA, or FERPA detected:
@@ -379,6 +381,7 @@ This skill provides comprehensive global coverage. For **deeper expertise** in s
 | **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | Fragmented US state laws — CCPA/CPRA, CPA, VCDPA, GPC | `npx skills add datht-work/safeai-global-agent` → select `safeai-us-privacy-expert` |
 | **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | Products for minors — COPPA, FERPA, AADC, Age Gating | `npx skills add datht-work/safeai-global-agent` → select `safeai-edtech-compliance` |
 | **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | AI governance — NIST AI RMF, Bias Testing, Human-in-the-Loop | `npx skills add datht-work/safeai-global-agent` → select `safeai-ai-ethics-expert` |
+| **[SafeAI Code Scanner](skills/safeai-code-scanner/SKILL.md)** | Code audit — Vibe Coding risk, secrets detection, PRD traceability | `npx skills add datht-work/safeai-global-agent` → select `safeai-code-scanner` |
 
 > **Workflow:** Start with this **Global PRD Agent** for initial compliance assessment → use domain-specific skills for detailed implementation.
 
@@ -412,6 +415,7 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 | Version | Date | Changes |
 |---|---|---|
+| **v4.2.0** | 2026-03-18 | **New Skill: SafeAI Code Scanner**. Added support for Vibe Coding risk detection, secrets scanning, and PRD traceability. |
 | **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Security hotfixes. |
 | **v4.0.0** | 2026-03-14 | Agile & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output commands. Full detection and syntax support for multiple languages including `/safeai lang [language]` override. |
 | **v3.2.0** | 2026-03-13 | Custom Policy Injection: Introduced `/safeai inject` and Hybrid Compliance mode. Support for `knowledge/custom/` directory. |
@@ -429,4 +433,4 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 ---
 
-<small>Powered by SafeAI-Global Team · Version 4.1.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 4.2.0 · March 2026</small>

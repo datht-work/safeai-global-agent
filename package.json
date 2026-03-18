@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.2.0",
   "main": "SKILL.md",
   "bin": {
     "safeai-lint": "cli/safeai-lint.js"
@@ -12,7 +12,8 @@
     "safeai-asean-data-protection": "skills/safeai-asean-data-protection/SKILL.md",
     "safeai-us-privacy-expert": "skills/safeai-us-privacy-expert/SKILL.md",
     "safeai-edtech-compliance": "skills/safeai-edtech-compliance/SKILL.md",
-    "safeai-ai-ethics-expert": "skills/safeai-ai-ethics-expert/SKILL.md"
+    "safeai-ai-ethics-expert": "skills/safeai-ai-ethics-expert/SKILL.md",
+    "safeai-code-scanner": "skills/safeai-code-scanner/SKILL.md"
   },
   "author": "SafeAI-Global Team (datht-work)",
   "keywords": [

@@ -3,12 +3,12 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **8 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
+> **9 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.1.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -62,6 +62,7 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 | 🇺🇸 | **[SafeAI US State Privacy Expert](safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC, Opt-in consent | US market PMs |
 | 👶 | **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC, Age Gating | EdTech PMs |
 | 🤖 | **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, Human-in-the-Loop | AI/ML PMs |
+| 🛡️ | **[SafeAI Code Scanner](skills/safeai-code-scanner/SKILL.md)** | Code audit — Vibe Coding risk, secrets detection | DevSecOps / Engineers |
 
 ### 🔗 Modular Architecture for Global Scale
 
@@ -101,7 +102,7 @@ The SafeAI-Global suite uses a **Hub-and-Spoke** architecture. You always start 
 npx skills add datht-work/safeai-global-agent
 ```
 
-This will show all 8 skills — select the ones you need.
+This will show all 9 skills — select the ones you need.
 
 ### Method 2: Use in Any AI Chat Tool (No Install)
 
@@ -181,6 +182,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v4.2.0** | 2026-03-18 | **New Skill**: SafeAI Code Scanner for Vibe Coding security auditing. |
 | **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Fixed Snyk Runtime Fetch vulnerability. |
 | **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output formats. Full multilingual prompt detection and `/safeai lang` manual override. |
 | **v3.2.0** | 2026-03-13 | Custom Policy Injection — Introduced `/safeai inject` command and Hybrid Compliance mode |
@@ -217,7 +219,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.1.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.2.0 · March 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

@@ -8,7 +8,17 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
-## [Unreleased]
+## [v4.2.0] - 2026-03-18
+
+### Added
+
+- **SafeAI Code Scanner (v0.1.0)**: Introduced a new specialized skill for auditing AI-generated code (Vibe Coding).
+- **Vibe Coding Safety Layer**: Detection of Ghost Dependencies, Template Secrets, Insecure Defaults, and Permission Bloat.
+- **PRD Traceability**: Cross-references implementation code against compliance requirements defined in SafeAI PRDs.
+- **Security Scoring (0-100)**: Automated security posture assessment with detailed vulnerability tables and fix recommendations.
+- **Hub Integration**: Automatically routes code scanning and security audit requests to the `safeai-code-scanner` expert.
+
+---
 
 ## [4.1.0] - 2026-03-14
 
