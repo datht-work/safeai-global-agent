@@ -98,7 +98,7 @@ app.use(helmet());
 
 ## ⚠️ Disclaimer
 
-> **This skill is a security مساعد instrument and does NOT replace a professional security audit or penetration test.**
+> **This skill is an assistive security instrument and does NOT replace a professional security audit or penetration test.**
 >
 > - AI-based scanning may miss subtle logic flaws or complex exploits.
 > - Always run automated SAST/DAST tools (Snyk, SonarQube) in your CI/CD.
