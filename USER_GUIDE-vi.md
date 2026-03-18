@@ -121,6 +121,15 @@ Bạn có thể tận dụng tính năng gọi ngữ cảnh của các IDE (như
 npx safeai-lint .
 ```
 
+***HOẶC*** sử dụng trực tiếp qua GitHub Actions:
+
+```yaml
+steps:
+  - uses: actions/checkout@v4
+  - name: Run SafeAI Security Scanner
+    uses: datht-work/safeai-global-agent@v4.2.0
+```
+
 **Điều gì xảy ra:** Linter quét xem tài liệu PRD hoặc Codebase của bạn có thiếu phần Bảo mật hay Sơ đồ dữ liệu không. Giúp ngăn chặn các phần mềm sai quy định trước lúc Product Manager duyệt Deploy.
 
 > 🤖 **Tích hợp Agent IDE (Cursor, Antigravity):**

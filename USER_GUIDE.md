@@ -121,6 +121,15 @@ You can scan a specific snippet, a folder, or even a git diff using your IDE's c
 npx safeai-lint .
 ```
 
+***OR*** natively in your GitHub Actions workflow:
+
+```yaml
+steps:
+  - uses: actions/checkout@v4
+  - name: Run SafeAI Security Scanner
+    uses: datht-work/safeai-global-agent@v4.2.0
+```
+
 **What Happens:** The CLI tool scans your project documentation locally. It fails the CI build if critical safety requirements (Security, Encryption, Data Flow) are missing.
 
 > 🤖 **Agentic IDE Integration (Cursor, Claude, Antigravity):**

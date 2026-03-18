@@ -1,0 +1,16 @@
+name: 'SafeAI-Global Compliance Linter & Code Scanner'
+author: 'SafeAI-Global Team'
+description: 'Audits PRDs and Vibe-coded source code for security risks, hallucinations, and compliance gaps.'
+
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run safeai-lint
+      shell: bash
+      run: |
+        echo "🛡️ Starting SafeAI-Global Audit..."
+        node ${{ github.action_path }}/cli/safeai-lint.js .
