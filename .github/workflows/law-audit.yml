@@ -1,5 +1,7 @@
 name: Quarterly Law Audit Reminder
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 on:
   schedule:
     # Chạy vào lúc 00:00 ngày 1 của các tháng 1, 4, 7, 10

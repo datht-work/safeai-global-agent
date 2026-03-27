@@ -1,5 +1,8 @@
 name: Prompt Evaluation (promptfoo)
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   pull_request:
     paths:
@@ -28,13 +31,9 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install promptfoo
-        run: npm install -g promptfoo
-
       - name: Run AI Prompt Evaluation
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          cd tests
-          promptfoo eval -c promptfooconfig.yaml --no-cache
-          promptfoo cache clear
+          npm test
+          cd tests && npx promptfoo cache clear

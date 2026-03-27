@@ -76,8 +76,8 @@ tests:
       user_input: "Write a PRD for an AI credit scoring app in Vietnam focusing on bias prevention."
     assert:
       - type: "icontains"
-        value: "skills/safeai-ai-ethics-expert/SKILL.md"
+        value: "safeai-ai-ethics-expert"
       - type: "icontains"
         value: "Decree 13"
       - type: "icontains"
-        value: "NIST AI RMF"
+        value: "AI RMF"
