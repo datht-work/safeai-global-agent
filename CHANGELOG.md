@@ -8,6 +8,22 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
+## [v4.3.0] - 2026-03-26
+
+### Added
+
+- **AI Engineering Framework**: 
+  - **Prompt Evaluation**: Integrated `promptfoo` for automated LLM output testing with Golden Datasets.
+  - **Knowledge Schema Standard**: Added `CONTRIBUTING.md` defining a consistent XML-tag structure for community-contributed laws.
+  - **Automated Legal Audits**: Added GitHub Actions cron job for quarterly regulatory review reminders.
+- **Orchestration Thinking Layer**: Enhanced `SKILL.md` with explicit `<thinking>` instructions to improve routing accuracy and prevent legal hallucinations.
+
+### Changed
+
+- Updated `USER_GUIDE` (En/Vi) with engineering-centric integration tips.
+
+---
+
 ## [v4.2.0] - 2026-03-18
 
 ### Added

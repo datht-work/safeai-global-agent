@@ -135,5 +135,15 @@ steps:
 > 🤖 **Tích hợp Agent IDE (Cursor, Antigravity):**
 > Bạn có thể yêu cầu IDE Agent hỗ trợ bạn: *"Hãy chạy script `cli/safeai-lint.js` trên toàn bộ dự án này, sau đó đọc log và tự động sửa các lỗi linter báo về."*
 
+### 🧪 Đảm bảo Chất lượng AI (Prompt Evaluation)
+
+**Khi nào dùng:** Bạn vừa sửa file `SKILL.md` hoặc thêm luật mới và muốn chắc chắn AI không bị "ngáo" hoặc nhầm luật.
+**Cách kích hoạt:**
+```bash
+cd tests
+npx promptfoo eval
+```
+**Điều gì xảy ra:** Chạy bộ kiểm thử "Golden Datasets" để đối soát độ chính xác pháp lý và logic phân luồng của Agent.
+
 ---
-<small>Chịu trách nhiệm phát triển bởi nhóm SafeAI-Global Team · Cập nhật Version 4.2.0 · Tháng 03/2026</small>
+<small>Chịu trách nhiệm phát triển bởi nhóm SafeAI-Global Team · Cập nhật Version 4.3.0 · Tháng 03/2026</small>

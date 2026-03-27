@@ -135,5 +135,15 @@ steps:
 > 🤖 **Agentic IDE Integration (Cursor, Claude, Antigravity):**
 > You can ask your IDE agent: *"Run the `cli/safeai-lint.js` script on this project and fix any compliance errors it finds."*
 
+### 🧪 AI Quality Assurance (Prompt Evaluation)
+
+**Use Case:** You've modified `SKILL.md` or added a new law to `knowledge/` and want to ensure the agent still generates accurate PRDs.
+**How to Trigger:**
+```bash
+cd tests
+npx promptfoo eval
+```
+**What Happens:** Runs your prompts against "Golden Datasets" to verify legal accuracy and routing logic.
+
 ---
-<small>Powered by SafeAI-Global Team · Version 4.2.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 4.3.0 · March 2026</small>

@@ -1,53 +1,88 @@
-# Europe, Middle East & Africa (EMEA) Privacy & Cybersecurity Regulations
+<!-- Europe, Middle East & Africa (EMEA) Privacy & Cybersecurity Regulations -->
+# Europe, Middle East & Africa (EMEA) Compliance Frameworks
 
-This document outlines the core data protection and cybersecurity regulations for the EMEA region, used by SafeAI-Global.
+<law_definition id="EU-GDPR">
+  <name>EU General Data Protection Regulation (GDPR)</name>
+  <effective_date>2018-05-25</effective_date>
+  <source_url><https://gdpr-info.eu/></source_url>
 
-## European Union (EU)
+  <applicability>
+    - Entities processing personal data of individuals in the EU, regardless of where the entity is based.
+  </applicability>
 
-- **Applicable Regulations**: GDPR, EU AI Act (Feb 2025 – Aug 2026 phased), EU Data Act 2025, ePrivacy Directive
-- **Cybersecurity & Resilience (by 2026)**:
-  - **DORA (Digital Operational Resilience Act)**: For financial entities and ICT providers. Full enforcement by mid-2026. Key requirements: ICT risk management, incident reporting, resilience testing.
-  - **NIS2 Directive**: Expands cyber rules to 18 critical sectors. Member state transpositions (e.g., Germany) enforce registration and new strict incident reporting by early 2026.
-  - **CRA (Cyber Resilience Act)**: Mandatory cybersecurity requirements for hardware/software products. Vulnerability and incident reporting obligations begin September 2026.
-- **Cross-Border Transfer**: Standard Contractual Clauses (SCCs), Binding Corporate Rules (BCRs), or EU adequacy decision.
-- **AI Governance**: Risk classification, conformity assessment, transparency obligations, AI literacy under the EU AI Act.
+  <rule category="data_residency">
+    <description>
+      No strict data residency in-EU, but cross-border transfer requirements are strict.
+    </description>
+  </rule>
 
-## United Kingdom (UK)
+  <rule category="cross_border_transfer">
+    <description>
+      Transferring data outside the EEA requires an adequacy decision, Standard Contractual Clauses (SCCs), or Binding Corporate Rules (BCRs).
+    </description>
+  </rule>
 
-- **Applicable Regulations**: UK GDPR, Data (Use and Access) Act 2025 (DUA Act), Online Safety Act
+  <rule category="consent_mechanism">
+    <description>
+      Explicit consent is required for special categories of data (Art. 9) and automated decision-making. Consent must be freely given, specific, and informed.
+    </description>
+  </rule>
 
-## Switzerland (CH)
+  <rule category="ai_governance">
+    <description>
+      Articles 13(2)(f), 14(2)(g), 15(1)(h), and 22 provide rights regarding automated decision-making and explainability.
+    </description>
+  </rule>
+</law_definition>
 
-- **Applicable Regulations**: nFADP (new Federal Act on Data Protection 2023)
+<law_definition id="EU-AI-ACT">
+  <name>EU Artificial Intelligence Act</name>
+  <effective_date>2024-08-01</effective_date>
 
-## Turkey (TR)
+  <rule category="ai_governance">
+    <description>
+      Risk-based approach: Unacceptable, High, Limited, Minimal. Requires conformity assessment for high-risk systems.
+    </description>
+  </rule>
 
-- **Applicable Regulations**: KVKK (Law No. 6698 on Personal Data Protection), 2024 Cross-Border Transfer Amendments
+  <rule category="transparency">
+    <description>
+      Mandates clear labeling for AI-generated content (deepfakes) and transparency for interaction with AI.
+    </description>
+  </rule>
+</law_definition>
 
-## UAE (AE)
+<law_definition id="EU-DORA">
+  <name>Digital Operational Resilience Act (DORA)</name>
+  <effective_date>2025-01-17</effective_date>
+  <rule category="cybersecurity_resilience">
+    <description>
+      Focuses on ICT risk management, incident reporting, operational resilience testing, and third-party risk management for the financial sector.
+    </description>
+  </rule>
+</law_definition>
 
-- **Applicable Regulations**: DIFC Data Protection Law, ADGM Data Protection Regulations 2021, Federal Decree-Law 45/2021 (Personal Data Protection)
+<law_definition id="SA-PDPL">
+  <name>Saudi Arabia Personal Data Protection Law (PDPL)</name>
+  <effective_date>2024-09-14</effective_date>
+  <rule category="data_residency">
+    <description>
+      Requires local data storage for sensitive personal data or if the transfer affects national security.
+    </description>
+  </rule>
+  <rule category="consent_mechanism">
+    <description>
+      Explicit consent is the primary legal basis. Legitimate interest is restricted for sensitive data.
+    </description>
+  </rule>
+</law_definition>
 
-## Saudi Arabia (SA)
-
-- **Applicable Regulations**: PDPL (Personal Data Protection Law 2023), NDMO Regulations, SDAIA AI Governance
-
-## Israel (IL)
-
-- **Applicable Regulations**: Privacy Protection Law 5741-1981, Protection of Privacy Regulations 2024 Amendments
-
-## Nigeria (NG)
-
-- **Applicable Regulations**: NDPR (Nigeria Data Protection Regulation), NDPA (Nigeria Data Protection Act 2023)
-
-## South Africa (ZA)
-
-- **Applicable Regulations**: POPIA (Protection of Personal Information Act), ECTA (Electronic Communications Act)
-
-## Kenya (KE)
-
-- **Applicable Regulations**: Data Protection Act 2019
-
-## Egypt (EG)
-
-- **Applicable Regulations**: Personal Data Protection Law No. 151/2020
+<law_definition id="ZA-POPIA">
+  <name>South Africa Protection of Personal Information Act (POPIA)</name>
+  <effective_date>2021-07-01</effective_date>
+  <rule category="cross_border_transfer">
+    <description>
+      Requires adequate protection in the recipient country, BCRs, or data subject consent.
+    </description>
+  </rule>
+</law_definition>

@@ -1,0 +1,47 @@
+name: Quarterly Law Audit Reminder
+
+on:
+  schedule:
+    # Chạy vào lúc 00:00 ngày 1 của các tháng 1, 4, 7, 10
+    - cron: '0 0 1 1,4,7,10 *'
+  workflow_dispatch: # Cho phép chạy thủ công
+
+jobs:
+  create-audit-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create Audit Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date();
+            const year = date.getFullYear();
+            const quarter = Math.floor(date.getMonth() / 3) + 1;
+            
+            const issueTitle = `[Quarterly Law Audit] Q${quarter} ${year}: Check for Regulatory Changes`;
+            const issueBody = `
+            ## 🔔 Quarterly Legal Audit Required
+            The SafeAI-Global Knowledge Base heavily relies on up-to-date legal facts. Please audit the following major frameworks to ensure our \`knowledge/\` directory is accurate:
+
+            ### 🌍 Checkpoints:
+            - [ ] **EU AI Act**: Any new enforcement milestones passed?
+            - [ ] **GDPR**: Any major CJEU rulings affecting cross-border transfers?
+            - [ ] **US State Privacy**: Did any new US states enact comprehensive privacy laws this quarter?
+            - [ ] **ASEAN**: Any new decrees (like Vietnam Decree 13) going into full enforcement?
+            - [ ] **ISO Standards**: Were any ISO 27001 / 42001 amendments published?
+
+            **Action**:
+            1. Validate the facts in \`knowledge/\` against official sources.
+            2. If changes exist, open a PR with the updated Markdown tags.
+            3. Run \`promptfoo eval\` to ensure the PRD generator still behaves correctly.
+            `;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: issueTitle,
+              body: issueBody,
+              labels: ['maintenance', 'legal-audit']
+            });

@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.3.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -133,8 +133,9 @@ Công cụ sẽ kiểm tra các mục: Security section, Encryption, Consent/DSA
 - ✅ **Không gọi mạng** — Không kết nối bên ngoài
 - ✅ **Không thu thập dữ liệu** — Hoạt động không trạng thái
 - ✅ **CI/CD kiểm tra** — Pipeline bảo mật GitHub Actions
+- ✅ **LLM Đã Đánh Giá** — Tự động kiểm tra chất lượng Prompt bằng bộ "Golden Datasets" (`promptfoo`).
 
-Xem [SECURITY.md](SECURITY.md) để biết chi tiết chính sách bảo mật.
+Xem [SECURITY.md](SECURITY.md) để biết chi tiết chính sách bảo mật và [CONTRIBUTING.md](CONTRIBUTING.md) để biết chuẩn dữ liệu.
 
 ---
 
@@ -144,6 +145,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v4.3.0** | 2026-03-26 | **AI Engineering Roadmap**: Tích hợp kiểm thử `promptfoo`, chuẩn hóa Schema kiến thức (XML-tags) và tự động nhắc nhở Audit luật. |
 | **v4.2.0** | 2026-03-18 | **Kỹ năng mới**: SafeAI Code Scanner hỗ trợ rà soát rủi ro bảo mật cho Vibe Coding. |
 | **v4.1.0** | 2026-03-14 | Tòa nhà hạ tầng DevSecOps: Thêm lệnh `/safeai export opa` và `/safeai export terraform`. Đặc tả An toàn bảo mật. |
 | **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Thêm lệnh xuất form `/safeai export jira` và `/safeai export confluence`. Tự động nhận diện chủ đích Đa ngôn ngữ và lệnh `/safeai lang`. |
@@ -182,7 +184,7 @@ Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.2.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.3.0 · Tháng 3/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

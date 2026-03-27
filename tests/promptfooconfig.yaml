@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: "SafeAI-Global Baseline Prompt Evaluation"
+
+prompts:
+  - file://../SKILL.md
+
+providers:
+  # Dùng OpenAI làm baseline để test logic prompt
+  - id: openai:gpt-4o
+    config:
+      temperature: 0.1 # Đặt temperature thấp để đánh giá tính nhất quán pháp lý
+
+tests:
+  - description: "Kiểm tra Routing cho Healthcare US (HIPAA)"
+    vars:
+      user_input: "Write a PRD for a telehealth app capturing patient symptoms in California."
+    assert:
+      - type: "icontains"
+        value: "skills/safeai-hipaa-expert/SKILL.md"
+        weight: 2
+      - type: "icontains"
+        value: "HIPAA"
+      - type: "icontains"
+        value: "CCPA"
+      - type: "not-icontains"
+        value: "GDPR"
+
+  - description: "Kiểm tra Routing cho FinTech EU (GDPR, PSD2)"
+    vars:
+      user_input: "Build a credit card payment feature for users in France."
+    assert:
+      - type: "icontains"
+        value: "skills/safeai-fintech-compliance/SKILL.md"
+      - type: "icontains"
+        value: "skills/safeai-gdpr-expert/SKILL.md"
+      - type: "icontains"
+        value: "GDPR"
+      - type: "icontains"
+        value: "PSD2"
+
+  - description: "Kiểm tra Template Generation cho FinTech VN"
+    vars:
+      user_input: "/template fintech vn"
+    assert:
+      - type: "icontains"
+        value: "Decree 13"
+      - type: "icontains"
+        value: "SBV"
+      - type: "icontains"
+        value: "Cybersecurity Law"
+
+  - description: "Kiểm tra Agile Engine (Jira Export)"
+    vars:
+      user_input: "/safeai export jira"
+    assert:
+      - type: "icontains"
+        value: "Epic"
+      - type: "icontains"
+        value: "User Story"
+      - type: "icontains"
+        value: "Gherkin"
+
+  - description: "Kiểm tra DevSecOps (Terraform Export)"
+    vars:
+      user_input: "/safeai export terraform"
+    assert:
+      - type: "icontains"
+        value: "resource"
+      - type: "icontains"
+        value: "terraform"
+      - type: "icontains"
+        value: "hcl"
+
+  - description: "Kiểm tra Multi-region Routing (Vietnam + AI Ethics)"
+    vars:
+      user_input: "Write a PRD for an AI credit scoring app in Vietnam focusing on bias prevention."
+    assert:
+      - type: "icontains"
+        value: "skills/safeai-ai-ethics-expert/SKILL.md"
+      - type: "icontains"
+        value: "Decree 13"
+      - type: "icontains"
+        value: "NIST AI RMF"

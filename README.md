@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.2.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-4.3.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -171,8 +171,9 @@ The agent is trained to map product features to strict international frameworks 
 - ✅ **No network calls** — No external connections
 - ✅ **No data collection** — Stateless operations
 - ✅ **CI/CD audited** — GitHub Actions security pipeline
+- ✅ **LLM Evaluated** — Automated `promptfoo` testing with Golden Datasets
 
-See [SECURITY.md](SECURITY.md) for full policy.
+See [SECURITY.md](SECURITY.md) for full policy and [CONTRIBUTING.md](CONTRIBUTING.md) for knowledge standards.
 
 ---
 
@@ -182,6 +183,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v4.3.0** | 2026-03-26 | **AI Engineering Roadmap**: Integrated `promptfoo` testing, Knowledge Schema standards, and automated quarterly law audits. |
 | **v4.2.0** | 2026-03-18 | **New Skill**: SafeAI Code Scanner for Vibe Coding security auditing. |
 | **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Fixed Snyk Runtime Fetch vulnerability. |
 | **v4.0.0** | 2026-03-14 | Agile Engine & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output formats. Full multilingual prompt detection and `/safeai lang` manual override. |
@@ -219,7 +221,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.2.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.3.0 · March 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)
