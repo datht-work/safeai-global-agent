@@ -4,7 +4,7 @@
   "main": "SKILL.md",
   "scripts": {
     "lint": "node cli/safeai-lint.js .",
-    "test": "cd tests && npx promptfoo eval"
+    "test": "npx --yes promptfoo eval -c tests/promptfooconfig.yaml"
   },
   "bin": {
     "safeai-lint": "cli/safeai-lint.js"
@@ -43,5 +43,8 @@
     "url": "https://github.com/datht-work/safeai-global-agent/issues"
   },
   "homepage": "https://skills.sh/datht-work/safeai-global-agent",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "promptfoo": "^0.121.3"
+  }
 }

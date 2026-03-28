@@ -31,9 +31,12 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run AI Prompt Evaluation
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          npm test
-          cd tests && npx promptfoo cache clear
+          npx --yes promptfoo eval -c tests/promptfooconfig.yaml --no-cache
+          npx --yes promptfoo cache clear

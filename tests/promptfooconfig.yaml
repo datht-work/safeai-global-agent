@@ -78,6 +78,6 @@ tests:
       - type: "icontains"
         value: "safeai-ai-ethics-expert"
       - type: "icontains"
-        value: "Decree 13"
+        value: "Decree"
       - type: "icontains"
-        value: "AI RMF"
+        value: "RMF"

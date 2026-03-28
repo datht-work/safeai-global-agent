@@ -150,7 +150,12 @@ function collectMarkdownFiles(targetPath) {
     if (stat.isDirectory()) {
         return fs
             .readdirSync(targetPath, { recursive: true })
-            .filter((f) => f.endsWith(".md"))
+            .filter((f) => {
+                const parts = f.split(path.sep);
+                const isHidden = parts.some(part => part.startsWith("."));
+                const isNodeModules = parts.some(part => part === "node_modules");
+                return f.endsWith(".md") && !isHidden && !isNodeModules;
+            })
             .map((f) => path.join(targetPath, f));
     }
     return [];
