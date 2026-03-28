@@ -1,6 +1,6 @@
 # SafeAI-Global PRD Agent: Actionable User Guide
 
-This guide provides a focused, step-by-step reference for the SafeAI-Global Agent. Whether you are building a quick MVP or complex enterprise software, these commands will help you trigger the right behavior instantly.
+This guide provides a focused, step-by-step reference for the SafeAI-Global Agent. Whether you are accelerating a quick MVP to market (Time-to-Market) or architecting complex enterprise software that requires rigorous compliance, these commands will help you trigger the right behavior instantly.
 
 ---
 
@@ -65,7 +65,7 @@ Use these explicit commands for precision control over the agent's output.
 
 ### Export to Agile Tickets
 
-**Use Case:** Handing over a generated PRD to engineering without manual copy-pasting.
+**Use Case (Zero-Friction Handover):** Handing over a generated PRD to engineering without manual copy-pasting. Bridges the gap between Product Management and Engineering seamlessly.
 **How to Trigger:** `/safeai export jira` or `/safeai export confluence`
 **What Happens:** Strips conversational fluff and outputs pure, structured blocks tailored for Agile software. Security constraints are embedded deep inside the ticket Acceptance Criteria.
 
@@ -79,7 +79,7 @@ Use these explicit commands for precision control over the agent's output.
 
 ### Policy-as-Code Export (DevSecOps)
 
-**Use Case:** Automating compliance enforcement in the CI/CD pipeline or Cloud deployments directly based on PRD constraints.
+**Use Case (DevSecOps Ready):** Automating compliance enforcement in the CI/CD pipeline or Cloud deployments directly based on PRD constraints. Eliminates "compliance drift" between architecture and reality.
 **How to Trigger:** `/safeai export opa` or `/safeai export terraform`
 **What Happens:** Outputs raw `.rego` scripts for Open Policy Agent to test CI/CD configurations, or `main.tf` logic in HCL to stand up secure infrastructure resources (e.g., encryption toggles, data localized VPCs).
 
@@ -93,7 +93,7 @@ Use these explicit commands for precision control over the agent's output.
 
 ### Scanning AI-Generated Code (Vibe Coding)
 
-**Use Case**: You've used an AI to generate code, or you want to audit an entire codebase/pull request before deployment to ensure it doesn't contain "hallucinated" libraries or leaked secrets.
+**Use Case (Secure Vibe Coding):** You've used an AI to generate code, or you want to audit an entire codebase/pull request before deployment to ensure it doesn't contain "hallucinated" libraries or leaked secrets. Essential for teams leveraging AI engineering tools.
 **How to Trigger**: `/safeai scan [Target]`
 You can scan a specific snippet, a folder, or even a git diff using your IDE's context features (like `@Folder` in Cursor/Windsurf).
 > **Examples:**
@@ -139,10 +139,12 @@ steps:
 
 **Use Case:** You've modified `SKILL.md` or added a new law to `knowledge/` and want to ensure the agent still generates accurate PRDs.
 **How to Trigger:**
+
 ```bash
 cd tests
 npx promptfoo eval
 ```
+
 **What Happens:** Runs your prompts against "Golden Datasets" to verify legal accuracy and routing logic.
 
 ---

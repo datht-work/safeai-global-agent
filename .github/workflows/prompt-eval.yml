@@ -38,5 +38,9 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "⚠️ OPENAI_API_KEY is not set. Skipping prompt evaluation."
+            exit 0
+          fi
           npx --yes promptfoo eval -c tests/promptfooconfig.yaml --no-cache
           npx --yes promptfoo cache clear

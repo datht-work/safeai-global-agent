@@ -12,16 +12,22 @@
 
 ---
 
-## 🎯 Giá trị Doanh nghiệp dành cho Product Manager
+## 🎯 Giá trị Doanh nghiệp (Biz View)
 
-Việc xây dựng phần mềm tuân thủ hệ thống pháp lý toàn cầu thường chậm chạp, tốn kém và nhiều rủi ro. **SafeAI-Global Compliance Suite** hoạt động như một chuyên gia Pháp lý & Bảo mật nhúng (embedded co-pilot), được thiết kế đặc biệt dành cho Product Manager.
+Việc phát triển phần mềm tuân thủ hệ thống pháp lý toàn cầu thường chậm chạp, tốn kém và tiềm ẩn rủi ro bồi thường lớn. **SafeAI-Global Compliance Suite** hoạt động như một chuyên gia Pháp lý & Bảo mật nhúng (embedded co-pilot), đưa bài toán tuân thủ lên giai đoạn sớm nhất—nằm ngay trong tay các Product Manager và Kỹ sư.
 
-- **⚡ Tăng tốc Time-to-Market**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút thay vì chờ đợi hàng tuần để bộ phận pháp chế rà soát.
-- **🔄 Sẵn sàng cho Agile (v4.0)**: Lệnh `/safeai export jira` và `/safeai export confluence` tự động bóc tách PRD thành Epics, User Stories tiêu chuẩn, đi thẳng vào Backlog.
-- **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và vạch định rủi ro pháp lý (GDPR, CCPA, SEC, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code.
-- **💯 Chấm điểm SafeAI-Global Score**: Đánh giá nhanh mức độ sẵn sàng tuân thủ của PRD với điểm số 0-100 dựa trên 3 trụ cột: Quyền riêng tư, Bảo mật và Minh bạch.
-- **🏗️ Thu hẹp Khoảng cách**: Dịch các thuật ngữ pháp lý khô khan thành các Checklist kỹ thuật hành động được, biểu đồ luồng dữ liệu Mermaid, và các tiêu chuẩn bảo mật ISO/SOC2.
-- **📉 Tránh "Kỹ sư hoá quá mức"**: Đảm bảo sản phẩm của bạn chỉ áp dụng những luật thực sự cần thiết cho thị trường mục tiêu, không làm phần mềm trở nên cồng kềnh.
+**Dành cho Lãnh đạo Sản phẩm (CPO/PM):**
+
+- **⚡ Tăng tốc Time-to-Market (TTM)**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút. Xoá bỏ nút thắt chờ đợi ban pháp chế thẩm định gây cản trở các chặng Sprint.
+- **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và chặn đứng rủi ro pháp lý (GDPR, HIPAA, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code. Tránh các án phạt vi phạm dữ liệu khổng lồ.
+- **💯 Kiểm Soát Chất Lượng Tức Thì**: Tự động chấm điểm (SafeAI-Global Score) mức độ sẵn sàng tuân thủ của PRD trên 3 trụ cột: Quyền riêng tư, Bảo mật và Minh bạch.
+- **📉 Tránh "Kỹ sư hoá quá mức"**: Chỉ áp dụng những luật thực sự cần thiết cho thị trường mục tiêu. Tiết kiệm chi phí dev các tính năng bảo mật không bắt buộc đối với MVP.
+
+**Dành cho Lãnh đạo Kỹ thuật (CTO/DevSecOps):**
+
+- **🔄 Bàn giao Không Độ trễ**: Dùng `/safeai export jira` để lập tức quy đổi PRD thành hệ thống Epics và User Stories (Gherkin BDD). Các ràng buộc pháp lý trở thành Yêu Cầu Code bắt buộc.
+- **🏗️ Sẵn sàng cho DevSecOps**: Trích xuất bản thiết kế hạ tầng bảo mật thành mã (Terraform/OPA) từ chính sách trong PRD. Tự động kiểm tra chất lượng bằng plugin `safeai-lint` ngay trên CI/CD.
+- **🔍 Bảo vệ Vibe Coding (Code bằng AI)**: Dùng lệnh `/safeai scan` để rơ-moóc quá trình AI sinh code, phát hiện và cắt đuôi các nguy cơ lộ Credentials (secrets), hoặc gọi các API/Thư viện "ảo giác".
 
 ### 🚀 Tính năng nổi bật: Lệnh `/template`
 

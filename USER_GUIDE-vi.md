@@ -1,6 +1,6 @@
 # Hướng dẫn Sử dụng Cốt lõi: SafeAI-Global PRD Agent
 
-Tài liệu này cung cấp các hướng dẫn trực tiếp, dễ tra cứu về các tính năng cốt lõi của SafeAI-Global Agent. Dù bạn đang xây dựng một MVP nhanh chóng hay phần mềm doanh nghiệp phức tạp, cấu trúc lệnh dưới đây sẽ giúp bạn thao tác chính xác.
+Tài liệu này cung cấp các hướng dẫn trực tiếp, dễ tra cứu về các tính năng cốt lõi của SafeAI-Global Agent. Dù bạn đang muốn đẩy nhanh tốc độ ra mắt MVP (Time-to-Market) hay thiết kế kiến trúc phần mềm doanh nghiệp phức tạp đòi hỏi tuân thủ khắt khe, cấu trúc lệnh dưới đây sẽ giúp bạn thao tác chính xác.
 
 ---
 
@@ -65,7 +65,7 @@ Dùng các lệnh chủ động này để can thiệp và ép Agent xuất file
 
 ### Trích xuất Mẫu Tickets Agile
 
-**Khi nào dùng:** Bàn giao liền PRD cho Dev, loại bỏ các bước Copy/Paste sang thẻ thao tác.
+**Khi nào dùng (Bàn Giao Không Độ Trễ):** Bàn giao liền PRD cho Dev, loại bỏ các bước Copy/Paste sang thẻ thao tác. Xoá bỏ khoảng cách giữa Quản lý Sản phẩm và Kỹ sư.
 **Cách kích hoạt:** `/safeai export jira` hoặc `/safeai export confluence`
 **Điều gì xảy ra:** Agent khóa chặt các yêu cầu tuân thủ rủi ro và cấy thẳng chúng vào phần `Acceptance Criteria` của từng ticket kỹ thuật. Trả về cấu trúc bảng phân tách.
 
@@ -79,7 +79,7 @@ Dùng các lệnh chủ động này để can thiệp và ép Agent xuất file
 
 ### Trích xuất Hạ tầng DevSecOps (Policy-as-Code)
 
-**Khi nào dùng:** Bạn là Tech Lead muốn tự động hóa các ràng buộc bảo mật mà PRD sinh ra, ngăn không cho Server vi phạm luật ngay từ lúc Config bằng DevOps CI/CD.
+**Khi nào dùng (Sẵn sàng DevSecOps):** Bạn là Tech Lead muốn tự động hóa các ràng buộc bảo mật mà PRD sinh ra, ngăn không cho Server vi phạm luật ngay từ lúc Config bằng DevOps CI/CD. Khắc phục tình trạng "lệch pha" giữa thiết kế và thực tế.
 **Cách kích hoạt:** `/safeai export opa` hoặc `/safeai export terraform`
 **Điều gì xảy ra:** Agent trả về khối mã thô Open Policy Agent (`.rego`) hoặc Terraform HCL (`main.tf`) chứa quy định chặn port, mã hoá Storage, và giới hạn Data Localization thay vì chữ nghĩa đơn thuần.
 
@@ -93,7 +93,7 @@ Dùng các lệnh chủ động này để can thiệp và ép Agent xuất file
 
 ### Quét Bảo Mật Code AI (Vibe Coding)
 
-**Khi nào dùng:** Bạn dùng AI để viết code và muốn đảm bảo dự án không chứa các thư viện "ảo giác" (hallucinated) hoặc bị lộ secret keys. Bạn có thể quét một đoạn code nhỏ hoặc **toàn bộ dự án/PR**.
+**Khi nào dùng (Bảo Vệ Vibe Code):** Bạn dùng AI để viết code và muốn đảm bảo dự án không chứa các thư viện "ảo giác" (hallucinated) hoặc bị lộ secret keys. Vô cùng cần thiết cho các nhóm áp dụng AI vào lập trình. Bạn có thể quét một đoạn code nhỏ hoặc **toàn bộ dự án/PR**.
 **Cách kích hoạt:** `/safeai scan [Mục tiêu]`
 Bạn có thể tận dụng tính năng gọi ngữ cảnh của các IDE (như `@Folder` trong Cursor/Windsurf) để quét toàn bộ thư mục hoặc thay đổi git.
 > **Ví dụ:**
@@ -139,10 +139,12 @@ steps:
 
 **Khi nào dùng:** Bạn vừa sửa file `SKILL.md` hoặc thêm luật mới và muốn chắc chắn AI không bị "ngáo" hoặc nhầm luật.
 **Cách kích hoạt:**
+
 ```bash
 cd tests
 npx promptfoo eval
 ```
+
 **Điều gì xảy ra:** Chạy bộ kiểm thử "Golden Datasets" để đối soát độ chính xác pháp lý và logic phân luồng của Agent.
 
 ---
