@@ -50,7 +50,8 @@ Each rule should be wrapped in clear `<rule>` tags to create boundaries for the 
 ```
 
 ### Why this format?
-By wrapping rules in `<rule category="...">`, the prompt engineering logic in `SKILL.md` can extract specifically what it needs to build a PRD's Compliance Checklist without hallucinating extraneous data.
+
+By wrapping rules in `<rule category=\"...\">`, the prompt engineering logic in `SKILL.md` can extract specifically what it needs to build a PRD's Compliance Checklist without hallucinating extraneous data.
 
 ## 💬 Suggesting New Compliance Frameworks (Spokes)
 
@@ -61,8 +62,7 @@ If you believe a new domain requires a full "Spoke" expert (e.g., FedRAMP, SOC 2
 If you modify `SKILL.md` or any file in `knowledge/`, please ensure you run our LLM evaluation suite locally:
 
 ```bash
-cd tests
-promptfoo eval -c promptfooconfig.yaml
+npm test
 ```
 
 This ensures your new law didn't break the existing Prompt's logic!

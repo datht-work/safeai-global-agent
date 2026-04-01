@@ -1,24 +1,37 @@
 #!/usr/bin/env node
 
 /**
- * SafeAI-Lint — PRD Compliance Checker (CLI)
+ * SafeAI-Lint — PRD & Knowledge Compliance Checker (CLI)
  *
  * Scans Markdown PRD files and warns about missing compliance sections.
+ * Automatically excludes project infrastructure files (README, CHANGELOG, etc.)
  *
  * Usage:
  *   npx safeai-lint path/to/prd.md
  *   npx safeai-lint path/to/prd-folder/
+ *   npx safeai-lint . --strict          # Exit code 1 on any warning
  *
  * Exit codes:
  *   0 = All checks passed
- *   1 = Warnings found (missing sections)
+ *   1 = Errors found (or warnings in --strict mode)
  *   2 = Error (file not found, etc.)
  */
 
 const fs = require("fs");
 const path = require("path");
 
-// ── Required sections ────────────────────────────────────────────────
+// ── Project infrastructure files (NOT PRDs — skip PRD rules) ─────────
+const EXCLUDED_BASENAMES = new Set([
+    "README.md",
+    "README-vi.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "LICENSE",
+    "USER_GUIDE.md",
+    "USER_GUIDE-vi.md",
+]);
+
 // ── Required sections for PRDs ───────────────────────────────────────
 const PRD_RULES = [
     {
@@ -111,6 +124,38 @@ const KNOWLEDGE_RULES = [
     },
 ];
 
+// ── SKILL.md-specific rules ──────────────────────────────────────────
+const SKILL_RULES = [
+    {
+        id: "SKILL-001",
+        name: "YAML Frontmatter",
+        pattern: /^---\nname:/,
+        severity: "error",
+        message: "Missing YAML frontmatter with 'name' field.",
+    },
+    {
+        id: "SKILL-002",
+        name: "Description in frontmatter",
+        pattern: /^---\n.*description:/s,
+        severity: "error",
+        message: "Missing 'description' field in YAML frontmatter.",
+    },
+    {
+        id: "SKILL-003",
+        name: "Disclaimer section",
+        pattern: /disclaimer/i,
+        severity: "warning",
+        message: "Missing Disclaimer section.",
+    },
+    {
+        id: "SKILL-004",
+        name: "Version table",
+        pattern: /version.*date.*changes/i,
+        severity: "warning",
+        message: "Missing Version & Changelog table.",
+    },
+];
+
 // ── Helpers ──────────────────────────────────────────────────────────
 const COLORS = {
     reset: "\x1b[0m",
@@ -126,12 +171,55 @@ function log(color, symbol, text) {
     console.log(`  ${color}${symbol}${COLORS.reset} ${text}`);
 }
 
+function getFileCategory(filePath) {
+    const basename = path.basename(filePath);
+
+    // Excluded infrastructure files — skip entirely
+    if (EXCLUDED_BASENAMES.has(basename)) {
+        return "excluded";
+    }
+
+    // Knowledge base files
+    if (filePath.includes("knowledge/") && !filePath.endsWith("metadata.json")) {
+        return "knowledge";
+    }
+
+    // SKILL.md files (hub or spoke)
+    if (basename === "SKILL.md") {
+        return "skill";
+    }
+
+    // Example PRD outputs
+    if (filePath.includes("examples/")) {
+        return "prd";
+    }
+
+    // Default: treat as a PRD
+    return "prd";
+}
+
 function lintFile(filePath) {
     const content = fs.readFileSync(filePath, "utf-8");
     const results = [];
-    const isKnowledge = filePath.includes("knowledge/") && !filePath.endsWith("metadata.json");
-    
-    const rules = isKnowledge ? KNOWLEDGE_RULES : PRD_RULES;
+    const category = getFileCategory(filePath);
+
+    if (category === "excluded") {
+        return { results: [], skipped: true };
+    }
+
+    let rules;
+    switch (category) {
+        case "knowledge":
+            rules = KNOWLEDGE_RULES;
+            break;
+        case "skill":
+            rules = SKILL_RULES;
+            break;
+        case "prd":
+        default:
+            rules = PRD_RULES;
+            break;
+    }
 
     for (const rule of rules) {
         if (!rule.pattern.test(content)) {
@@ -139,7 +227,7 @@ function lintFile(filePath) {
         }
     }
 
-    return results;
+    return { results, skipped: false, category };
 }
 
 function collectMarkdownFiles(targetPath) {
@@ -164,27 +252,38 @@ function collectMarkdownFiles(targetPath) {
 // ── Main ─────────────────────────────────────────────────────────────
 function main() {
     const args = process.argv.slice(2);
+    const isStrict = args.includes("--strict");
+    const filteredArgs = args.filter(a => a !== "--strict");
 
-    if (args.length === 0 || args.includes("--help")) {
+    if (filteredArgs.length === 0 || args.includes("--help")) {
         console.log(`
-${COLORS.bold}SafeAI-Lint${COLORS.reset} — PRD & Knowledge Compliance Checker
+${COLORS.bold}SafeAI-Lint v5.0.0${COLORS.reset} — PRD, Skill & Knowledge Compliance Checker
 
 ${COLORS.dim}Usage:${COLORS.reset}
   npx safeai-lint <file.md | directory>
+  npx safeai-lint . --strict              # Treat warnings as errors
 
-${COLORS.dim}Example:${COLORS.reset}
-  npx safeai-lint docs/my-prd.md
-  npx safeai-lint knowledge/
+${COLORS.dim}Options:${COLORS.reset}
+  --strict    Exit with code 1 on any warning (useful for CI/CD)
+  --help      Show this help message
+
+${COLORS.dim}File Categories:${COLORS.reset}
+  PRD files         → Checked against SEC-001 to SEC-009
+  SKILL.md files    → Checked against SKILL-001 to SKILL-004
+  knowledge/*.md    → Checked against KNOW-001 to KNOW-003
+  Infrastructure    → Automatically skipped (README, CHANGELOG, etc.)
 
 ${COLORS.dim}PRD Rules:${COLORS.reset}`);
         PRD_RULES.forEach((r) => log(COLORS.cyan, r.id, `${r.name} (${r.severity})`));
+        console.log(`\n${COLORS.dim}Skill Rules:${COLORS.reset}`);
+        SKILL_RULES.forEach((r) => log(COLORS.cyan, r.id, `${r.name} (${r.severity})`));
         console.log(`\n${COLORS.dim}Knowledge Rules:${COLORS.reset}`);
         KNOWLEDGE_RULES.forEach((r) => log(COLORS.cyan, r.id, `${r.name} (${r.severity})`));
         console.log("");
         process.exit(0);
     }
 
-    const target = args[0];
+    const target = filteredArgs[0];
     if (!fs.existsSync(target)) {
         console.error(`${COLORS.red}Error:${COLORS.reset} Path not found: ${target}`);
         process.exit(2);
@@ -196,19 +295,23 @@ ${COLORS.dim}PRD Rules:${COLORS.reset}`);
         process.exit(2);
     }
 
-    console.log(`\n${COLORS.bold}🛡️  SafeAI-Lint${COLORS.reset} — scanning ${files.length} file(s)...\n`);
+    console.log(`\n${COLORS.bold}🛡️  SafeAI-Lint v5.0.0${COLORS.reset} — scanning ${files.length} file(s)...${isStrict ? ` ${COLORS.red}(strict mode)${COLORS.reset}` : ""}\n`);
 
     let totalWarnings = 0;
     let totalErrors = 0;
+    let totalSkipped = 0;
 
     for (const file of files) {
-        const issues = lintFile(file);
+        const { results: issues, skipped, category } = lintFile(file);
         const relPath = path.relative(process.cwd(), file);
 
-        if (issues.length === 0) {
-            log(COLORS.green, "✓", `${relPath} — All checks passed`);
+        if (skipped) {
+            log(COLORS.dim, "⏭", `${relPath} — Skipped (infrastructure file)`);
+            totalSkipped++;
+        } else if (issues.length === 0) {
+            log(COLORS.green, "✓", `${relPath} — All checks passed ${COLORS.dim}(${category})${COLORS.reset}`);
         } else {
-            log(COLORS.yellow, "⚠", `${COLORS.bold}${relPath}${COLORS.reset}`);
+            log(COLORS.yellow, "⚠", `${COLORS.bold}${relPath}${COLORS.reset} ${COLORS.dim}(${category})${COLORS.reset}`);
             for (const issue of issues) {
                 const color = issue.severity === "error" ? COLORS.red : COLORS.yellow;
                 const symbol = issue.severity === "error" ? "✗" : "⚠";
@@ -222,10 +325,15 @@ ${COLORS.dim}PRD Rules:${COLORS.reset}`);
     console.log(`\n${COLORS.dim}────────────────────────────────────────${COLORS.reset}`);
     console.log(
         `  ${totalErrors > 0 ? COLORS.red : COLORS.green}${totalErrors} error(s)${COLORS.reset}, ` +
-        `${totalWarnings > 0 ? COLORS.yellow : COLORS.green}${totalWarnings} warning(s)${COLORS.reset}\n`
+        `${totalWarnings > 0 ? COLORS.yellow : COLORS.green}${totalWarnings} warning(s)${COLORS.reset}, ` +
+        `${COLORS.dim}${totalSkipped} skipped${COLORS.reset}\n`
     );
 
-    process.exit(totalErrors > 0 ? 1 : 0);
+    if (isStrict) {
+        process.exit((totalErrors + totalWarnings) > 0 ? 1 : 0);
+    } else {
+        process.exit(totalErrors > 0 ? 1 : 0);
+    }
 }
 
 main();

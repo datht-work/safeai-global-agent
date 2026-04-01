@@ -112,6 +112,10 @@ jobs:
             "skills/safeai-hipaa-expert/SKILL.md"
             "skills/safeai-fintech-compliance/SKILL.md"
             "skills/safeai-asean-data-protection/SKILL.md"
+            "skills/safeai-us-privacy-expert/SKILL.md"
+            "skills/safeai-edtech-compliance/SKILL.md"
+            "skills/safeai-ai-ethics-expert/SKILL.md"
+            "skills/safeai-code-scanner/SKILL.md"
           )
 
           for file in "${SKILL_FILES[@]}"; do

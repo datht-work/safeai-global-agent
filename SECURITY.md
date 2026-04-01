@@ -4,8 +4,9 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x   | ✅ Active support  |
-| 1.0.x   | ❌ End of life     |
+| 5.0.x   | ✅ Active support  |
+| 4.x.x   | 🔧 Maintenance    |
+| 1.0.x – 3.x.x | ❌ End of life |
 
 ## Reporting a Vulnerability
 

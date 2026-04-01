@@ -40,6 +40,11 @@
       "source": "datht-work/safeai-global-agent",
       "subpath": "skills/safeai-ai-ethics-expert",
       "sourceType": "github"
+    },
+    "SafeAI Code Scanner": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-code-scanner",
+      "sourceType": "github"
     }
   }
 }

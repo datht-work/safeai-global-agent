@@ -1,6 +1,6 @@
 ---
 name: SafeAI Code Scanner
-description: Security & Compliance Guardrail for AI-Generated Code (Vibe Coding). (v4.3.0)
+description: Security & Compliance Guardrail for AI-Generated Code (Vibe Coding). (v5.0.0)
 tags: [security, code-scan, vibe-coding, compliance, devsecops]
 ---
 
@@ -148,6 +148,7 @@ app.use(helmet());
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v0.1.0** | 2026-03-18 | Initial Beta: Vibe Coding risk detection, PRD traceability, Security Scoring. |
 

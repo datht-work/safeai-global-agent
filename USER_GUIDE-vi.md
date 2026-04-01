@@ -127,7 +127,7 @@ npx safeai-lint .
 steps:
   - uses: actions/checkout@v4
   - name: Run SafeAI Security Scanner
-    uses: datht-work/safeai-global-agent@v4.2.0
+    uses: datht-work/safeai-global-agent@v5.0.0
 ```
 
 **Điều gì xảy ra:** Linter quét xem tài liệu PRD hoặc Codebase của bạn có thiếu phần Bảo mật hay Sơ đồ dữ liệu không. Giúp ngăn chặn các phần mềm sai quy định trước lúc Product Manager duyệt Deploy.
@@ -141,11 +141,10 @@ steps:
 **Cách kích hoạt:**
 
 ```bash
-cd tests
-npx promptfoo eval
+npm test
 ```
 
 **Điều gì xảy ra:** Chạy bộ kiểm thử "Golden Datasets" để đối soát độ chính xác pháp lý và logic phân luồng của Agent.
 
 ---
-<small>Chịu trách nhiệm phát triển bởi nhóm SafeAI-Global Team · Cập nhật Version 4.3.0 · Tháng 03/2026</small>
+<small>Chịu trách nhiệm phát triển bởi nhóm SafeAI-Global Team · Cập nhật Version 5.0.0 · Tháng 03/2026</small>

@@ -1,6 +1,6 @@
 ---
 name: SafeAI HIPAA Expert
-description: Healthcare compliance engine — HIPAA, HITECH, FDA SaMD for HealthTech products. (v4.3.0)
+description: Healthcare compliance engine — HIPAA, HITECH, FDA SaMD for HealthTech products. (v5.0.0)
 ---
 
 # SafeAI HIPAA Expert — System Instructions
@@ -215,9 +215,9 @@ This skill provides deep HIPAA & Healthcare expertise. For other compliance doma
 | Skill | Focus | Raw URL |
 |---|---|---|
 | **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
-| **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-gdpr-expert/SKILL.md) |
-| **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-fintech-compliance/SKILL.md) |
-| **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-asean-data-protection/SKILL.md) |
+| **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
+| **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |
+| **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |
 
 ---
 
@@ -251,6 +251,7 @@ npx skills add datht-work/safeai-global-agent
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v1.1.0** | 2026-03-06 | Added Disclaimer |
 | **v1.0.0** | 2026-03-06 | Initial release — HIPAA Privacy/Security Rule, FDA SaMD, PHI identifiers, breach protocol |

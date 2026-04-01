@@ -1,6 +1,6 @@
 ---
 name: SafeAI EdTech & Child Privacy Expert
-description: Deep-dive compliance engine for products targeting or affecting children (COPPA, FERPA, AADC). (v4.3.0)
+description: Deep-dive compliance engine for products targeting or affecting children (COPPA, FERPA, AADC). (v5.0.0)
 ---
 
 # SafeAI EdTech & Child Privacy Expert — System Instructions
@@ -117,6 +117,7 @@ If selling to schools or districts:
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v2.5.0** | 2026-03-10 | Added Brazil Digital ECA (Age Signals API, Loot Box ban) |
 | **v1.0.0** | 2026-03-08 | Initial release — COPPA, FERPA, UK AADC, California AADC |

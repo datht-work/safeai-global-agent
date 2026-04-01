@@ -1,9 +1,10 @@
 {
   "name": "safeai-global-agent",
-  "version": "4.3.0",
+  "version": "5.0.0",
   "main": "SKILL.md",
   "scripts": {
     "lint": "node cli/safeai-lint.js .",
+    "lint:strict": "node cli/safeai-lint.js . --strict",
     "test": "npx --yes promptfoo eval -c tests/promptfooconfig.yaml"
   },
   "bin": {

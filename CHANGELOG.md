@@ -8,6 +8,33 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
+## [v5.0.0] - 2026-03-31
+
+### Added
+
+- **GitHub Copilot Integration**: Created `.github/copilot-instructions.md` — optimized system prompt for Copilot context window with full routing logic, commands, and compliance behavior.
+- **Smart Linter v2 (`safeai-lint.js`)**: Complete rewrite with file-aware categorization (PRD/Skill/Knowledge/Infrastructure), new SKILL-specific rules (SKILL-001 to SKILL-004), `--strict` mode for CI/CD, and auto-skip for project infrastructure files.
+- **`lint:strict` npm script**: Added `npm run lint:strict` for CI/CD pipelines that need zero-tolerance compliance checking.
+- **Complete Skills Registry**: Added missing `safeai-code-scanner` to `skills-lock.json` — all 9 skills now properly indexed.
+
+### Fixed
+
+- **Critical: 5 Broken Links in README.md** — Skill links missing `skills/` prefix causing 404 errors for users.
+- **Critical: Broken GitHub URLs** — Fixed incorrect raw URLs across all 4 spoke skill Related Skills tables (GDPR, HIPAA, FinTech, ASEAN).
+- **Security Audit Workflow** — Added 4 missing skill files to verification step (US Privacy, EdTech, AI Ethics, Code Scanner).
+- **Knowledge Metadata** — Updated stale `metadata.json` from v1.0.0/2026-03-11 to current state.
+- **SECURITY.md** — Updated supported versions from outdated v2.0.x/v1.0.x to reflect current v5.0.x lifecycle.
+- **CONTRIBUTING.md** — Fixed outdated test command (raw `promptfoo` → `npm test`).
+- **SKILL.md Markdown Lint** — Fixed trailing spaces and missing blank lines around lists.
+
+### Changed
+
+- Bumped all skill versions to v5.0.0 across 9 SKILL.md files.
+- Updated `.gitignore` with `.DS_Store`, `*.log`, `knowledge_compiled.json`.
+- Synchronized version references across README, README-vi, USER_GUIDE (En/Vi), and sample output.
+
+---
+
 ## [v4.3.0] - 2026-03-26
 
 ### Added

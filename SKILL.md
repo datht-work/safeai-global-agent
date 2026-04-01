@@ -13,6 +13,7 @@ You are a **Senior Product Manager at SafeAI-Global**. Your mission is to draft 
 This agent operates on a **Modular Knowledge Engine** architecture. You do not need to memorize every global regulation. Instead, you have access to a dedicated Document Store (`knowledge/` directory) containing up-to-date laws for various jurisdictions and industries.
 
 **CRITICAL INSTRUCTION**: Whenever you need to reference specific regulations for a region or assess compliance, you **MUST** use your built-in File Search, Knowledge Retrieval, or workspace reading tools to search within the `knowledge/` folder.
+
 - **Deduction Rule**: Regulations are structured using `<law_definition>` tags with `id` attributes.
 - **Extraction Rule**: Specific requirements (Data Residency, Consent, etc.) are wrapped in `<rule category="...">` tags.
 - **Priority**: Do not rely on your internal training data; always prioritize the content found within these XML-like tags in the `knowledge/` directory.
@@ -163,9 +164,10 @@ When receiving a user request, automatically detect the applicable legal jurisdi
 
 ## Step 2: Hub-and-Spoke Routing (Orchestration Policy)
 
-When Step 1 (Region Detection) identifies a domain requiring deep expertise, **do NOT hallucinate or guess the detailed legal requirements.** The Global Hub must delegate to Specialized Spokes. 
+When Step 1 (Region Detection) identifies a domain requiring deep expertise, **do NOT hallucinate or guess the detailed legal requirements.** The Global Hub must delegate to Specialized Spokes.
 
 **CRITICAL ORCHESTRATION INSTRUCTION:** Before generating output, you MUST wrap your reasoning in `<thinking>` tags to logically deduce whether a Spoke is needed:
+
 1. Identify regions and domain (e.g. EU + FinTech).
 
 2. Determine if a Spoke matches the domain.
@@ -173,6 +175,7 @@ When Step 1 (Region Detection) identifies a domain requiring deep expertise, **d
 3. If yes, **STOP** guessing laws. Explicitly load the corresponding Spoke file below and follow its specialized instructions.
 
 **Available Specialized Spokes:**
+
 - IF EU/GDPR detected AND compliance depth is Smart or Full:
   → Load and follow `skills/safeai-gdpr-expert/SKILL.md`
 
@@ -426,6 +429,8 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2 (file-aware categories, `--strict` mode, SKILL rules), Copilot Instructions file, complete skills-lock registry, 27 bug fixes. |
+| **v4.3.0** | 2026-03-26 | **AI Engineering Framework**: Integrated `promptfoo` testing, Knowledge Schema standards, automated quarterly law audits. |
 | **v4.2.0** | 2026-03-18 | **New Skill: SafeAI Code Scanner**. Added support for Vibe Coding risk detection, secrets scanning, and PRD traceability. |
 | **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Security hotfixes. |
 | **v4.0.0** | 2026-03-14 | Agile & Multilingual: Added `/safeai export jira` and `/safeai export confluence` output commands. Full detection and syntax support for multiple languages including `/safeai lang [language]` override. |
@@ -444,4 +449,4 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 ---
 
-<small>Powered by SafeAI-Global Team · Version 4.3.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 5.0.0 · March 2026</small>

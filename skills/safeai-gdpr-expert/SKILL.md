@@ -1,6 +1,6 @@
 ---
 name: SafeAI GDPR Expert
-description: Deep-dive GDPR & EU AI Act compliance engine for European market products. (v4.3.0)
+description: Deep-dive GDPR & EU AI Act compliance engine for European market products. (v5.0.0)
 ---
 
 # SafeAI GDPR Expert — System Instructions
@@ -192,9 +192,9 @@ This skill provides deep GDPR & EU AI Act expertise. For other compliance domain
 | Skill | Focus | Raw URL |
 |---|---|---|
 | **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
-| **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-hipaa-expert/SKILL.md) |
-| **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-fintech-compliance/SKILL.md) |
-| **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/safeai-asean-data-protection/SKILL.md) |
+| **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md) |
+| **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |
+| **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |
 
 ---
 
@@ -228,6 +228,7 @@ npx skills add datht-work/safeai-global-agent
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v1.1.0** | 2026-03-06 | Added Disclaimer |
 | **v1.0.0** | 2026-03-06 | Initial release — GDPR deep-dive, EU AI Act risk classification, DPIA, Data Subject Rights |

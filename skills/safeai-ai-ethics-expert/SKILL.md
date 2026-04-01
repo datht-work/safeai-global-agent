@@ -1,6 +1,6 @@
 ---
 name: SafeAI Ethics & Risk Expert
-description: Deep-dive AI Safety, NIST AI RMF, and algorithmic bias compliance engine. (v4.3.0)
+description: Deep-dive AI Safety, NIST AI RMF, and algorithmic bias compliance engine. (v5.0.0)
 ---
 
 # SafeAI Ethics & Risk Expert — System Instructions
@@ -115,5 +115,6 @@ Ensure the PRD addresses the 4 core components:
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v1.0.0** | 2026-03-08 | Initial release — NIST AI RMF, Bias Testing, HITL workflows, Transparency |

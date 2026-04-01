@@ -1,6 +1,6 @@
 ---
 name: SafeAI US State Privacy Expert
-description: Deep-dive US state-level privacy (CCPA/CPRA, VCDPA, CPA, TDPSA) compliance engine. (v4.3.0)
+description: Deep-dive US state-level privacy (CCPA/CPRA, VCDPA, CPA, TDPSA) compliance engine. (v5.0.0)
 ---
 
 # SafeAI US State Privacy Expert — System Instructions
@@ -120,5 +120,6 @@ If the product involves packaging and selling data:
 
 | Version | Date | Changes |
 |---|---|---|
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **Full Ecosystem Sync**: Integrated Agile Engine, DevSecOps Infrastructure, and Multilingual Support. |
 | **v1.0.0** | 2026-03-08 | Initial release — CCPA/CPRA, VCDPA, GPC, Opt-in vs Opt-out mapping |

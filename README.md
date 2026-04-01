@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-4.3.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -62,12 +62,12 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 |---|---|---|---|
 | 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ jurisdictions, cross-border transfers, AI governance | All Product Managers |
 | 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR Art-by-Art, EU AI Act risk classification, DPIA | EU market PMs |
-| 🏥 | **[SafeAI HIPAA Expert](safeai-hipaa-expert/SKILL.md)** | HIPAA safeguards, FDA SaMD, PHI handling | HealthTech PMs |
-| 💳 | **[SafeAI FinTech Compliance](safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | FinTech PMs |
-| 🌏 | **[SafeAI ASEAN Data Protection](safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH country deep-dives | ASEAN startups |
-| 🇺🇸 | **[SafeAI US State Privacy Expert](safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC, Opt-in consent | US market PMs |
-| 👶 | **[SafeAI EdTech & Child Privacy Expert](safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC, Age Gating | EdTech PMs |
-| 🤖 | **[SafeAI Ethics & Risk Expert](safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, Human-in-the-Loop | AI/ML PMs |
+| 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA safeguards, FDA SaMD, PHI handling | HealthTech PMs |
+| 💳 | **[SafeAI FinTech Compliance](skills/safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | FinTech PMs |
+| 🌏 | **[SafeAI ASEAN Data Protection](skills/safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH country deep-dives | ASEAN startups |
+| 🇺🇸 | **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC, Opt-in consent | US market PMs |
+| 👶 | **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC, Age Gating | EdTech PMs |
+| 🤖 | **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, Human-in-the-Loop | AI/ML PMs |
 | 🛡️ | **[SafeAI Code Scanner](skills/safeai-code-scanner/SKILL.md)** | Code audit — Vibe Coding risk, secrets detection | DevSecOps / Engineers |
 
 ### 🔗 Modular Architecture for Global Scale
@@ -227,7 +227,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v4.3.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v5.0.0 · March 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)
