@@ -1,31 +1,38 @@
 <!-- Asia-Pacific (APAC) Privacy & Cybersecurity Regulations -->
 # Asia-Pacific (APAC) Compliance Frameworks
 
-<law_definition id="VN-PDPD">
-  <name>Vietnam Personal Data Protection Decree (Decree 13/2023/ND-CP)</name>
-  <effective_date>2023-07-01</effective_date>
+<law_definition id="VN-PDPL">
+  <name>Vietnam Law on Personal Data Protection (Law No. 91/2025/QH15) & Decree 356/2025/ND-CP</name>
+  <effective_date>2026-01-01</effective_date>
   <source_url><https://vanban.chinhphu.vn/></source_url>
 
   <applicability>
     - Any agency, organization, or individual involved in personal data processing in Vietnam.
     - Foreign agencies, organizations, or individuals directly involved in or related to personal data processing in Vietnam.
+    - Mandatory designation of a Data Protection Officer (DPO) or Department.
   </applicability>
 
   <rule category="data_residency">
     <description>
-      Decree 53/2022/ND-CP requires certain data (including personal data of users in Vietnam) to be stored in Vietnam. A copy must be maintained on servers located in Vietnam.
+      Decree 356/2025/ND-CP and Decree 53/2022/ND-CP require certain data (including personal data of users in Vietnam) to be stored in Vietnam. A copy must be maintained on servers located in Vietnam.
     </description>
   </rule>
 
   <rule category="cross_border_transfer">
     <description>
-      Transferring personal data of Vietnamese citizens abroad requires a Data Transfer Impact Assessment (DPIA) to be filed with the Ministry of Public Security (A05) within 60 days of processing.
+      Transferring personal data of Vietnamese citizens abroad requires: (1) Impact Assessment (TIA) filing with Ministry of Public Security (A05), (2) Written commitment to data protection standards, (3) Data subject consent.
     </description>
   </rule>
 
   <rule category="consent_mechanism">
     <description>
-      Explicit consent is required. Silence or non-response by the data subject does not constitute consent. Consent must be voluntary and informed.
+      Explicit, voluntary, and informed consent is required. Must be granular (separate consent for separate purposes). Silence or pre-checked boxes are not valid consent.
+    </description>
+  </rule>
+
+  <rule category="penalties">
+    <description>
+      Administrative fines up to 5% of annual revenue for severe violations or up to VND 3 billion.
     </description>
   </rule>
 </law_definition>

@@ -49,7 +49,7 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 |---|---|---|---|
 | `/template fintech eu` | FinTech | 🇪🇺 EU | PSD2, GDPR, DORA |
 | `/template healthcare us` | HealthTech | 🇺🇸 USA | HIPAA, FDA SaMD |
-| `/template social vn` | Social Media | 🇻🇳 Vietnam | Decree 13, Cybersecurity Law |
+| `/template social vn` | Social Media | 🇻🇳 Vietnam | PDPL (2026), Decree 356, Decree 53 |
 | `/template ai eu` | AI/ML | 🇪🇺 EU | EU AI Act, GDPR Art. 22 |
 
 > *See the full list of templates in [SKILL.md](SKILL.md).*
@@ -222,6 +222,22 @@ See [SECURITY.md](SECURITY.md) for security-related contribution guidelines.
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+## 🔔 Quarterly Legal Audit Required
+The SafeAI-Global Knowledge Base heavily relies on up-to-date legal facts. Please audit the following major frameworks to ensure our `knowledge/` directory is accurate:
+
+### 🌍 Checkpoints (Q2-2026):
+- [ ] **EU AI Act**: Monitor AI Office guidelines ahead of the **August 2, 2026** enforcement milestone.
+- [ ] **Vietnam PDPL**: Ensure all facts align with **Law No. 91/2025/QH15** and **Decree 356/2025/ND-CP**.
+- [ ] **US State Privacy**: Validate enforcement for Maryland (MODPA), Indiana, Kentucky, and Rhode Island.
+- [ ] **ISO Standards**: Review EN ISO/IEC 42001:2026 regional adoptions and ISO 27001:2022 amendments.
+
+**Action**:
+1. Validate the facts in `knowledge/` against official sources (e.g., Official Journals, NIST, ISO).
+2. If changes exist, open a PR with updated Markdown tags.
+3. Run `npm run eval` to ensure the PRD generator still behaves correctly via `promptfoo`.
 
 ---
 

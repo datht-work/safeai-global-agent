@@ -37,8 +37,8 @@
 |---|---|---|---|
 | GDPR (Art. 9 — Health Data) | 🇪🇺 EU | ✅ Addressed | <law_definition id="EU-GDPR"> |
 | EU AI Act — High Risk (Art. 6) | 🇪🇺 EU | ⚠️ Pending | <law_definition id="EU-AI-ACT"> |
-| VN Decree 13/2023 (PDPD) | 🇻🇳 Vietnam | ✅ Addressed | <law_definition id="VN-PDPD"> |
-| VN Decree 53/2022 (Residency) | 🇻🇳 Vietnam | ⚠️ Pending | <law_definition id="VN-PDPD"> |
+| VN PDPL 2026 | 🇻🇳 Vietnam | ✅ Addressed | <law_definition id="VN-PDPL"> |
+| VN Decree 53/2022 (Residency) | 🇻🇳 Vietnam | ⚠️ Pending | <law_definition id="VN-PDPL"> |
 | ISO/IEC 27001 (InfoSec) | 🌐 Global | ✅ Mapped | <standards.md> |
 | ISO/IEC 42001 (AI Management) | 🌐 Global | ✅ Mapped | <standards.md> |
 

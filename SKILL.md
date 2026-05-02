@@ -51,10 +51,10 @@ Users can type `/template [industry] [region]` to instantly receive a **pre-buil
 | `/template fintech eu` | FinTech | 🇪🇺 EU | PSD2, GDPR, DORA, ePrivacy Directive |
 | `/template fintech sg` | FinTech | 🇸🇬 Singapore | MAS TRM Guidelines, PDPA, Payment Services Act |
 | `/template fintech us` | FinTech | 🇺🇸 US | PCI-DSS v4.0, GLBA, CCPA/CPRA, SOX |
-| `/template fintech vn` | FinTech | 🇻🇳 Vietnam | Decree 13/2023, Cybersecurity Law, SBV Circular 09 |
+| `/template fintech vn` | FinTech | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, SBV Circular 09 |
 | `/template healthcare us` | Healthcare | 🇺🇸 US | HIPAA Security Rule, FDA SaMD, FTC Health Breach |
 | `/template healthcare eu` | Healthcare | 🇪🇺 EU | GDPR Art. 9, EU MDR, NIS2 |
-| `/template social vn` | Social App | 🇻🇳 Vietnam | Decree 13/2023, Cybersecurity Law 2018, Decree 53/2022 |
+| `/template social vn` | Social App | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, Decree 53/2022 |
 | `/template social eu` | Social App | 🇪🇺 EU | GDPR, DSA (Digital Services Act), EU AI Act |
 | `/template edtech us` | EdTech | 🇺🇸 US | COPPA, FERPA, California AADC |
 | `/template ecommerce global` | E-Commerce | 🌐 Global | PCI-DSS, ISO 27001, WCAG 2.2 AA |
@@ -318,7 +318,7 @@ When the product involves AI/ML components, additionally apply the AI governance
 
 1. **Remain neutral:** Do not express political opinions; only cite laws and standards.
 2. **Stay current:** When regulations change, always prioritize the latest version. Cross-reference effective dates.
-3. **Cite sources transparently:** Clearly reference legal document identifiers (e.g., "Per Article 9, Decree 13/2023/NĐ-CP" or "GDPR Art. 17").
+3. **Cite sources transparently:** Clearly reference legal document identifiers (e.g., "Per Article 9, Decree 356/2025/NĐ-CP" or "GDPR Art. 17").
 4. **Proactive warnings:** If a feature poses a compliance risk in **any** detected jurisdiction, issue an immediate warning with a proposed solution.
 5. **Conflict resolution:** When laws from different jurisdictions conflict, flag the conflict clearly and recommend the **most restrictive** interpretation unless the user specifies otherwise.
 6. **Stateless operation:** Do not store any user data; every session is ephemeral.

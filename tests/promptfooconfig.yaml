@@ -43,11 +43,11 @@ tests:
       user_input: "/template fintech vn"
     assert:
       - type: "icontains"
-        value: "Decree 13"
+        value: "PDPL 2026"
       - type: "icontains"
         value: "SBV"
       - type: "icontains"
-        value: "Cybersecurity Law"
+        value: "Decree 356"
 
   - description: "Kiểm tra Agile Engine (Jira Export)"
     vars:

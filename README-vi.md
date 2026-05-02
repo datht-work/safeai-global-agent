@@ -19,7 +19,7 @@ Việc phát triển phần mềm tuân thủ hệ thống pháp lý toàn cầu
 **Dành cho Lãnh đạo Sản phẩm (CPO/PM):**
 
 - **⚡ Tăng tốc Time-to-Market (TTM)**: Sinh ra các PRD chuẩn kỹ thuật và pháp lý chỉ trong vài phút. Xoá bỏ nút thắt chờ đợi ban pháp chế thẩm định gây cản trở các chặng Sprint.
-- **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và chặn đứng rủi ro pháp lý (GDPR, HIPAA, DORA, Nghị định 13) trước khi kỹ sư bắt đầu viết code. Tránh các án phạt vi phạm dữ liệu khổng lồ.
+- **🛡️ Giảm Rủi ro Phát hành**: Tự động nhận diện và chặn đứng rủi ro pháp lý (GDPR, HIPAA, DORA, Luật PDPL 2026) trước khi kỹ sư bắt đầu viết code. Tránh các án phạt vi phạm dữ liệu khổng lồ.
 - **💯 Kiểm Soát Chất Lượng Tức Thì**: Tự động chấm điểm (SafeAI-Global Score) mức độ sẵn sàng tuân thủ của PRD trên 3 trụ cột: Quyền riêng tư, Bảo mật và Minh bạch.
 - **📉 Tránh "Kỹ sư hoá quá mức"**: Chỉ áp dụng những luật thực sự cần thiết cho thị trường mục tiêu. Tiết kiệm chi phí dev các tính năng bảo mật không bắt buộc đối với MVP.
 
@@ -36,9 +36,9 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 | Lệnh | Ngành | Khu vực | Quy định áp dụng |
 |---|---|---|---|
 | `/template fintech eu` | Tài chính | 🇪🇺 EU | PSD2, GDPR, DORA |
-| `/template fintech vn` | Tài chính | 🇻🇳 Việt Nam | NĐ 13/2023, Luật ANMVN, TT SBV 09 |
+| `/template fintech vn` | Tài chính | 🇻🇳 Việt Nam | Luật PDPL 2026, NĐ 356, TT SBV 09 |
 | `/template healthcare us` | Y tế | 🇺🇸 Mỹ | HIPAA, FDA SaMD |
-| `/template social vn` | Mạng xã hội | 🇻🇳 Việt Nam | NĐ 13, NĐ 53, Luật ANMVN 2018 |
+| `/template social vn` | Mạng xã hội | 🇻🇳 Việt Nam | Luật PDPL, NĐ 356, NĐ 53 |
 | `/template ai eu` | AI/ML | 🇪🇺 EU | EU AI Act, GDPR Art. 22, ISO 42001 |
 
 > *Xem đầy đủ danh sách templates trong [SKILL.md](SKILL.md).*
@@ -184,7 +184,23 @@ Xem [SECURITY.md](SECURITY.md) để biết hướng dẫn đóng góp liên qua
 
 ## 📄 Giấy Phép
 
-Giấy phép MIT — xem [LICENSE](LICENSE) để biết chi tiết.
+Giấy phép MIT — xem [LICENSE](LICENSE) cho chi tiết.
+
+---
+
+## 🔔 Kiểm toán Pháp lý Định kỳ (Hàng quý)
+Hệ thống tri thức SafeAI-Global phụ thuộc hoàn toàn vào tính cập nhật của các văn bản luật. Vui lòng thực hiện kiểm tra các khung pháp lý sau để đảm bảo thư mục `knowledge/` luôn chính xác:
+
+### 🌍 Các điểm kiểm tra (Q2-2026):
+- [ ] **EU AI Act**: Theo dõi các hướng dẫn mới từ AI Office trước cột mốc thực thi chính thức ngày **02/08/2026**.
+- [ ] **Luật PDPL Việt Nam**: Đảm bảo toàn bộ tri thức đã cập nhật theo **Luật số 91/2025/QH15** và **Nghị định 356/2025/NĐ-CP**.
+- [ ] **US State Privacy**: Đối soát hiệu lực thực thi tại Maryland (MODPA), Indiana, Kentucky và Rhode Island.
+- [ ] **Tiêu chuẩn ISO**: Rà soát các bản địa phương hóa EN ISO/IEC 42001:2026 và các sửa đổi của ISO 27001:2022.
+
+**Hành động**:
+1. Đối soát dữ liệu trong `knowledge/` với các nguồn chính thống (Công báo, NIST, ISO).
+2. Nếu có thay đổi, mở PR cập nhật các tag Markdown trong knowledge base.
+3. Chạy `npm run eval` để đảm bảo Agent vẫn sinh PRD chuẩn xác thông qua `promptfoo`.
 
 ---
 

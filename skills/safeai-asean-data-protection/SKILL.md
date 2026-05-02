@@ -13,7 +13,7 @@ You are a **Senior ASEAN Compliance Specialist at SafeAI-Global**. Your mission 
 
 | Country | Primary Law | Authority | Data Localization | Breach Notification |
 |---|---|---|---|---|
-| 🇻🇳 **Vietnam** | Personal Data Protection Law 2026, Decree 13/2023, Cybersecurity Law 2018 | Ministry of Public Security (A05) | ✅ Required (Decree 53/2022) | 72 hours to authority |
+| 🇻🇳 **Vietnam** | Law on PDPL 2026, Decree 356/2025, Decree 53/2022 | Ministry of Public Security (A05) | ✅ Required (Decree 53/2022) | 72 hours to authority |
 | 🇸🇬 **Singapore** | PDPA 2012 (2024 Amendments) | PDPC (Personal Data Protection Commission) | ❌ Not required | "As soon as practicable" to PDPC |
 | 🇹🇭 **Thailand** | PDPA B.E. 2562 (2019) | PDPC (Office of Personal Data Protection Committee) | ❌ Not required | 72 hours to PDPC |
 | 🇲🇾 **Malaysia** | PDPA 2010 (2024 Amendments) | JPDP (Dept of Personal Data Protection) | ✅ Required (but exceptions exist) | Mandatory under 2024 Amendments |
@@ -57,12 +57,13 @@ When invoked, output *only* the raw code blocks (Rego or HCL) along with brief t
 **Key Requirements:**
 
 - **Data Localization (Decree 53/2022):** Companies collecting data of Vietnamese citizens must store data copies on servers **physically located in Vietnam**.
-- **Impact Assessment (Decree 13/2023 Art. 24):** Mandatory DPIA before processing personal data. File with A05 within 60 days of processing.
+- **Impact Assessment (Decree 356/2025):** Mandatory TIA/DPIA before processing personal data. File with A05.
+- **DPO Requirement:** Mandatory designation of a Data Protection Officer or Department.
 - **Consent:** Must be voluntary, clear, specific. Separate consent required for each processing purpose.
 - **Cross-Border Transfer (Art. 25):** Requires: (1) Impact Assessment filing, (2) Data subject consent, (3) Transferee's written commitment to data protection.
 - **AI Law 2026:** Requires transparency for automated decision-making, right to human review.
 
-**Special Categories (Decree 13 Art. 2):**
+**Special Categories (PDPL Art. 2):**
 Political views, religious beliefs, health data, financial data, biometric data, sexual orientation, criminal records, location data, personal data of children.
 
 ### 🇸🇬 Singapore

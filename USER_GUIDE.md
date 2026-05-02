@@ -33,7 +33,7 @@ These features work automatically based on conversational context.
 **How to Trigger:** Just mention the target country/region naturally.
 > *"Write a PRD for a ride-hailing mobile app. Target market is **Vietnam**."*
 
-**What Happens:** The agent automatically embeds local laws (e.g., Vietnam PDPD Decree 13) into the PRD constraints.
+**What Happens:** The agent automatically embeds local laws (e.g., Vietnam PDPL 2026) into the PRD constraints.
 
 ### Fast MVP Generation (No legal overhead)
 
