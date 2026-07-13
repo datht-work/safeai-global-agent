@@ -63,11 +63,25 @@
 </law_definition>
 
 <law_definition id="US-STATE-LAWS">
-  <name>US State Privacy Laws (VCDPA, CPA, CTPA, UCPA)</name>
-  <effective_date>2023-2024</effective_date>
+  <name>US Comprehensive State Privacy Laws (24 states enacted as of mid-2026)</name>
+  <effective_date>2023-2026</effective_date>
+  <source_url><https://iapp.org/resources/article/us-state-privacy-legislation-tracker/></source_url>
+
+  <applicability>
+    - As of July 2026, 24 US states have enacted comprehensive consumer privacy laws, with approximately 20 currently in effect.
+    - States with active laws include: Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Iowa, Indiana, Tennessee, Texas, Montana, Oregon, Delaware, New Hampshire, New Jersey, Nebraska, Kentucky, Rhode Island, Maryland, Minnesota, Alabama, Louisiana, Oklahoma, Vermont, Arkansas, and others.
+    - Key effective dates in 2026: Indiana, Kentucky, Rhode Island (Jan 1), Connecticut expanded + Arkansas + Utah expanded (Jul 1).
+  </applicability>
+
   <rule category="consent_mechanism">
     <description>
-      Generally follows opt-out for sales/sharing, but varies on sensitive data (opt-in often required).
+      Generally follows opt-out for sales/sharing and targeted advertising. Sensitive data processing typically requires opt-in consent. Most states now require recognition of Universal Opt-Out Mechanisms (e.g., Global Privacy Control signals). Variations exist — organizations must track state-specific thresholds (consumer counts, revenue from data sales) to determine applicability.
+    </description>
+  </rule>
+
+  <rule category="consumer_rights">
+    <description>
+      Common rights across most state laws: Access, Deletion, Correction, Data Portability, and Opt-Out of Sale/Sharing. Some states (e.g., Connecticut, Maryland, Minnesota) provide additional rights such as algorithmic decision-making opt-outs and data minimization requirements.
     </description>
   </rule>
 </law_definition>
