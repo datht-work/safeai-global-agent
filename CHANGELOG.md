@@ -8,6 +8,27 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
+## [v5.1.0] - 2026-07-13
+
+### Added — Q3 2026 Quarterly Legal Audit (Closes #4)
+
+- **EU AI Act Enforcement Milestones**: Added phased enforcement timeline (Feb 2025 → Aug 2026 → 2027-2028) and tiered penalty framework (up to €35M / 7% turnover) to `knowledge/emea/regulations.md`.
+- **GDPR DPF/Schrems III Risk**: Updated cross-border transfer rules with EU-US Data Privacy Framework status and impact of *Trump v. Slaughter* (June 2026) on FTC independence. Added CJEU *WhatsApp Ireland v. EDPB* ruling note.
+- **Thailand PDPA**: New `TH-PDPA` entry in `knowledge/apac/regulations.md` — active enforcement, THB 21.5M+ in fines (2025), BCR regulations effective Feb 2026.
+- **Indonesia PDP Law**: New `ID-PDP` entry — Law 27/2022 fully binding since Oct 2024, DPA pending establishment.
+- **Vietnam PDPL Enforcement Status**: Added `enforcement_status` rule documenting Decree 13/2023 sunset and PDPL active enforcement transition.
+- **US State Privacy Expansion**: Updated `US-STATE-LAWS` from 4 states to 24 states enacted (20 active). Added Universal Opt-Out Mechanism (GPC) requirement and `consumer_rights` rule.
+- **ISO/IEC 27701:2025**: New `ISO-27701` entry in `knowledge/global/standards.md` — standalone PIMS certification.
+- **ISO 27001 Transition Note**: Added `transition_status` rule — 2013→2022 transition completed Oct 2025, climate action amendment.
+- **ISO 42001 EU AI Act Integration**: Updated AI governance description with EU AI Act compliance alignment and combined audit note.
+
+### Changed
+
+- Bumped knowledge metadata version to v5.1.0, `last_updated` to 2026-07-13.
+- Increased `total_jurisdictions` from 35 to 38 (Thailand, Indonesia, expanded US state coverage).
+
+---
+
 ## [v5.0.0] - 2026-03-31
 
 ### Added
