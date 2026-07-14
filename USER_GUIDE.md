@@ -8,10 +8,10 @@ This guide provides a focused, step-by-step reference for the SafeAI-Global Agen
 
 | Command | Action / Behavior |
 |---|---|
-| *(Natural text)* | **Auto-Detect Market Compliance**: Mention a country (e.g. "Vietnam") and the agent automatically applies targeted local laws. |
+| *(Natural text)* | **Auto-Detect Market Compliance**: Mention a country (e.g. "Vietnam") and the agent automatically applies targeted local laws (routing to specialized spokes like `safeai-vietnam-compliance` when deep compliance is needed). |
 | **"Standard PRD"** | **Fast MVP**: Skips legal compliance scanning for fast-paced MVP generation. |
 | **"Full Audit"** | **Enterprise Audit**: Runs an aggressive, fine-tooth-comb compliance check for highly sensitive data (ISO 27001/SOC 2). |
-| `/template [industry] [region]` | **Industry Skeleton**: Spits out a pre-built compliant skeleton (e.g. `/template fintech eu`). |
+| `/template [industry] [region]` | **Industry Skeleton**: Spits out a pre-built compliant skeleton (e.g. `/template fintech eu` or `/template banking vn` or `/template ai vn`). |
 | `/safeai lang [Language]` | **Multilingual**: Translates PRD but keeps English legal terms in parentheses (e.g. `/safeai lang japanese`). |
 | `/safeai export jira` | **Agile Export**: Slices PRD into Epics/User Stories + Gherkin BDD Acceptance Criteria. |
 | `/safeai export confluence`| **Wiki Export**: Formats the PRD into Wiki-friendly tables and layout. |
@@ -41,6 +41,14 @@ These features work automatically based on conversational context.
 **How to Trigger:** Include **"Standard PRD"** or **"skip compliance"** in your prompt.
 **What Happens:** Bypasses the legal safety engine and focuses purely on User Stories and Technical Architecture.
 
+### Auto-Detect Market Compliance (Smart Mode)
+
+**Use Case:** Launching a product targeted at a specific country (e.g., Vietnam, EU, USA).
+**How to Trigger:** Just mention the target country/region naturally.
+> *"Write a PRD for a ride-hailing mobile app. Target market is **Vietnam**."*
+
+**What Happens:** The agent automatically retrieves local laws (e.g., Vietnam PDPL 2026 & Cybersecurity 2025) and delegates deep compliance requirements directly to the specialized **Vietnam Compliance Spoke** (`skills/safeai-vietnam-compliance/SKILL.md`).
+
 ### Deep-Dive Enterprise Audit (Full Audit)
 
 **Use Case:** Preparing for enterprise software deployment handling sensitive data (PHI/PII).
@@ -59,7 +67,7 @@ Use these explicit commands for precision control over the agent's output.
 
 **Use Case:** Starting from scratch in a highly regulated industry.
 **How to Trigger:** `/template [industry] [region]`
-> `/template fintech eu` or `/template healthcare us`
+> `/template fintech eu` or `/template banking vn` or `/template ai vn`
 
 **What Happens:** Immediately outputs a full PRD skeleton pre-filled with the necessary ISO standards and legal guardrails.
 

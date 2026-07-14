@@ -3,12 +3,12 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **9 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
+> **10 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -36,9 +36,12 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 | Lệnh | Ngành | Khu vực | Quy định áp dụng |
 |---|---|---|---|
 | `/template fintech eu` | Tài chính | 🇪🇺 EU | PSD2, GDPR, DORA |
-| `/template fintech vn` | Tài chính | 🇻🇳 Việt Nam | Luật PDPL 2026, NĐ 356, TT SBV 09 |
+| `/template fintech vn` | Tài chính | 🇻🇳 Việt Nam | Luật PDPL 2026, NĐ 356, QĐ SBV 2345 |
+| `/template banking vn` | Ngân hàng | 🇻🇳 Việt Nam | QĐ SBV 2345, TT 45 & 77, Luật BVDLCN |
+| `/template ecommerce vn` | TMĐT | 🇻🇳 Việt Nam | Luật TMĐT 2025, Luật BVDLCN, định danh VNeID |
+| `/template ai vn` | Sản phẩm AI | 🇻🇳 Việt Nam | Luật AI 2025, QĐ 33/2026, Luật BVDLCN |
 | `/template healthcare us` | Y tế | 🇺🇸 Mỹ | HIPAA, FDA SaMD |
-| `/template social vn` | Mạng xã hội | 🇻🇳 Việt Nam | Luật PDPL, NĐ 356, NĐ 53 |
+| `/template social vn` | Mạng xã hội | 🇻🇳 Việt Nam | Luật BVDLCN, NĐ 356, Luật An ninh mạng 2025 |
 | `/template ai eu` | AI/ML | 🇪🇺 EU | EU AI Act, GDPR Art. 22, ISO 42001 |
 
 > *Xem đầy đủ danh sách templates trong [SKILL.md](SKILL.md).*
@@ -58,6 +61,7 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 | # | Kỹ năng | Chuyên về | Dành cho |
 |---|---|---|---|
 | 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ quốc gia, luồng dữ liệu xuyên biên giới | Tất cả PM |
+| 🇻🇳 | **[SafeAI Vietnam Compliance](skills/safeai-vietnam-compliance/SKILL.md)** | Tuân thủ chuyên sâu VN, SBV, Luật AI, An ninh mạng | PM thị trường VN |
 | 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR từng Điều, EU AI Act | PM thị trường EU |
 | 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, PHI | PM HealthTech |
 | 💳 | **[SafeAI FinTech Compliance](skills/safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC | PM FinTech |

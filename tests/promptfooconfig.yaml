@@ -81,3 +81,36 @@ tests:
         value: "Decree"
       - type: "icontains"
         value: "RMF"
+
+  - description: "Kiểm tra Routing cho FinTech VN (SBV Biometric)"
+    vars:
+      user_input: "Write a PRD for a mobile banking app in Vietnam with online payments."
+    assert:
+      - type: "icontains"
+        value: "safeai-vietnam-compliance"
+      - type: "icontains"
+        value: "2345"
+      - type: "icontains"
+        value: "biometric"
+
+  - description: "Kiểm tra Routing cho AI Product VN"
+    vars:
+      user_input: "Build a PRD for an AI-powered credit scoring system deployed in Ho Chi Minh City."
+    assert:
+      - type: "icontains"
+        value: "safeai-vietnam-compliance"
+      - type: "icontains"
+        value: "Law on AI"
+      - type: "icontains"
+        value: "high-risk"
+
+  - description: "Kiểm tra Template E-Commerce VN"
+    vars:
+      user_input: "/template ecommerce vn"
+    assert:
+      - type: "icontains"
+        value: "Law on E-Commerce"
+      - type: "icontains"
+        value: "VNeID"
+      - type: "icontains"
+        value: "gatekeeper"

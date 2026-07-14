@@ -51,15 +51,19 @@ Users can type `/template [industry] [region]` to instantly receive a **pre-buil
 | `/template fintech eu` | FinTech | 🇪🇺 EU | PSD2, GDPR, DORA, ePrivacy Directive |
 | `/template fintech sg` | FinTech | 🇸🇬 Singapore | MAS TRM Guidelines, PDPA, Payment Services Act |
 | `/template fintech us` | FinTech | 🇺🇸 US | PCI-DSS v4.0, GLBA, CCPA/CPRA, SOX |
-| `/template fintech vn` | FinTech | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, SBV Circular 09 |
+| `/template fintech vn` | FinTech | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, SBV Decision 2345 |
+| `/template banking vn` | Banking/Payment | 🇻🇳 Vietnam | SBV Decision 2345, Circular 45/2025, Circular 77/2025, PDPL |
+| `/template ecommerce vn` | E-Commerce | 🇻🇳 Vietnam | Law on E-Commerce 2025, PDPL, VNeID verification, Electronic Transactions |
+| `/template saas vn` | SaaS/B2B | 🇻🇳 Vietnam | Law on Cybersecurity 2025, PDPL, InfoSec System Tiers, ISO 27001 |
 | `/template healthcare us` | Healthcare | 🇺🇸 US | HIPAA Security Rule, FDA SaMD, FTC Health Breach |
 | `/template healthcare eu` | Healthcare | 🇪🇺 EU | GDPR Art. 9, EU MDR, NIS2 |
-| `/template social vn` | Social App | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, Decree 53/2022 |
+| `/template social vn` | Social App | 🇻🇳 Vietnam | Law on PDPL 2026, Decree 356/2025, Law on Cybersecurity 2025 |
 | `/template social eu` | Social App | 🇪🇺 EU | GDPR, DSA (Digital Services Act), EU AI Act |
 | `/template edtech us` | EdTech | 🇺🇸 US | COPPA, FERPA, California AADC |
 | `/template ecommerce global` | E-Commerce | 🌐 Global | PCI-DSS, ISO 27001, WCAG 2.2 AA |
 | `/template ai us` | AI/ML Product | 🇺🇸 US | NIST AI RMF, Colorado AI Act, FTC AI Guidelines |
 | `/template ai eu` | AI/ML Product | 🇪🇺 EU | EU AI Act, GDPR Art. 22, ISO/IEC 42001 |
+| `/template ai vn` | AI/ML Product | 🇻🇳 Vietnam | Law on AI 2025, QĐ 33/2026, PDPL, Law on Cybersecurity 2025 |
 
 ---
 
@@ -151,7 +155,7 @@ When receiving a user request, automatically detect the applicable legal jurisdi
 
 1. Identify the target region(s) from the prompt.
 2. Use your Knowledge Retrieval / File Search tool to read the corresponding file in the `knowledge/` directory:
-   - 🌏 **APAC**: `knowledge/apac/regulations.md` (VN, CN, JP, KR, IN, SG, AU, TH, MY, ID, PH)
+   - 🌏 **APAC**: `knowledge/apac/regulations.md` (VN, CN, JP, KR, IN, SG, AU, TH, MY, ID, PH) and `knowledge/apac/vietnam_deepdive.md` (Deep dive for VN)
    - 🌍 **EMEA**: `knowledge/emea/regulations.md` (EU, UK, CH, TR, AE, SA, IL, NG, ZA, KE, EG)
    - 🌎 **Americas**: `knowledge/americas/regulations.md` (US Federal/State, CA, BR, MX, AR, CO, PE)
    - 🌐 **Global Standards**: `knowledge/global/standards.md` (ISO 27001, 27701, 42001, SOC 2, Accessibility)
@@ -183,7 +187,9 @@ When Step 1 (Region Detection) identifies a domain requiring deep expertise, **d
   → Load and follow `skills/safeai-hipaa-expert/SKILL.md`
 - IF payments, PCI-DSS, or financial data detected:
   → Load and follow `skills/safeai-fintech-compliance/SKILL.md`
-- IF ASEAN markets (VN, SG, TH, MY, ID, PH) detected:
+- IF Vietnam market deep compliance is needed (AI, SaaS, E-Commerce, Banking/Payment in VN):
+  → Load and follow `skills/safeai-vietnam-compliance/SKILL.md`
+- IF ASEAN markets general overview (SG, TH, MY, ID, PH) detected:
   → Load and follow `skills/safeai-asean-data-protection/SKILL.md`
 - IF code scanning, Vibe Coding, or security audit requested:
   → Load and follow `skills/safeai-code-scanner/SKILL.md`
