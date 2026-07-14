@@ -8,6 +8,27 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 - **MINOR**: New features, new regulations, expanded coverage
 - **PATCH**: Fixes, typo corrections, citation updates
 
+## [v6.0.0] - 2026-07-13
+
+### Added — Vietnam Compliance Spoke Expert & Deep-dive Integration
+
+- **SafeAI Vietnam Compliance Spoke**: Created the dedicated spoke expert `skills/safeai-vietnam-compliance/SKILL.md` targeting Vietnam's data protection, cybersecurity, AI, e-commerce, electronic transactions, and financial services regulations.
+- **Vietnam Deep-dive Knowledge Base**: Created `knowledge/apac/vietnam_deepdive.md` with 8 detailed law definition sections:
+  - `VN-PDPL-DEEP` (Law on PDPL 2026 & Decree 356/2025)
+  - `VN-CYBERSECURITY-2025` (Law on Cybersecurity 2025)
+  - `VN-AI-LAW` (Law on AI 2025)
+  - `VN-ECOMMERCE-2025` (Law on E-Commerce 2025)
+  - `VN-ELECTRONIC-TRANSACTIONS` (Law on Electronic Transactions 2023)
+  - `VN-SBV-FINTECH` (Decision 2345, Circulars 45/2025 & 77/2025)
+  - `VN-INFOSEC-TIERS` (5-level security classification)
+  - `VN-QCVN-STANDARDS` (IoT camera and software secure coding guidelines)
+- **Global Hub Routing Integration**: Updated primary routing logic in `SKILL.md` to detect deep Vietnam compliance requirements and delegate tasks to the new spoke. Registered `/template ai vn`, `/template saas vn`, `/template ecommerce vn`, and `/template banking vn` commands.
+- **ASEAN Spoke Cross-Reference**: Added redirect notices and Related Skills lookup to `skills/safeai-asean-data-protection/SKILL.md` to prevent duplicate instructions.
+- **Prompt Evaluation Suite**: Added 3 new test assertions for Vietnam routing in `tests/promptfooconfig.yaml`.
+- **Metadata Registry**: Updated `skills-lock.json` and `package.json` to register the new spoke path. Updated `knowledge/metadata.json` to bump version to 6.0.0 and jurisdiction count to 39.
+
+---
+
 ## [v5.1.0] - 2026-07-13
 
 ### Added — Q3 2026 Quarterly Legal Audit (Closes #4)

@@ -3,12 +3,12 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **9 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
+> **10 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-5.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -49,7 +49,10 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 |---|---|---|---|
 | `/template fintech eu` | FinTech | 🇪🇺 EU | PSD2, GDPR, DORA |
 | `/template healthcare us` | HealthTech | 🇺🇸 USA | HIPAA, FDA SaMD |
-| `/template social vn` | Social Media | 🇻🇳 Vietnam | PDPL (2026), Decree 356, Decree 53 |
+| `/template banking vn` | Banking/Payment | 🇻🇳 Vietnam | SBV Decision 2345, Circulars 45 & 77, PDPL |
+| `/template ecommerce vn` | E-Commerce | 🇻🇳 Vietnam | Law on E-Commerce 2025, PDPL, VNeID verification |
+| `/template ai vn` | AI/ML Product | 🇻🇳 Vietnam | Law on AI 2025, QĐ 33/2026, PDPL |
+| `/template social vn` | Social Media | 🇻🇳 Vietnam | PDPL (2026), Decree 356, Law on Cybersecurity 2025 |
 | `/template ai eu` | AI/ML | 🇪🇺 EU | EU AI Act, GDPR Art. 22 |
 
 > *See the full list of templates in [SKILL.md](SKILL.md).*
@@ -61,10 +64,11 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 | # | Skill | Focus | For Who |
 |---|---|---|---|
 | 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ jurisdictions, cross-border transfers, AI governance | All Product Managers |
+| 🇻🇳 | **[SafeAI Vietnam Compliance](skills/safeai-vietnam-compliance/SKILL.md)** | Deep-dive Vietnam local compliance, SBV, Law on AI 2025 | VN market PMs |
 | 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR Art-by-Art, EU AI Act risk classification, DPIA | EU market PMs |
 | 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA safeguards, FDA SaMD, PHI handling | HealthTech PMs |
 | 💳 | **[SafeAI FinTech Compliance](skills/safeai-fintech-compliance/SKILL.md)** | PCI-DSS v4.0, PSD2/SCA, AML/KYC, Open Banking | FinTech PMs |
-| 🌏 | **[SafeAI ASEAN Data Protection](skills/safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH country deep-dives | ASEAN startups |
+| 🌏 | **[SafeAI ASEAN Data Protection](skills/safeai-asean-data-protection/SKILL.md)** | SG, TH, MY, ID, PH country deep-dives (general overview) | ASEAN startups |
 | 🇺🇸 | **[SafeAI US State Privacy Expert](skills/safeai-us-privacy-expert/SKILL.md)** | CCPA, CPA, VCDPA, GPC, Opt-in consent | US market PMs |
 | 👶 | **[SafeAI EdTech & Child Privacy Expert](skills/safeai-edtech-compliance/SKILL.md)** | COPPA, FERPA, AADC, Age Gating | EdTech PMs |
 | 🤖 | **[SafeAI Ethics & Risk Expert](skills/safeai-ai-ethics-expert/SKILL.md)** | NIST AI RMF, Bias Testing, Human-in-the-Loop | AI/ML PMs |
@@ -85,20 +89,19 @@ The SafeAI-Global suite uses a **Hub-and-Spoke** architecture. You always start 
                                    │
               [ Step 0: Auto-Detects Region & Depth ]
                                    │
-       ┌───────────────┬───────────┴───┬───────────────┬───────────────┐
-       ▼               ▼               ▼               ▼               ▼
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ 🇪🇺 GDPR     │ │ 🏥 HIPAA    │ │ 💳 FinTech  │ │ 🌏 ASEAN    │ │ 📝 Standard │
-│   Expert    │ │   Expert    │ │ Compliance  │ │  Data Prot. │ │    PRD      │
-├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤
-│ • Art-by-Art│ │ • FDA SaMD  │ │ • PCI-DSS   │ │ • VN, SG, TH│ │ • No Legal  │
-│ • EU AI Act │ │ • PHI Safegu│ │ • PSD2/SCA  │ │ • MY, ID, PH│ │ • Fast MVP  │
-└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
-*(Plus specialized nodes for US Privacy, EdTech, and AI Ethics)*
+   ┌─────────────┬───────────┬─────┴─────┬───────────┬─────────────┬─────────────┐
+   ▼             ▼           ▼           ▼           ▼             ▼             ▼
+┌───────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌───────────┐ ┌───────────┐
+│ 🇻🇳 Vietnam │ │ 🇪🇺 GDPR │ │ 🏥 HIPAA│ │ 💳 Fin  │ │ 🌏 ASEAN│ │ 📝 Stand. │ │ 🤖 AI/Risk│
+│ Compliance│ │  Expert │ │  Expert │ │ Tech    │ │  Data   │ │    PRD    │ │   Expert  │
+├───────────┤ ├─────────┤ ├─────────┤ ├─────────┤ ├─────────┤ ├───────────┤ ├───────────┤
+│ • SBV 2345│ │ • GDPR  │ │ • SaMD  │ │ • PCI   │ │ • SG, TH│ │ • No Legal│ │ • NIST AI │
+│ • AI/Cyber│ │ • AI Act│ │ • PHI   │ │ • PSD2  │ │ • ID, PH│ │ • Fast TTM│ │ • Ethics  │
+└───────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └───────────┘ └───────────┘
+*(Plus specialized nodes for US Privacy, EdTech, and Code Scanning)*
 
-> **The Hub Workflow:** Start your chat with the **Global PRD Agent**. If it detects a highly regulated domain (like Healthcare in the US or FinTech in Europe), it will automatically recommend you switch to the specialized **Spoke** skill for a deeper audit.
-
----
+> **The Hub Workflow:** Start your chat with the **Global PRD Agent**. If it detects a highly regulated domain (like Healthcare in the US, FinTech in Europe, or deep compliance requirements in Vietnam), it will automatically recommend you switch to the specialized **Spoke** skill for a deeper audit.
+```
 
 ## 🚀 How to Use
 

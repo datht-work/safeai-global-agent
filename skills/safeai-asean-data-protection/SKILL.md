@@ -54,6 +54,9 @@ When invoked, output *only* the raw code blocks (Rego or HCL) along with brief t
 
 ### 🇻🇳 Vietnam
 
+> [!NOTE]
+> For comprehensive, deep-dive Vietnam compliance guidelines (including SBV biometric rules, Law on AI 2025, Law on Cybersecurity 2025, e-commerce verification, and InfoSec system tiers), load and follow [SafeAI Vietnam Compliance](../safeai-vietnam-compliance/SKILL.md).
+
 **Key Requirements:**
 
 - **Data Localization (Decree 53/2022):** Companies collecting data of Vietnamese citizens must store data copies on servers **physically located in Vietnam**.
@@ -203,6 +206,7 @@ This skill provides deep ASEAN data protection expertise. For other compliance d
 | Skill | Focus | Raw URL |
 |---|---|---|
 | **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI Vietnam Compliance](../safeai-vietnam-compliance/SKILL.md)** | Deep-dive Vietnam local compliance, SBV, AI Law | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-vietnam-compliance/SKILL.md) |
 | **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
 | **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md) |
 | **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |

@@ -26,6 +26,11 @@
       "subpath": "skills/safeai-asean-data-protection",
       "sourceType": "github"
     },
+    "SafeAI Vietnam Compliance": {
+      "source": "datht-work/safeai-global-agent",
+      "subpath": "skills/safeai-vietnam-compliance",
+      "sourceType": "github"
+    },
     "SafeAI US State Privacy Expert": {
       "source": "datht-work/safeai-global-agent",
       "subpath": "skills/safeai-us-privacy-expert",
