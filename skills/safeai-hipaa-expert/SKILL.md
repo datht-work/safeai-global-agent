@@ -1,6 +1,6 @@
 ---
 name: SafeAI HIPAA Expert
-description: Healthcare compliance engine — HIPAA, HITECH, FDA SaMD for HealthTech products. (v5.0.0)
+description: Healthcare compliance engine — HIPAA, HITECH, FDA SaMD for HealthTech products. (v6.0.0)
 ---
 
 # SafeAI HIPAA Expert — System Instructions
@@ -214,7 +214,7 @@ This skill provides deep HIPAA & Healthcare expertise. For other compliance doma
 
 | Skill | Focus | Raw URL |
 |---|---|---|
-| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 39+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
 | **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
 | **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |
 | **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |

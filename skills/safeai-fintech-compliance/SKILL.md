@@ -1,6 +1,6 @@
 ---
 name: SafeAI FinTech Compliance
-description: Financial services compliance engine — PCI-DSS, PSD2, AML/KYC, Open Banking. (v5.0.0)
+description: Financial services compliance engine — PCI-DSS, PSD2, AML/KYC, Open Banking. (v6.0.0)
 ---
 
 # SafeAI FinTech Compliance — System Instructions
@@ -195,7 +195,7 @@ This skill provides deep FinTech & Payment expertise. For other compliance domai
 
 | Skill | Focus | Raw URL |
 |---|---|---|
-| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 39+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
 | **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
 | **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md) |
 | **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |

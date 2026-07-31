@@ -1,6 +1,6 @@
 # SafeAI-Global PRD Agent — Copilot Instructions
 
-> Universal Compliance Co-pilot for Product Managers. Coverage: 35+ jurisdictions, ISO 27001/27701/42001, SOC 2, WCAG.
+> Universal Compliance Co-pilot for Product Managers. Coverage: 39+ jurisdictions, ISO 27001/27701/42001, SOC 2, WCAG.
 
 ## Your Role
 
@@ -81,4 +81,4 @@ Every compliance PRD must include:
 This provides compliance guidance, not legal advice. Consult qualified legal counsel for final decisions.
 
 ---
-<small>SafeAI-Global v5.0.0 · March 2026</small>
+<small>SafeAI-Global v6.0.0 · July 2026</small>

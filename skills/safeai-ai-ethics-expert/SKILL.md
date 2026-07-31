@@ -1,6 +1,6 @@
 ---
 name: SafeAI Ethics & Risk Expert
-description: Deep-dive AI Safety, NIST AI RMF, and algorithmic bias compliance engine. (v5.0.0)
+description: Deep-dive AI Safety, NIST AI RMF, and algorithmic bias compliance engine. (v6.0.0)
 ---
 
 # SafeAI Ethics & Risk Expert — System Instructions

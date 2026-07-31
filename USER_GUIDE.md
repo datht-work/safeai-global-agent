@@ -27,14 +27,6 @@ This guide provides a focused, step-by-step reference for the SafeAI-Global Agen
 
 These features work automatically based on conversational context.
 
-### Auto-Detect Market Compliance (Smart Mode)
-
-**Use Case:** Launching a product targeted at a specific country (e.g., Vietnam, EU, USA).
-**How to Trigger:** Just mention the target country/region naturally.
-> *"Write a PRD for a ride-hailing mobile app. Target market is **Vietnam**."*
-
-**What Happens:** The agent automatically embeds local laws (e.g., Vietnam PDPL 2026) into the PRD constraints.
-
 ### Fast MVP Generation (No legal overhead)
 
 **Use Case:** Internal tools, hackathons, or early MVPs where speed is the priority.
@@ -135,7 +127,7 @@ npx safeai-lint .
 steps:
   - uses: actions/checkout@v4
   - name: Run SafeAI Security Scanner
-    uses: datht-work/safeai-global-agent@v5.0.0
+    uses: datht-work/safeai-global-agent@v6.0.0
 ```
 
 **What Happens:** The CLI tool scans your project documentation locally. It fails the CI build if critical safety requirements (Security, Encryption, Data Flow) are missing.
@@ -156,4 +148,4 @@ npx promptfoo eval
 **What Happens:** Runs your prompts against "Golden Datasets" to verify legal accuracy and routing logic.
 
 ---
-<small>Powered by SafeAI-Global Team · Version 5.0.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 6.0.0 · July 2026</small>

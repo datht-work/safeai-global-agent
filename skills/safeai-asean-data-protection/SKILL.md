@@ -1,6 +1,6 @@
 ---
 name: SafeAI ASEAN Data Protection
-description: ASEAN data protection compliance engine — VN, SG, TH, MY, ID, PH regulatory frameworks. (v5.0.0)
+description: ASEAN data protection compliance engine — VN, SG, TH, MY, ID, PH regulatory frameworks. (v6.0.0)
 ---
 
 # SafeAI ASEAN Data Protection — System Instructions
@@ -205,7 +205,7 @@ This skill provides deep ASEAN data protection expertise. For other compliance d
 
 | Skill | Focus | Raw URL |
 |---|---|---|
-| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 39+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
 | **[SafeAI Vietnam Compliance](../safeai-vietnam-compliance/SKILL.md)** | Deep-dive Vietnam local compliance, SBV, AI Law | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-vietnam-compliance/SKILL.md) |
 | **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
 | **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md) |

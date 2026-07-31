@@ -1,6 +1,6 @@
 ---
 name: SafeAI Code Scanner
-description: Security & Compliance Guardrail for AI-Generated Code (Vibe Coding). (v5.0.0)
+description: Security & Compliance Guardrail for AI-Generated Code (Vibe Coding). (v6.0.0)
 tags: [security, code-scan, vibe-coding, compliance, devsecops]
 ---
 

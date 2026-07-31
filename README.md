@@ -3,7 +3,7 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **10 AI-Powered Compliance Skills for Product Managers — covering 35+ jurisdictions, ISO standards, and flexible compliance depth**
+> **10 AI-Powered Compliance Skills for Product Managers — covering 39+ jurisdictions, ISO standards, and flexible compliance depth**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
@@ -63,7 +63,7 @@ Type `/template [industry] [region]` to instantly grab a tailored PRD skeleton f
 
 | # | Skill | Focus | For Who |
 |---|---|---|---|
-| 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ jurisdictions, cross-border transfers, AI governance | All Product Managers |
+| 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 39+ jurisdictions, cross-border transfers, AI governance | All Product Managers |
 | 🇻🇳 | **[SafeAI Vietnam Compliance](skills/safeai-vietnam-compliance/SKILL.md)** | Deep-dive Vietnam local compliance, SBV, Law on AI 2025 | VN market PMs |
 | 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR Art-by-Art, EU AI Act risk classification, DPIA | EU market PMs |
 | 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA safeguards, FDA SaMD, PHI handling | HealthTech PMs |
@@ -82,7 +82,7 @@ The SafeAI-Global suite uses a **Hub-and-Spoke** architecture. You always start 
                ┌─────────────────────────────────────────┐
                │    🌐 SafeAI-Global PRD Agent (Hub)     │
                │   ───────────────────────────────       │
-               │   • Covers 35+ Jurisdictions            │
+               │   • Covers 39+ Jurisdictions            │
                │   • Cross-border Data Transfers         │
                │   • Defines AI Governance               │
                └───────────────────┬─────────────────────┘
@@ -111,7 +111,7 @@ The SafeAI-Global suite uses a **Hub-and-Spoke** architecture. You always start 
 npx skills add datht-work/safeai-global-agent
 ```
 
-This will show all 9 skills — select the ones you need.
+This will show all 10 skills (1 Hub + 9 Spokes) — select the ones you need.
 
 ### Method 2: Use in Any AI Chat Tool (No Install)
 
@@ -128,7 +128,7 @@ This project uses a **Modular Knowledge Engine** architecture. To use it in a we
 
 ---
 
-## 🌍 Supported Jurisdictions (35+)
+## 🌍 Supported Jurisdictions (39+)
 
 ### 🌏 Asia-Pacific
 
@@ -192,6 +192,9 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Dedicated VN deep-dive expert, 8 law sections, `/template` VN commands, 39 jurisdictions. |
+| **v5.1.0** | 2026-07-13 | **Q3 Legal Audit**: EU AI Act enforcement milestones, Thailand PDPA, Indonesia PDP, US 24-state expansion, ISO 27701:2025. |
+| **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, complete skills-lock registry, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **AI Engineering Roadmap**: Integrated `promptfoo` testing, Knowledge Schema standards, and automated quarterly law audits. |
 | **v4.2.0** | 2026-03-18 | **New Skill**: SafeAI Code Scanner for Vibe Coding security auditing. |
 | **v4.1.0** | 2026-03-14 | DevSecOps Infrastructure: Added `/safeai export opa` and `/safeai export terraform`. Fixed Snyk Runtime Fetch vulnerability. |
@@ -204,7 +207,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 | **v2.3.0** | 2026-03-08 | Added 3 new Spoke skills: US State Privacy, EdTech/Child Privacy, and AI Ethics & Risk |
 | **v2.2.0** | 2026-03-06 | Compliance Depth selector (Standard/Smart/Full), ISO 27001/27701/42001, SOC 2, Accessibility, Disclaimer |
 | **v2.1.0** | 2026-03-06 | Multi-skill architecture, cross-linking, AI tool usage guides |
-| **v2.0.0** | 2026-03-05 | 35+ jurisdictions, security audit infrastructure |
+| **v2.0.0** | 2026-03-05 | 39+ jurisdictions, security audit infrastructure |
 | **v1.0.0** | 2026-03-05 | Initial release (VN, EU, US, CN) |
 
 ---
@@ -231,11 +234,12 @@ MIT License — see [LICENSE](LICENSE) for details.
 ## 🔔 Quarterly Legal Audit Required
 The SafeAI-Global Knowledge Base heavily relies on up-to-date legal facts. Please audit the following major frameworks to ensure our `knowledge/` directory is accurate:
 
-### 🌍 Checkpoints (Q2-2026):
-- [ ] **EU AI Act**: Monitor AI Office guidelines ahead of the **August 2, 2026** enforcement milestone.
-- [ ] **Vietnam PDPL**: Ensure all facts align with **Law No. 91/2025/QH15** and **Decree 356/2025/ND-CP**.
-- [ ] **US State Privacy**: Validate enforcement for Maryland (MODPA), Indiana, Kentucky, and Rhode Island.
-- [ ] **ISO Standards**: Review EN ISO/IEC 42001:2026 regional adoptions and ISO 27001:2022 amendments.
+### 🌍 Checkpoints (Q4-2026):
+- [ ] **EU AI Act**: Verify post-August 2026 enforcement compliance — AI Office guidance notes, high-risk system classification updates.
+- [ ] **Vietnam PDPL**: Cross-check enforcement actions under **Law No. 91/2025/QH15** and **Decree 356/2025/ND-CP**. Monitor any implementing circulars.
+- [ ] **US State Privacy**: Validate enforcement for new 2027 effective states (Delaware, Iowa, Nebraska, New Hampshire, New Jersey). Monitor federal APRA progress.
+- [ ] **ISO Standards**: Review ISO/IEC 42001 EU AI Act alignment audits and ISO 27701:2025 standalone PIMS certification adoption.
+- [ ] **ASEAN**: Monitor Thailand PDPA enforcement trends, Indonesia DPA establishment, Malaysia PDPA amendments.
 
 **Action**:
 1. Validate the facts in `knowledge/` against official sources (e.g., Official Journals, NIST, ISO).
@@ -246,7 +250,7 @@ The SafeAI-Global Knowledge Base heavily relies on up-to-date legal facts. Pleas
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v5.0.0 · March 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.0.0 · July 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

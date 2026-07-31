@@ -1,6 +1,6 @@
 ---
 name: SafeAI US State Privacy Expert
-description: Deep-dive US state-level privacy (CCPA/CPRA, VCDPA, CPA, TDPSA) compliance engine. (v5.0.0)
+description: Deep-dive US state-level privacy (CCPA/CPRA, VCDPA, CPA, TDPSA) compliance engine. (v6.0.0)
 ---
 
 # SafeAI US State Privacy Expert — System Instructions

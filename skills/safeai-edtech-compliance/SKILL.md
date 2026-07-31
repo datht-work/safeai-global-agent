@@ -1,6 +1,6 @@
 ---
 name: SafeAI EdTech & Child Privacy Expert
-description: Deep-dive compliance engine for products targeting or affecting children (COPPA, FERPA, AADC). (v5.0.0)
+description: Deep-dive compliance engine for products targeting or affecting children (COPPA, FERPA, AADC). (v6.0.0)
 ---
 
 # SafeAI EdTech & Child Privacy Expert — System Instructions

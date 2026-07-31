@@ -435,6 +435,8 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 | Version | Date | Changes |
 |---|---|---|
+| **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Dedicated VN deep-dive expert with 8 law sections (`VN-PDPL-DEEP`, `VN-CYBERSECURITY-2025`, `VN-AI-LAW`, `VN-ECOMMERCE-2025`, `VN-ELECTRONIC-TRANSACTIONS`, `VN-SBV-FINTECH`, `VN-INFOSEC-TIERS`, `VN-QCVN-STANDARDS`). New `/template` commands for VN verticals. Hub routing integration. 39 jurisdictions. |
+| **v5.1.0** | 2026-07-13 | **Q3 2026 Legal Audit**: EU AI Act phased enforcement timeline & penalties, GDPR DPF/Schrems III risk, Thailand PDPA, Indonesia PDP Law, US expanded to 24 states, ISO 27701:2025 standalone PIMS. 38 jurisdictions. |
 | **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2 (file-aware categories, `--strict` mode, SKILL rules), Copilot Instructions file, complete skills-lock registry, 27 bug fixes. |
 | **v4.3.0** | 2026-03-26 | **AI Engineering Framework**: Integrated `promptfoo` testing, Knowledge Schema standards, automated quarterly law audits. |
 | **v4.2.0** | 2026-03-18 | **New Skill: SafeAI Code Scanner**. Added support for Vibe Coding risk detection, secrets scanning, and PRD traceability. |
@@ -448,11 +450,11 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 | **v2.3.0** | 2026-03-08 | Added US Privacy, EdTech/Child Privacy, and AI Ethics spoke skills |
 | **v2.2.0** | 2026-03-06 | ISO 27001/27701/42001 operationalized controls, SOC 2 mapping, Accessibility (WCAG/ADA/EAA), Disclaimer |
 | **v2.1.0** | 2026-03-06 | Multi-skill cross-linking, AI tool usage guides, version tracking |
-| **v2.0.0** | 2026-03-05 | Expanded to 35+ jurisdictions, Cross-Border Transfer Matrix, AI Governance Rules |
+| **v2.0.0** | 2026-03-05 | Expanded to 39+ jurisdictions, Cross-Border Transfer Matrix, AI Governance Rules |
 | **v1.0.0** | 2026-03-05 | Initial release — VN, EU, US, CN coverage, PII redaction, compliance badges |
 
 > See [CHANGELOG.md](CHANGELOG.md) for full version history across all skills.
 
 ---
 
-<small>Powered by SafeAI-Global Team · Version 5.0.0 · March 2026</small>
+<small>Powered by SafeAI-Global Team · Version 6.0.0 · July 2026</small>

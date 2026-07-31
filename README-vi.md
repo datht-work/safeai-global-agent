@@ -3,7 +3,7 @@
 > 🌍 [English](README.md) | 🇻🇳 [Tiếng Việt](README-vi.md)
 > 📖 [Actionable User Guide](USER_GUIDE.md) | 🇻🇳 [Hướng dẫn Sử dụng](USER_GUIDE-vi.md)
 >
-> **10 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 35+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
+> **10 Kỹ năng AI Hỗ trợ Tuân thủ Pháp lý cho Product Manager — bao phủ 39+ quốc gia, tiêu chuẩn ISO, và tuỳ chọn mức độ kiểm tra linh hoạt**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
@@ -60,7 +60,7 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 
 | # | Kỹ năng | Chuyên về | Dành cho |
 |---|---|---|---|
-| 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 35+ quốc gia, luồng dữ liệu xuyên biên giới | Tất cả PM |
+| 🌐 | **[SafeAI-Global PRD Agent](SKILL.md)** | 39+ quốc gia, luồng dữ liệu xuyên biên giới | Tất cả PM |
 | 🇻🇳 | **[SafeAI Vietnam Compliance](skills/safeai-vietnam-compliance/SKILL.md)** | Tuân thủ chuyên sâu VN, SBV, Luật AI, An ninh mạng | PM thị trường VN |
 | 🇪🇺 | **[SafeAI GDPR Expert](skills/safeai-gdpr-expert/SKILL.md)** | GDPR từng Điều, EU AI Act | PM thị trường EU |
 | 🏥 | **[SafeAI HIPAA Expert](skills/safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, PHI | PM HealthTech |
@@ -81,7 +81,7 @@ Gõ `/template [ngành] [quốc gia]` để nhận ngay **khung PRD may đo sẵ
 npx skills add datht-work/safeai-global-agent
 ```
 
-Hiển thị tất cả 9 kỹ năng — chọn những cái bạn cần.
+Hiển thị tất cả 10 kỹ năng (1 Hub + 9 Spokes) — chọn những cái bạn cần.
 
 ### Cách 2: Sử dụng trực tiếp trong AI Chat (Không cần cài)
 
@@ -120,7 +120,7 @@ Công cụ sẽ kiểm tra các mục: Security section, Encryption, Consent/DSA
 
 ---
 
-## 🌍 Khu Vực Pháp Lý Được Hỗ Trợ (35+)
+## 🌍 Khu Vực Pháp Lý Được Hỗ Trợ (39+)
 
 ### 🌏 Châu Á - Thái Bình Dương
 
@@ -155,6 +155,9 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Chuyên gia tuân thủ chuyên sâu VN, 8 mục luật, lệnh `/template` VN, 39 khu vực pháp lý. |
+| **v5.1.0** | 2026-07-13 | **Kiểm toán pháp lý Q3**: EU AI Act enforcement, Thailand PDPA, Indonesia PDP, US mở rộng 24 bang, ISO 27701:2025. |
+| **v5.0.0** | 2026-03-31 | **Tối ưu Production**: Smart Linter v2, Copilot Instructions, hoàn thiện skills-lock registry, 27 bản sửa lỗi. |
 | **v4.3.0** | 2026-03-26 | **AI Engineering Roadmap**: Tích hợp kiểm thử `promptfoo`, chuẩn hóa Schema kiến thức (XML-tags) và tự động nhắc nhở Audit luật. |
 | **v4.2.0** | 2026-03-18 | **Kỹ năng mới**: SafeAI Code Scanner hỗ trợ rà soát rủi ro bảo mật cho Vibe Coding. |
 | **v4.1.0** | 2026-03-14 | Tòa nhà hạ tầng DevSecOps: Thêm lệnh `/safeai export opa` và `/safeai export terraform`. Đặc tả An toàn bảo mật. |
@@ -167,7 +170,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 | **v2.3.0** | 2026-03-08 | 3 kỹ năng Spoke mới: US Privacy, EdTech/Child Privacy, AI Ethics |
 | **v2.2.0** | 2026-03-06 | Bộ chọn mức độ tuân thủ, ISO 27001/27701/42001, SOC 2, Accessibility, Disclaimer |
 | **v2.1.0** | 2026-03-06 | Kiến trúc đa kỹ năng, liên kết chéo, hướng dẫn sử dụng AI |
-| **v2.0.0** | 2026-03-05 | 35+ khu vực pháp lý, Kiểm toán bảo mật |
+| **v2.0.0** | 2026-03-05 | 39+ khu vực pháp lý, Kiểm toán bảo mật |
 | **v1.0.0** | 2026-03-05 | Phiên bản đầu tiên (VN, EU, US, CN) |
 
 ---
@@ -195,11 +198,12 @@ Giấy phép MIT — xem [LICENSE](LICENSE) cho chi tiết.
 ## 🔔 Kiểm toán Pháp lý Định kỳ (Hàng quý)
 Hệ thống tri thức SafeAI-Global phụ thuộc hoàn toàn vào tính cập nhật của các văn bản luật. Vui lòng thực hiện kiểm tra các khung pháp lý sau để đảm bảo thư mục `knowledge/` luôn chính xác:
 
-### 🌍 Các điểm kiểm tra (Q2-2026):
-- [ ] **EU AI Act**: Theo dõi các hướng dẫn mới từ AI Office trước cột mốc thực thi chính thức ngày **02/08/2026**.
-- [ ] **Luật PDPL Việt Nam**: Đảm bảo toàn bộ tri thức đã cập nhật theo **Luật số 91/2025/QH15** và **Nghị định 356/2025/NĐ-CP**.
-- [ ] **US State Privacy**: Đối soát hiệu lực thực thi tại Maryland (MODPA), Indiana, Kentucky và Rhode Island.
-- [ ] **Tiêu chuẩn ISO**: Rà soát các bản địa phương hóa EN ISO/IEC 42001:2026 và các sửa đổi của ISO 27001:2022.
+### 🌍 Các điểm kiểm tra (Q4-2026):
+- [ ] **EU AI Act**: Rà soát việc thực thi sau mốc Tháng 8/2026 — hướng dẫn từ AI Office, cập nhật phân loại hệ thống rủi ro cao.
+- [ ] **Luật PDPL Việt Nam**: Đối soát các hành động thực thi theo **Luật số 91/2025/QH15** và **Nghị định 356/2025/NĐ-CP**. Theo dõi các thông tư hướng dẫn bổ sung.
+- [ ] **US State Privacy**: Đối soát hiệu lực cho các bang có hiệu lực 2027 (Delaware, Iowa, Nebraska, New Hampshire, New Jersey). Theo dõi tiến trình APRA liên bang.
+- [ ] **Tiêu chuẩn ISO**: Rà soát kiểm toán liên kết ISO/IEC 42001 với EU AI Act và chứng nhận PIMS độc lập ISO 27701:2025.
+- [ ] **ASEAN**: Theo dõi xu hướng thực thi PDPA Thái Lan, thành lập DPA Indonesia, sửa đổi PDPA Malaysia.
 
 **Hành động**:
 1. Đối soát dữ liệu trong `knowledge/` với các nguồn chính thống (Công báo, NIST, ISO).
@@ -210,7 +214,7 @@ Hệ thống tri thức SafeAI-Global phụ thuộc hoàn toàn vào tính cập
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v5.0.0 · Tháng 3/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.0.0 · Tháng 7/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

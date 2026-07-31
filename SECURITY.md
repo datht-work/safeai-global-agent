@@ -4,9 +4,9 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.0.x   | ✅ Active support  |
-| 4.x.x   | 🔧 Maintenance    |
-| 1.0.x – 3.x.x | ❌ End of life |
+| 6.0.x   | ✅ Active support  |
+| 5.0.x   | 🔧 Maintenance    |
+| 1.0.x – 4.x.x | ❌ End of life |
 
 ## Reporting a Vulnerability
 
@@ -42,7 +42,7 @@ This skill implements the following security practices:
 
 ### Compliance
 
-- ✅ **Multi-jurisdiction awareness** — Covers 35+ legal jurisdictions with up-to-date regulations.
+- ✅ **Multi-jurisdiction awareness** — Covers 39+ legal jurisdictions with up-to-date regulations.
 - ✅ **Conflict resolution** — Defaults to the most restrictive regulation when jurisdictions conflict.
 - ✅ **Source transparency** — All legal citations include specific article/decree references.
 

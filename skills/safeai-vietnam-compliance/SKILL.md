@@ -127,7 +127,7 @@ Ensure your PRD includes specific requirements for the following:
 
 | Skill | Focus | Raw URL |
 |---|---|---|
-| **[SafeAI-Global PRD Agent](../../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI-Global PRD Agent](../../SKILL.md)** | Comprehensive 39+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
 | **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | ASEAN overview (SG, TH, MY, ID, PH) | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |
 | **[SafeAI GDPR Expert](../safeai-gdpr-expert/SKILL.md)** | GDPR, EU AI Act | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-gdpr-expert/SKILL.md) |
 | **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |

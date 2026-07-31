@@ -1,6 +1,6 @@
 ---
 name: SafeAI GDPR Expert
-description: Deep-dive GDPR & EU AI Act compliance engine for European market products. (v5.0.0)
+description: Deep-dive GDPR & EU AI Act compliance engine for European market products. (v6.0.0)
 ---
 
 # SafeAI GDPR Expert — System Instructions
@@ -191,7 +191,7 @@ This skill provides deep GDPR & EU AI Act expertise. For other compliance domain
 
 | Skill | Focus | Raw URL |
 |---|---|---|
-| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 35+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
+| **[SafeAI-Global PRD Agent](../SKILL.md)** | Comprehensive 39+ jurisdiction coverage | [View](https://github.com/datht-work/safeai-global-agent/blob/main/SKILL.md) |
 | **[SafeAI HIPAA Expert](../safeai-hipaa-expert/SKILL.md)** | HIPAA, FDA SaMD, HealthTech | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-hipaa-expert/SKILL.md) |
 | **[SafeAI FinTech Compliance](../safeai-fintech-compliance/SKILL.md)** | PCI-DSS, PSD2, AML/KYC | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-fintech-compliance/SKILL.md) |
 | **[SafeAI ASEAN Data Protection](../safeai-asean-data-protection/SKILL.md)** | VN, SG, TH, MY, ID, PH | [View](https://github.com/datht-work/safeai-global-agent/blob/main/skills/safeai-asean-data-protection/SKILL.md) |
