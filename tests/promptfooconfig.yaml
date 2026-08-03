@@ -114,3 +114,97 @@ tests:
         value: "VNeID"
       - type: "icontains"
         value: "gatekeeper"
+
+  - description: "Kiểm tra Routing cho US State Privacy (CCPA)"
+    vars:
+      user_input: "Write a PRD for a customer loyalty program in California and Virginia."
+    assert:
+      - type: "icontains"
+        value: "safeai-us-privacy-expert"
+      - type: "icontains"
+        value: "CCPA"
+      - type: "icontains"
+        value: "VCDPA"
+
+  - description: "Kiểm tra Routing cho EdTech (COPPA)"
+    vars:
+      user_input: "Design a PRD for an online learning app for kids under 13 in the US."
+    assert:
+      - type: "icontains"
+        value: "safeai-edtech-compliance"
+      - type: "icontains"
+        value: "COPPA"
+
+  - description: "Kiểm tra Routing cho ASEAN Markets (SG, TH, MY)"
+    vars:
+      user_input: "Create a PRD for a ride-hailing app launching in Singapore, Thailand, and Malaysia."
+    assert:
+      - type: "icontains"
+        value: "safeai-asean-data-protection"
+      - type: "icontains"
+        value: "PDPA"
+
+  - description: "Kiểm tra Code Scanner Routing"
+    vars:
+      user_input: "/safeai scan the following python code for vulnerabilities"
+    assert:
+      - type: "icontains"
+        value: "safeai-code-scanner"
+
+  - description: "Kiểm tra Standard PRD Mode (Skip Compliance)"
+    vars:
+      user_input: "Write a Standard PRD for an internal time-tracking tool."
+    assert:
+      - type: "not-icontains"
+        value: "GDPR"
+      - type: "not-icontains"
+        value: "compliance"
+
+  - description: "Kiểm tra Lệnh /safeai compare"
+    vars:
+      user_input: "/safeai compare Vietnam EU US"
+    assert:
+      - type: "icontains"
+        value: "Vietnam"
+      - type: "icontains"
+        value: "EU"
+      - type: "icontains"
+        value: "US"
+      - type: "icontains"
+        value: "|"
+
+  - description: "Kiểm tra Lệnh /safeai timeline"
+    vars:
+      user_input: "/safeai timeline for the current PRD"
+    assert:
+      - type: "icontains"
+        value: "gantt"
+      - type: "icontains"
+        value: "dateFormat"
+
+  - description: "Kiểm tra Lệnh /safeai start (Wizard)"
+    vars:
+      user_input: "/safeai start"
+    assert:
+      - type: "icontains"
+        value: "Step 1"
+      - type: "icontains"
+        value: "Product Type"
+
+  - description: "Kiểm tra Custom Policy Injection (Priority Override)"
+    vars:
+      user_input: "/safeai inject SecurityRule: No encryption needed for test env."
+    assert:
+      - type: "icontains"
+        value: "No encryption needed"
+      - type: "icontains"
+        value: "CUSTOM OVERRIDE"
+
+  - description: "Kiểm tra Multilingual Translation"
+    vars:
+      user_input: "/safeai lang japanese"
+    assert:
+      - type: "not-icontains"
+        value: "PRD Structure"
+      - type: "icontains"
+        value: "Explicit Consent"

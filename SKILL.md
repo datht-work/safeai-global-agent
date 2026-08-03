@@ -110,6 +110,49 @@ Users can inject their own **Personal/Custom Rules** into the agent's knowledge 
 
 *Example:* `/safeai inject ServerLoc: Tất cả dữ liệu người dùng phải được lưu trữ tại máy chủ vật lý đặt tại TP. Hồ Chí Minh.`
 
+---
+
+## Interactive Workflow: `/safeai start` (v6.1.0)
+
+For users who are unsure which template or laws apply to their product, they can initiate an interactive wizard.
+
+**Command Syntax:** `/safeai start`
+
+**Behavior:**
+1. Do not generate a PRD immediately. Instead, act as a consultant and ask the user 5 sequential questions, one at a time (wait for the user's answer before asking the next):
+   - Step 1: Product Type? (e.g., SaaS, Mobile App, E-Commerce, HealthTech)
+   - Step 2: Target Markets? (Which countries/regions?)
+   - Step 3: Data Sensitivity? (Public, Internal, Confidential, Restricted/PII)
+   - Step 4: AI Components? (Yes/No, and what type?)
+   - Step 5: Compliance Depth? (Standard, Smart, Full Audit)
+2. Once all 5 questions are answered, generate the optimized PRD following the Hub-and-Spoke routing rules.
+
+---
+
+## Multi-Market Matrix: `/safeai compare` (v6.1.0)
+
+When a product targets multiple regions, users need to quickly identify the most restrictive "bottleneck" jurisdiction.
+
+**Command Syntax:** `/safeai compare [region1] [region2] [region3]`
+
+**Behavior:**
+1. Do not generate a full PRD.
+2. Output a comparative markdown table matrix analyzing the strictness of each region across key dimensions (Data Residency, Consent Model, AI Registration, Highest Fine).
+3. Conclude with a brief recommendation on which region's laws should be set as the baseline (usually the most restrictive).
+
+---
+
+## Implementation Roadmap: `/safeai timeline` (v6.1.0)
+
+Generate a visual timeline for implementing the compliance tasks generated in a PRD.
+
+**Command Syntax:** `/safeai timeline [prd]`
+
+**Behavior:**
+1. Read the Compliance Checklist from the current PRD context.
+2. Group tasks into Critical (Pre-Launch), High (Sprint 1-2), and Medium (Sprint 3+).
+3. Output a `mermaid` Gantt chart (`gantt` syntax) visualizing the implementation roadmap with estimated effort in days.
+
 ### Template Output Format
 
 When a `/template` command is received, output a PRD skeleton with **pre-filled sections**:
@@ -435,6 +478,7 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 | Version | Date | Changes |
 |---|---|---|
+| **v6.1.0** | 2026-07-31 | **Interactive Workflow & Matrix**: Added `/safeai start` interactive wizard, `/safeai compare` cross-market matrix, and `/safeai timeline` Gantt charts. Expanded test coverage to 20+ scenarios. |
 | **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Dedicated VN deep-dive expert with 8 law sections (`VN-PDPL-DEEP`, `VN-CYBERSECURITY-2025`, `VN-AI-LAW`, `VN-ECOMMERCE-2025`, `VN-ELECTRONIC-TRANSACTIONS`, `VN-SBV-FINTECH`, `VN-INFOSEC-TIERS`, `VN-QCVN-STANDARDS`). New `/template` commands for VN verticals. Hub routing integration. 39 jurisdictions. |
 | **v5.1.0** | 2026-07-13 | **Q3 2026 Legal Audit**: EU AI Act phased enforcement timeline & penalties, GDPR DPF/Schrems III risk, Thailand PDPA, Indonesia PDP Law, US expanded to 24 states, ISO 27701:2025 standalone PIMS. 38 jurisdictions. |
 | **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2 (file-aware categories, `--strict` mode, SKILL rules), Copilot Instructions file, complete skills-lock registry, 27 bug fixes. |
@@ -457,4 +501,4 @@ Not everyone uses the `npx skills` CLI. Here's how to use this skill directly in
 
 ---
 
-<small>Powered by SafeAI-Global Team · Version 6.0.0 · July 2026</small>
+<small>Powered by SafeAI-Global Team · Version 6.1.0 · July 2026</small>

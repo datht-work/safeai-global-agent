@@ -257,7 +257,7 @@ function main() {
 
     if (filteredArgs.length === 0 || args.includes("--help")) {
         console.log(`
-${COLORS.bold}SafeAI-Lint v5.0.0${COLORS.reset} — PRD, Skill & Knowledge Compliance Checker
+${COLORS.bold}SafeAI-Lint v6.1.0${COLORS.reset} — PRD, Skill & Knowledge Compliance Checker
 
 ${COLORS.dim}Usage:${COLORS.reset}
   npx safeai-lint <file.md | directory>
@@ -295,7 +295,7 @@ ${COLORS.dim}PRD Rules:${COLORS.reset}`);
         process.exit(2);
     }
 
-    console.log(`\n${COLORS.bold}🛡️  SafeAI-Lint v5.0.0${COLORS.reset} — scanning ${files.length} file(s)...${isStrict ? ` ${COLORS.red}(strict mode)${COLORS.reset}` : ""}\n`);
+    console.log(`\n${COLORS.bold}🛡️  SafeAI-Lint v6.1.0${COLORS.reset} — scanning ${files.length} file(s)...${isStrict ? ` ${COLORS.red}(strict mode)${COLORS.reset}` : ""}\n`);
 
     let totalWarnings = 0;
     let totalErrors = 0;

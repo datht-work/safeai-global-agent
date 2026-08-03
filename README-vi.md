@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.1.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -155,6 +155,7 @@ Xem [CHANGELOG.md](CHANGELOG.md) để biết chi tiết đầy đủ.
 
 | Phiên bản | Ngày | Nổi bật |
 |---|---|---|
+| **v6.1.0** | 2026-07-31 | **Interactive Workflow & Matrix**: Thêm lệnh `/safeai start` (wizard), `/safeai compare` (so sánh đa thị trường), và `/safeai timeline` (sơ đồ Gantt). Mở rộng test coverage lên 20+ kịch bản. |
 | **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Chuyên gia tuân thủ chuyên sâu VN, 8 mục luật, lệnh `/template` VN, 39 khu vực pháp lý. |
 | **v5.1.0** | 2026-07-13 | **Kiểm toán pháp lý Q3**: EU AI Act enforcement, Thailand PDPA, Indonesia PDP, US mở rộng 24 bang, ISO 27701:2025. |
 | **v5.0.0** | 2026-03-31 | **Tối ưu Production**: Smart Linter v2, Copilot Instructions, hoàn thiện skills-lock registry, 27 bản sửa lỗi. |
@@ -214,7 +215,7 @@ Hệ thống tri thức SafeAI-Global phụ thuộc hoàn toàn vào tính cập
 
 > ⚠️ **Tuyên bố từ chối:** Bộ công cụ này cung cấp hướng dẫn tuân thủ, không phải tư vấn pháp lý. Luôn tham khảo luật sư có chuyên môn cho các quyết định tuân thủ cuối cùng.
 
-*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.0.0 · Tháng 7/2026*
+*Được xây dựng với ❤️ bởi [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.1.0 · Tháng 7/2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)

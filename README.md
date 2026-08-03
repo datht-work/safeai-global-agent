@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Audit](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml/badge.svg)](https://github.com/datht-work/safeai-global-agent/actions/workflows/security-audit.yml)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Listed-blueviolet.svg)](https://skills.sh/datht-work/safeai-global-agent)
-[![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.1.0-blue.svg)](CHANGELOG.md)
 
 ---
 
@@ -192,6 +192,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 | Version | Date | Highlights |
 |---|---|---|
+| **v6.1.0** | 2026-07-31 | **Interactive Workflow & Matrix**: Added `/safeai start` wizard, `/safeai compare` cross-market matrix, and `/safeai timeline` Gantt charts. Expanded test coverage to 20+ scenarios. |
 | **v6.0.0** | 2026-07-13 | **Vietnam Compliance Spoke**: Dedicated VN deep-dive expert, 8 law sections, `/template` VN commands, 39 jurisdictions. |
 | **v5.1.0** | 2026-07-13 | **Q3 Legal Audit**: EU AI Act enforcement milestones, Thailand PDPA, Indonesia PDP, US 24-state expansion, ISO 27701:2025. |
 | **v5.0.0** | 2026-03-31 | **Production Optimization**: Smart Linter v2, Copilot Instructions, complete skills-lock registry, 27 bug fixes. |
@@ -250,7 +251,7 @@ The SafeAI-Global Knowledge Base heavily relies on up-to-date legal facts. Pleas
 
 > ⚠️ **Disclaimer:** This suite provides compliance guidance, not legal advice. Always consult qualified legal counsel for final compliance decisions.
 
-*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.0.0 · July 2026*
+*Built with ❤️ by [SafeAI-Global Team](https://www.linkedin.com/in/dat-huynh-vn/) · v6.1.0 · July 2026*
 
 ---
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/datht)
